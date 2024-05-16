@@ -16,17 +16,15 @@
     <body class="body">
         <aside class="aside cc-col">
             <nav class="nav">
-                <figure class="logo cc-col">
-                    <a href="../index">
+                <figure class="logo cc-col h-divider m-0">
+                    <a href="../">
                         <img src="../src/img/anth.png" alt="logo" title="Die Antwoord">
                     </a>    
                 </figure>
 
-                <hr class="h-divider">
-
                 <menu class="menu ce-col">
                     <li>
-                        <a href="../index">
+                        <a href="../">
                             <i class="fas fa-home" title="inicio"></i>
                         </a>
                     </li>
@@ -38,19 +36,19 @@
                     </li>
 
                     <li>
-                        <a href="css">
+                        <a href="./css">
                             <i class="fab fa-css3-alt" title="Qué es CSS?"></i>
                         </a>
                     </li>
 
                     <li>
-                        <a href="js">
+                        <a href="./js">
                             <i class="fab fa-js-square" title="Qué es JavaScript?"></i>
                         </a>
                     </li>
 
                     <li>
-                        <a href="webDev">
+                        <a href="./webDev">
                             <i class="fas fa-code" title="Qué es el Desarrollo Web?"></i>
                         </a>
                     </li>
@@ -59,61 +57,107 @@
         </aside>
 
         <header class="header">
-            <h1>
-                Conceptos Básicos de HTML <i class="fab fa-html5 ml-2"></i>
-            </h1>
+            <span class="title v-divider">
+                <h1>
+                    Antwoord Learning <i class="fas fa-book ml-2"></i>
+                </h1>
+            </span>
+            
+            <span class="toPort cc-col">
+                <a href="https://ricardocristopher.github.io/">
+                    <i class="fas fa-th imgHover"></i>
+                </a>
+            </span>
         </header>
 
-        <main class="main">
-            <section>
-                <h2>Qué es HTML?</h2>
-                <hr class="h-divider w-100 my-4">
+        <main class="main cs-col">
+            <section id="menu" class="menu-wrapper z-prior">
+                <menu class="navMenu ce-row btn-group">
+                    <li class="btn m-dnamic btn-dark w-25">
+                        <a href="../">
+                            <span class="btn-txt">Inicio</span>
+                            <i class="fas fa-home btn-ico"></i>
+                        </a>
+                    </li>
+
+                    <li class="btn m-dnamic">
+                        <a href="#html">
+                            <span class="btn-txt">Html</span>
+                            <i class="fab fa-html5 btn-ico"></i>
+                        </a>
+                    </li>
+
+                    <li class="btn m-dnamic">
+                        <a href="#ejm">
+                            <span class="btn-txt">Ejemplos</span>
+                            <i class="fas fa-book btn-ico"></i>
+                        </a>
+                    </li>
+
+                    <li class="btn m-dnamic">
+                        <a href="#outro">
+                            <span class="btn-txt">Más</span>
+                            <i class="fas fa-plus btn-ico"></i>
+                        </a>
+                    </li>
+
+                    <li class="btn m-dnamic btn-dark w-25">
+                        <a href="./css">
+                            <span class="btn-txt">CSS</span>
+                            <i class="fab fa-css3 btn-ico"></i>
+                        </a>
+                    </li>
+                </menu>
             </section>
-            
-            <section>
-                <article>
-                    <div class="content">
-                        <p class="w-100">
+
+            <section id="html">
+                <hr class="h-divider w-100 my-4">
+
+                <h2>Qué es HTML?</h2>
+
+                <article class="data-wrapper">
+                    <div class="data-content cc-col">
+                        <p class="data-text">
                             El Lenguaje de Marcado de Hipertexto (HTML) es el código que se utiliza para estructurar y desplegar una página web y sus contenidos. Por ejemplo, sus contenidos podrían ser párrafos, una lista con viñetas, o imágenes y tablas de datos.
                         </p>
-
-                        <hr class="h-divider w-100">
                     </div>
                 </article>
             </section>
 
-            <section>
-                <article>
-                    <h3 class="mb-3">Ejemplos:</h3>
+            <section id="ejm">
+                <article class="data-wrapper">
+                    <hr class="h-divider w-100 my-4">
 
-                    <div class="content">
-                        <div class="p w-100 content evenGroup">
-                            <button title="<button></button>">Botón</button>
+                    <h2>Ejemplos:</h2>
 
-                            <table border="1" title="<table></table>">
-                                <tr>
-                                    <td>
-                                        tabla
-                                    </td>
-                                </tr>
-                            </table>
+                    <div class="data-content e-dinamic">
+                        <button title="<button></button>">Botón</button>
 
-                            <img src="../src/img/antico.png" alt="img example" title="<img src='foo'>" class="imgExp">
+                        <table border="1" title="<table></table>">
+                            <tr>
+                                <td>
+                                    tabla
+                                </td>
+                            </tr>
+                        </table>
 
-                            <p class="unformat" title="<p></p>">Texto</p>
+                        <img src="../src/img/antico.png" alt="img example" title="<img src='foo'>" class="imgExp">
 
-                            <input type="text" name="foo" title="<input>" maxlength="10" placeholder="Ingreso de datos" onclick="this.value = ''">
-                        </div>
+                        <p class="unformat" title="<p></p>">Texto</p>
 
-                        <hr class="h-divider w-100">
+                        <input type="text" name="foo" title="<input>" maxlength="10" placeholder="Ingreso de datos" onclick="this.value = ''">
                     </div>
                 </article>
             </section>
 
-            <section>
-                <article>
-                    <div class="content">
-                        <p class="w-100">
+            <section id="outro">
+                <article class="data-wrapper">
+                    <hr class="h-divider w-100 my-4">
+
+                    <h2>Conclusión:</h2>
+
+                    <div class="data-content cc-col">
+                        <p class="data-text">
                             Todos estos elementos se crean a partir de etiquetas, y representan el esqueleto de toda página web, pues es el único lenguaje que entienden los navegadores.
                         </p>
                     </div>
@@ -121,12 +165,19 @@
             </section>
         </main>
 
-        <footer class="footer">
-            <span>
-                Copyright © Antwoord Creative Lab
+        <footer class="footer cc-row">
+            <span class="foot-data">
+                Copyright © Antwoord Creative Lab. 
+                <wbr>
+                 Powered by <a href="https://www.coderhouse.com/">CODERHOUSE</a>
             </span>
         </footer>
+        
+        <script src="../plugins/jquery/jquery.min.js"></script>
+        <script src="../src/js/main.js"></script>
+
+        <script type="text/javascript">
             
-        <!-- <script src="../src/js/main.js"></script> -->
+        </script>
     </body>
 </html>

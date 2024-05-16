@@ -110,9 +110,25 @@
             width: 100%;
             background: #fff;
             box-shadow: 0px 5px 20px 0px #0003;
-            padding: 0 1%;
-            display: flex;
+            padding: 0 0 0 1%;
+            *padding-right: clamp(70px, 6%, 70px);
+            z-index: 3;
+
+            display: grid;
+            grid-template-columns: 1fr 50px; 
+            grid-template-rows: 1fr; 
+            gap: 0px 0px; 
+            grid-template-areas: 
+                "title toPort";
             align-items: center;
+        }
+
+        .header .title{
+            grid-area: title;
+        }
+
+        .header .toPort{
+            grid-area: toPort;
         }
 
     /* ----------------------------
@@ -127,35 +143,83 @@
             height: 100%;
             overflow-y: auto;
             overflow-x: hidden;
-            padding: 2%;
+            padding: 0 2% 2%;
         }
 
-        .main section.{
+        .main section{
             margin: 1% 0;
-        }
-
-        .main section.PlayGround{
             width: 100%;
-            height: 100%;
+        }
+
+        /* ----------------------------
+        <<<<<<<<<<<< navBar >>>>>>>>>>>
+        ---------------------------- */
+
+            .main .menu-wrapper{
+                position: sticky;
+                margin: unset;
+                top: 0;
+                margin-top: 2%;
+            }
+
+            .main .navMenu{
+                list-style-type: unset;
+                margin-block-start: unset;
+                margin-block-end: unset;
+                margin-inline-start: unset;
+                margin-inline-end: unset;
+                padding-inline-start: unset;
+            }
+
+            .main .navMenu .m-dnamic{
+                display: inline-flex;
+                width: 100%;
+            }
+
+            .main .navMenu .m-dnamic a, 
+            .main .navMenu .m-dnamic a .btn{
+                width: 100%;
+            }
+
+            .main .navMenu .m-dnamic .btn-ico{
+                display: none;
+            }
+
+            @media (max-width: 600px){
+                .main .navMenu .m-dnamic .btn-txt{
+                    display: none;
+                }
+
+                .main .navMenu .m-dnamic .btn-ico{
+                    display: inline-flex;
+                }
+            }
+
+        /* ----------------------------
+        <<<<<<<<<<< switcher >>>>>>>>>>
+        ---------------------------- */
+            .main .data-switch .m{
+                display: none;
+            }
+
+            @media only screen and (hover: none) and (pointer: coarse){
+                .main .data-switch .m{
+                    display: block;
+                }
+
+                .main .data-switch .p{
+                    display: none;
+                }
+            }
+
+        .main .data-wrapper .data-content{
             display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .main article .content{
-            display: flex;
-            flex-wrap: wrap;
             justify-content: center;
             align-items: center;
         }
 
-        .main article .content.evenGroup{
-            justify-content: space-between;
-            padding: 0 5%;
-        }
-
-        .main article .content p:not(.unformat), .main article .content .p:not(.unformat){
-            width: 70%;
+        .main .data-wrapper .data-content .data-text:not(.unformat){
+            width: 96%;
             background-color: #fff;
             padding: 1%;
             border-radius: 5px;
@@ -164,40 +228,40 @@
             text-align: justify;
         }
 
-        .main article .content p:not(.unformat):hover{
+        .main .data-wrapper .data-content .data-text:not(.unformat):hover{
             box-shadow: 5px 5px 10px 0px #0003;
             transition: all .2s;
         }
 
-        .main article .content figure{
+        .main .data-wrapper .data-content .data-img{
             width: 20%;
             text-align: center;
         }
 
-        .main article img{
-            width: 100%;
+        .main .data-wrapper img{
+            width: 90%;
             transition: all .2s;
         }
 
-        .main article img:hover{
+        .main .data-wrapper img:hover{
             transform: scale(1.1);
             filter: drop-shadow(5px 5px 2px #0004);
             -webkit-filter: drop-shadow(5px 5px 2px #0004);
             transition: all .2s;
         }
 
-        .main article .content figure:has(.labeling){
+        .main .data-wrapper .data-content .data-img:has(.labeling){
             position: relative;
             margin: unset;
             min-width: fit-content;
         }
 
-        .main article .content figure i {
-            font-size: 200px;
+        .main .data-wrapper .data-content .data-img i {
+            font-size: 100px;
             margin: 0 auto;
         }
 
-        .main article .content figure .labeling {
+        .main .data-wrapper .data-content .data-img .labeling {
             position: absolute;
             top: 0;
             left: 0;
@@ -216,55 +280,59 @@
             transition: all .2s;
         }
 
-        .main article .content figure:hover .labeling {
+        .main .data-wrapper .data-content .data-img:hover .labeling {
             opacity: 1;
             transition: all .2s;
         }
 
-        .main article .content figure .labeling a{
+        .main .data-wrapper .data-content .data-img .labeling a{
             text-decoration: none;
             color: inherit;
             text-align: center;
         }
 
         .imgExp{
-            width: 50px;
+            width: 50px !important;
         }
 
-        .trymeBtn,.trymeTbl,.trymeTxt,.trymeInp{
-            transition: all .2s;
-        }
+        /* ----------------------------
+        <<<<<<<<<<<< Trynna >>>>>>>>>>>
+        ---------------------------- */
 
-        .trymeBtn:hover{
-            padding: 1% 2%;
-            background-color: #0033db;
-            border-radius: 10px;
-            color: #fff;
-            box-shadow: 2px 2px 5px 0px #0003;
-            transition: all .2s;
-        }
+            .trymeBtn,.trymeTbl,.trymeTxt,.trymeInp{
+                transition: all .2s;
+            }
 
-        .trymeTbl:hover{
-            border: 2px dotted darkred;
-            transition: all .2s;
-        }
+            .trymeBtn:hover{
+                padding: 1% 2%;
+                background-color: #0033db;
+                border-radius: 10px;
+                color: #fff;
+                box-shadow: 2px 2px 5px 0px #0003;
+                transition: all .2s;
+            }
 
-        .trymeTxt:hover{
-            color: #db7800;
-            font-weight: bold;
-            font-style: italic;
-            transition: all .2s;
-        }
+            .trymeTbl:hover{
+                border: 2px dotted darkred;
+                transition: all .2s;
+            }
 
-        .trymeInp:hover{
-            height: 40px;
-            border-radius: 10px;
-            transition: all .2s;
-        }
+            .trymeTxt:hover{
+                color: #db7800;
+                font-weight: bold;
+                font-style: italic;
+                transition: all .2s;
+            }
 
-        .reverse{
-            flex-direction: row-reverse !important;
-        }
+            .trymeInp:hover{
+                height: 40px;
+                border-radius: 10px;
+                transition: all .2s;
+            }
+
+            .reverse{
+                flex-direction: row-reverse !important;
+            }
 
     /* ----------------------------
     <<<<<<<<<<<< Footer >>>>>>>>>>>
@@ -276,9 +344,10 @@
             width: 100%;
             background-color: #fff;
             box-shadow: 0px -5px 20px 0px #0003;
+            z-index: 2;
         }
 
-        .footer span{
+        .footer .foot-data{
             font-size: 2vmin;
             text-align: center;
         }
@@ -415,6 +484,85 @@
             align-items:flex-start !important;
         }
 
+        .cs-row{
+            display:-webkit-box !important;
+            display:-ms-flexbox !important;
+            display:flex !important;
+
+            -webkit-box-pack:start !important;
+            -ms-flex-pack:start !important;
+            justify-content:flex-start !important;
+            
+            -webkit-box-align:center !important;
+            -ms-flex-align:center !important;
+            align-items:center !important;
+        }
+
+        .cs-col{
+            display:-webkit-box !important;
+            display:-ms-flexbox !important;
+            display:flex !important;
+
+            -webkit-box-orient:vertical !important;
+            -webkit-box-direction:normal !important;
+            -ms-flex-direction:column !important;
+            flex-direction:column !important;
+
+            -webkit-box-pack:start !important;
+            -ms-flex-pack:start !important;
+            justify-content:flex-start !important;
+
+            -webkit-box-align:center !important;
+            -ms-flex-align:center !important;
+            align-items:center !important;
+        }
+
+        .c-dinamic{
+            width: 100%;
+            height: 100%;
+
+            display:-webkit-box !important;
+            display:-ms-flexbox !important;
+            display:flex !important;
+
+            -webkit-box-pack:center !important;
+            -ms-flex-pack:center !important;
+            justify-content:center !important;
+            
+            -webkit-box-align:center !important;
+            -ms-flex-align:center !important;
+            align-items:center !important;
+        }
+
+        .e-dinamic{
+            width: 100%;
+            height: 100%;
+
+            display:-webkit-box !important;
+            display:-ms-flexbox !important;
+            display:flex !important;
+
+            justify-content:space-evenly !important;
+            
+            -webkit-box-align:center !important;
+            -ms-flex-align:center !important;
+            align-items:center !important;
+        }
+
+        @media (orientation: portrait) or (max-width: 670px){
+            .c-dinamic, .e-dinamic{
+                -webkit-box-orient:vertical !important;
+                -webkit-box-direction:normal !important;
+                -ms-flex-direction:column !important;
+                flex-direction:column !important;
+            }
+
+            .c-dinamic > *, .e-dinamic > *{
+                margin: 2% 0;
+            }
+        }
+
+
     .btn{
         display: inline-flex;
         align-items: center;
@@ -438,4 +586,8 @@
 
     .href{
         cursor: pointer;
+    }
+
+    .z-prior{
+        z-index: 1;
     }

@@ -87,7 +87,7 @@ article,aside,figcaption,figure,footer,header,hgroup,main,nav,section{
 body{
     margin:0;
     font-family: 'Poppins-Medium';
-    font-size: calc(.7rem + .2vmin);
+    font-size: calc(.3rem + 2vmin);
     font-weight:400;
     line-height:1.5;
     color:#858796;
@@ -200,7 +200,7 @@ a{
     height: 100%;
 }
 
-a:hover, .href:hover{
+a:not(:has(.btn-txt)):hover, .href:not(:has(.btn-txt)):hover{
     color: var(--primary);
     text-decoration:unset;
 }
@@ -401,32 +401,32 @@ template{
 
 .h1,h1{
     /*font-size:2.5rem;*/
-    font-size: calc(1.50rem + 1vw);
+    font-size: calc(1rem + 2vmin);
 }
 
 .h2,h2{
     /*font-size:2rem;*/
-    font-size: calc(1.25rem + 1vw);
+    font-size: calc(.80rem + 2vmin);
 }
 
 .h3,h3{
     /*font-size:1.75rem;*/
-    font-size: calc(1rem + 1vw);
+    font-size: calc(.60rem + 2vmin);
 }
 
 .h4,h4{
     /*font-size:1.5rem;*/
-    font-size: calc(.75rem + 1vw);
+    font-size: calc(.40rem + 2vmin);
 }
 
 .h5,h5{
     /*font-size:1.25rem;*/
-    font-size: calc(.50rem + 1vw);
+    font-size: calc(.20rem + 2vmin);
 }
 
 .h6,h6{
     /*font-size:1rem;*/
-    font-size: calc(.25rem + 1vw);
+    font-size: calc(.05rem + 2vmin);
 }
 
 .lead{
@@ -3041,14 +3041,14 @@ a.btn.disabled,fieldset:disabled a.btn{
 
 .btn-dark{
     color:#fff;
-    background-color:#5a5c69;
-    border-color:#5a5c69
+    background-color:#5a5c69 !important;
+    border-color:#5a5c69 !important;
 }
 
 .btn-dark:hover{
     color:#fff;
-    background-color:#484a54;
-    border-color:#42444e
+    background-color:#484a54 !important;
+    border-color:#42444e !important;
 }
 
 .btn-dark.focus,.btn-dark:focus{
@@ -3610,12 +3610,12 @@ margin-right:.125rem
 
 .v-divider{
     height: inherit;
-    border-left: 1px solid rgba(0, 0, 0, .1);
+    border-right: 1px solid rgba(0, 0, 0, .1);
 }
 
 .h-divider{
     width: 100%;
-    border-top: 1px solid rgba(0, 0, 0, .1);
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
 }
 
 .dropdown-divider{

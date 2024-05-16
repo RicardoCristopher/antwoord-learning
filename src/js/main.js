@@ -1,9 +1,9 @@
-document.addEventListener("DOMContentLoaded", () => {
+function pageListenersJS(){
 
     const alert   = document.getElementById('alert');
     const confirm = document.getElementById('confirm');
     const reverse = document.getElementById('reverse');
-    const evenGrp = document.querySelector('.content.evenGroup');
+    const evenGrp = document.querySelector('.play');
 
     alert.addEventListener('click',()=>{
         window.alert('Hola Mundo');
@@ -16,4 +16,5 @@ document.addEventListener("DOMContentLoaded", () => {
     reverse.addEventListener('click',()=>{
         evenGrp.classList.contains('reverse') ? evenGrp.classList.remove('reverse') : evenGrp.classList.add('reverse');
     });
-});
+
+};
