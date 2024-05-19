@@ -359,8 +359,7 @@
 
             .parallax > * {
                 font-size: 7vmin;
-                color: #fff;
-                -webkit-text-stroke: 1.5px #000;
+                color: #000000c2;
                 font-family: Poppins-Bold;
             }
 
@@ -376,7 +375,7 @@
                 transform: translateZ(-3px) scale(2);
                 background-size: 100%;
                 z-index: -1;
-                opacity: .3;
+                opacity: .2;
                 box-shadow: inset 0px 0px 8px 8px var(--light);
             }
 
