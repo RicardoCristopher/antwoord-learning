@@ -13,6 +13,8 @@
             "aside footer"; 
     }
 
+    
+
     /* ----------------------------
     <<<<<<<<<<<< Aside >>>>>>>>>>>>
     ---------------------------- */
@@ -224,6 +226,18 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
+            }
+
+            .main .data-wrapper .data-content > *:not(:first-child,:last-child){
+                margin: 1%;
+            }
+
+            .main .data-wrapper .data-content > :first-child{
+                margin-bottom: 1%;
+            }
+
+            .main .data-wrapper .data-content > :last-child{
+                margin-top: 1%;
             }
 
             .main .data-wrapper .data-content .data-text:not(.unformat){
