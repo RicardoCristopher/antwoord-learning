@@ -60,7 +60,7 @@ Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
     src: url('../../plugins/Poppins-SemiBold.ttf'); 
 }
 
-*,::after,::before{
+*:not(code, code *),::after,::before{
     -webkit-box-sizing:border-box;
     box-sizing:border-box;
     user-select: none;
@@ -68,7 +68,6 @@ Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
     -khtml-user-drag: none;
     -moz-user-drag: none;
     -o-user-drag: none;
-    user-drag: none;
     scroll-behavior: smooth;
 }
 

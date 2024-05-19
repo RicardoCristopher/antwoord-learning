@@ -241,13 +241,14 @@
             }
 
             .main .data-wrapper .data-content .data-text:not(.unformat){
-                width: 96%;
+                width: 100%;
                 background-color: #fff;
                 padding: 1%;
                 border-radius: 5px;
                 border: 2px dotted #dddddd;
                 transition: all .2s;
                 text-align: justify;
+                white-space: pre-line;
             }
 
             .main .data-wrapper .data-content .data-text:not(.unformat):hover{
@@ -670,4 +671,16 @@
 
     .z-prior{
         z-index: 1;
+    }
+
+    pre{
+        user-select: text !important;
+    }
+
+    code {
+        user-select: text !important;
+    }
+
+    code * {
+        user-select: text !important;
     }

@@ -10,6 +10,27 @@
 
     }
 
+    function codeCleaner($code){
+        let lines = $code.textContent.split('\n');
+
+        if (lines[0] === '')
+        {
+            lines.shift()
+        }
+
+        let matches;
+        let indentation = (matches = /^[\s\t]+/.exec(lines[0])) !== null ? matches[0] : null;
+
+        if (!!indentation) {
+            lines = lines.map((line)=> {
+                line = line.replace(indentation, '')
+                return line.replace(/\t/g, '    ')
+            });
+        }
+
+        $code.textContent = lines.join('\n').trim();
+    }
+
 //----------------------------------------------------------------------
 // Listeners
 //----------------------------------------------------------------------
@@ -39,31 +60,26 @@
 // Global rules
 //----------------------------------------------------------------------
 
-    $(document).ready(()=>{
+    let codeList = document.querySelectorAll('code');
 
-        //----------------------------------------------------------------------
-        // Fixing WhiteSpace in <code> tags
-        //----------------------------------------------------------------------
+    for (let i = 0; i < codeList.length; i++) {
+        if((codeList[i].classList.contains('language-html')) || (codeList[i].classList.contains('lang-html'))){
+            let codeX = codeList[i].nextElementSibling;
 
-            [].forEach.call(document.querySelectorAll('code'), ($code)=> {
-                let lines = $code.textContent.split('\n');
+            if(codeX){
+                let container  = document.createElement('script');
+                container.type = 'text/plain';
+                container.style.display = 'block';
 
-                if (lines[0] === '')
-                {
-                    lines.shift()
-                }
+                let code  = codeX.value;
 
-                let matches;
-                let indentation = (matches = /^[\s\t]+/.exec(lines[0])) !== null ? matches[0] : null;
+                container.textContent = code;
 
-                if (!!indentation) {
-                    lines = lines.map((line)=> {
-                        line = line.replace(indentation, '')
-                        return line.replace(/\t/g, '    ')
-                    });
-                }
+                codeList[i].append(container);
 
-                $code.textContent = lines.join('\n').trim();
-            });
+                codeX.remove();
+            }
+        }
 
-    });
+        codeCleaner(codeList[i]);
+    }
