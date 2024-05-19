@@ -2,4 +2,5 @@
 *.temp
 *.log
 *.lock
+*.map
 **/backup
