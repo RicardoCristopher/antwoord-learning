@@ -1,39 +1,130 @@
 //----------------------------------------------------------------------
+// Global Constants
+//----------------------------------------------------------------------
+
+    const body  = document.querySelector('body');
+    const aside = document.querySelector('aside');
+    const main  = document.querySelector('main');
+
+//----------------------------------------------------------------------
 // Tools
 //----------------------------------------------------------------------
 
-    function modal(toggle = true){
-        toggle ? modalOn() : modalOff();
-    }
+    // --------------------------------------
+    //  Modal
+    // --------------------------------------
 
-    function modalOn(){
+        function modalManager(toggle = true){
+            if(toggle){
+                main.classList.add('lockdown');
 
-    }
+                let modal = document.createElement('aside');
+                modal.classList.add('modal', 'fadeIn');
+                let close = document.createElement('i');
+                close.classList.add('fas','fa-times-circle','close');
+                modal.append(close);
+                
+                body.append(modal);
+                modal.querySelector('.close').addEventListener('click', ()=>{
+                    modalManager(false);
+                });
 
-    function codeCleaner($code){
-        let lines = $code.textContent.split('\n');
-
-        if (lines[0] === '')
-        {
-            lines.shift()
+                return modal;
+            }else{
+                main.classList.remove('lockdown');
+                document.querySelector('.modal').remove();
+            }
         }
 
-        let matches;
-        let indentation = (matches = /^[\s\t]+/.exec(lines[0])) !== null ? matches[0] : null;
+        function modalElementCreator(){
+            // ------------------------------------------
+            // | IMG | data-: src, alt, class(opt)
+            // ------------------------------------------
 
-        if (!!indentation) {
-            lines = lines.map((line)=> {
-                line = line.replace(indentation, '')
-                return line.replace(/\t/g, '    ')
-            });
+                $('.createImg').click((e)=>{
+                    let btn = e.currentTarget;
+                    let src = btn.getAttribute('data-src');
+                    
+                    if(src){
+                        let alt = btn.getAttribute('data-alt');
+
+                        if(alt){
+                            let classes = btn.getAttribute('data-class');
+
+                            let img = document.createElement('img');
+                            img.setAttribute('src',src);
+                            img.setAttribute('alt',alt);
+                            img.classList.add('dinamus-img');
+                            let place = modalManager();
+
+                            if(classes.length > 0 ){
+                                let classLi = classes.split(',');
+                                img.classList.add(...classLi);
+                                place.append(img);
+                            }else{
+                                place.append(img);
+                            }
+                        }
+                    }
+                });
         }
 
-        $code.textContent = lines.join('\n').trim();
-    }
+    // --------------------------------------
+    //  Cleaner
+    // --------------------------------------
+
+        function codeCleaner($code){
+            let lines = $code.textContent.split('\n');
+
+            if (lines[0] === '')
+            {
+                lines.shift()
+            }
+
+            let matches;
+            let indentation = (matches = /^[\s\t]+/.exec(lines[0])) !== null ? matches[0] : null;
+
+            if (!!indentation) {
+                lines = lines.map((line)=> {
+                    line = line.replace(indentation, '')
+                    return line.replace(/\t/g, '    ')
+                });
+            }
+
+            $code.textContent = lines.join('\n').trim();
+        }
+
+        function pCleaner(){
+            let list = main.querySelectorAll('.data-text');
+
+            for (let i = 0; i < list.length; i++) {
+                let cleaned = list[i].textContent;
+
+                list[i].textContent = cleaned.trim()
+            }
+        }
+
+    // --------------------------------------
+    //  Nav Bar
+    // --------------------------------------
+
+        aside.addEventListener('click',()=>{
+            body.classList.add('toggled');
+        });
+
+        main.addEventListener('click',()=>{
+            body.classList.remove('toggled');
+        });
 
 //----------------------------------------------------------------------
 // Listeners
 //----------------------------------------------------------------------
+    
+    function pageListenersIndex(){
+        modalElementCreator();
+
+        pCleaner();
+    };
 
     function pageListenersJS(){
 
@@ -54,6 +145,7 @@
             evenGrp.classList.contains('reverse') ? evenGrp.classList.remove('reverse') : evenGrp.classList.add('reverse');
         });
 
+        pCleaner();
     };
 
 //----------------------------------------------------------------------

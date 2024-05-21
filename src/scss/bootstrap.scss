@@ -6196,21 +6196,36 @@ border-top-right-radius:0
 .close{
     float:right;
     font-size:1.5rem;
-font-weight:700;
-line-height:1;
-color:#000;
-text-shadow:0 1px 0 #fff;
-opacity:.5
+    font-weight:700;
+    line-height:1;
+    color:#fff;
+    opacity:.5;
+    position: absolute;
+    right: 2%;
+    top: 2%;
+    z-index: 5;
+
+    transition: opacity .2s;
 }
 
 .close:hover{
-    color:#000;
+    color:#fff;
     text-decoration:none
 }
 
 .close:not(:disabled):not(.disabled):focus,.close:not(:disabled):not(.disabled):hover{
-    opacity:.75
-}button.close{
+    opacity:.9;
+
+    transition: opacity .2s;
+}
+
+@media only screen and (hover: none) and (pointer: coarse){
+    .close{
+        opacity: .9 !important;
+    }
+}
+
+button.close{
     padding:0;
     background-color:transparent;
     border:0;
@@ -6276,32 +6291,47 @@ a.close.disabled{
 .modal-open{
     overflow:hidden
 }
+
 .modal-open .modal{
     overflow-x:hidden;
     overflow-y:auto
 }
+
 .modal{
     position:fixed;
     top:0;
     left:0;
     z-index:1050;
-    display:flex;
     width:100%;
     height:100%;
     overflow:hidden;
     outline:0;
+    padding: 1.5%;
     background-color: #0008;
-    backdrop-filter: blur(2px);
+    backdrop-filter: blur(3px);
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
+.modal .dinamus-img{
+    height: 100%;
+}
+
+@media (orientation: portrait) or (max-width: 670px){
+    .modal .dinamus-img{
+        height: unset;
+        width: 100%;
+    }
+}
+
 .modal-dialog{
     position:relative;
     width:auto;
     margin:.5rem;
     pointer-events:none
 }
+
 .modal.fade .modal-dialog{
     -webkit-transition:-webkit-transform .3s ease-out;
     transition:-webkit-transform .3s ease-out;
@@ -6363,7 +6393,7 @@ a.close.disabled{
 .modal-dialog-centered.modal-dialog-scrollable{
     -webkit-box-orient:vertical;
     -webkit-box-direction:normal;
--ms-flex-direction:column;
+    -ms-flex-direction:column;
     flex-direction:column;
     -webkit-box-pack:center;
     -ms-flex-pack:center;
@@ -6404,7 +6434,8 @@ a.close.disabled{
     z-index:1040;
     width:100vw;
     height:100vh;
-    background-color:#000
+    background-color:#0007;
+    backdrop-filter: blur(3px);
 }
 
 .modal-backdrop.fade{

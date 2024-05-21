@@ -121,12 +121,11 @@
                             &emsp; 2. De nuevo, si estás en una Computadora puedes usar la combinación de teclas Ctrl + U
 
                             &emsp; 3. Si no puedes realizar ninguna de las dos opciones anteriores seguramente estás en un dispositivo movil, por lo cuál te dejamos a continuación una imagen que revela la estructura interna real de una página web.
-                            </ol>
                         </p>
 
-                        <figure>
-                            <img src="./src/img/init-bg2.avif" alt="Ejemplo de código HTML" title="Ejemplo de código HTML" class="rounded">
-                        </figure>
+                        <button type="button" class="btn createImg" data-src="./src/img/init-bg2.png" data-alt="Ejemplo de código HTML" data-class="rounded">
+                            Ver Ejemplo
+                        </button>
                     </div>
                 </article>
             </section>
@@ -203,7 +202,9 @@
         <script src="./plugins/prism/prism.js"></script>
 
         <script type="text/javascript">
-            
+            document.addEventListener("DOMContentLoaded", ()=>{
+                pageListenersIndex();
+            });
         </script>
     </body>
 </html>
