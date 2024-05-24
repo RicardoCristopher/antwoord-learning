@@ -1,99 +1,126 @@
 <!DOCTYPE html>
 <html lang="es">
     <head>
+        <!-- Meta SEO -->
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta name="description" content="">
+        <meta name="description" content="Iniciativa educativa que tiene como proposito brindar un porto de inicio en el oficio del desarrollo web, de una manera simple y amigable">
+        <meta name="keywords" content="desarrollo, web, guía, instructivo, html5, css, javascript, frontEnd">
         <meta name="author" content="Antwoord Creative Lab">
         <title>Antwoord Learning</title>
+
+        <!-- Preloads -->
+        <link rel="preload" fetchpriority="high" as="font" href="./plugins/fontawesome-free/webfonts/fa-brands-400.woff2" type="font/woff2" crossorigin>
+        <link rel="preload" fetchpriority="high" as="font" href="./plugins/fontawesome-free/webfonts/fa-solid-900.woff2" type="font/woff2" crossorigin>
+        <link rel="preload" fetchpriority="high" as="image" href="./src/img/trinity.svg"   type="image/svg+xml">
+        <link rel="preload" fetchpriority="high" as="image" href="./src/img/init-bg5.webp" type="image/webp">
+        <link rel="preload" fetchpriority="high" as="image" href="./src/img/init-bg2.webp" type="image/webp">
+
+        <!-- Styles -->
         <link rel="shortcut icon" href="./src/img/antico.png">
-        <link rel="stylesheet" type="text/css" href="./plugins/fontawesome-free/css/all.css">
         <link rel="stylesheet" type="text/css" href="./src/css/style.css">
     </head>
 
     <body class="body">
+        <!-- Nav bar place -->
         <aside class="aside cc-col">
+            <!-- Nav Bar -->
             <nav class="nav">
+                <!-- Top logo -->
                 <figure class="logo cc-col h-divider m-0">
-                    <a class="href">
-                        <img src="./src/img/anth.png" alt="logo" title="Die Antwoord">
-                    </a>        
+                    <span class="href" title="Die Antwoord" aria-label="Menú principal">
+                        <img src="./src/img/anth.png" alt="logo" width="35" height="35">
+                    </span>
                 </figure>
 
+                <!-- Nav Options -->
                 <menu class="menu ce-col">
                     <li>
-                        <a class="href">
-                            <i class="fas fa-home visited" title="inicio"></i>
+                        <span class="href" title="inicio" aria-label="Menú principal">
+                            <i class="fas fa-home visited"></i>
+                        </span>
+                    </li>
+
+                    <li>
+                        <a href="info/html5" title="Qué es HTML5?" aria-label="información sobre HTML5">
+                            <i class="fab fa-html5"></i>
                         </a>
                     </li>
 
                     <li>
-                        <a href="info/html5">
-                            <i class="fab fa-html5" title="Qué es HTML5?"></i>
+                        <a href="info/css" title="Qué es CSS?" aria-label="información sobre CSS">
+                            <i class="fab fa-css3-alt"></i>
                         </a>
                     </li>
 
                     <li>
-                        <a href="info/css">
-                            <i class="fab fa-css3-alt" title="Qué es CSS?"></i>
+                        <a href="info/js" title="Qué es JavaScript?" aria-label="información sobre JavaScript">
+                            <i class="fab fa-js-square"></i>
                         </a>
                     </li>
 
                     <li>
-                        <a href="info/js">
-                            <i class="fab fa-js-square" title="Qué es JavaScript?"></i>
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="info/webDev">
-                            <i class="fas fa-code" title="Qué es el Desarrollo Web?"></i>
+                        <a href="info/webDev" title="Qué es el Desarrollo Web?" aria-label="información sobre el Desarrollo Web">
+                            <i class="fas fa-code"></i>
                         </a>
                     </li>
                 </menu>
             </nav>
         </aside>
 
+        <!-- Header -->
         <header class="header">
+            <!-- Main Title -->
             <span class="title v-divider">
                 <h1>
                     Antwoord Learning <i class="fas fa-book ml-2"></i>
                 </h1>
             </span>
             
+            <!-- Back To Portfolio -->
             <span class="toPort cc-col">
-                <a href="https://ricardocristopher.github.io/">
+                <a href="https://ricardocristopher.github.io/" title="Volver al Portafolio" aria-label="Volver al Portafolio">
                     <i class="fas fa-th imgHover"></i>
                 </a>
             </span>
         </header>
 
+        <!-- Main section -->
         <main class="main page-inicio">
+            <!-- Main Nav Bar -->
             <section id="menu" class="menu-wrapper">
+                <!-- main nav options -->
                 <menu class="navMenu ce-row btn-group">
-                    <li class="btn m-dnamic">
+                    <li class="btn m-dnamic" title="Inicio">
                         <a href="#intro">
                             <span class="btn-txt">Inicio</span>
                             <i class="fas fa-book btn-ico"></i>
                         </a>
                     </li>
 
-                    <li class="btn m-dnamic">
+                    <li class="btn m-dnamic" title="Bienvenida">
                         <a href="#tri">
                             <span class="btn-txt">Introdución</span>
                             <i class="fas fa-code btn-ico"></i>
                         </a>
                     </li>
 
-                    <li class="btn m-dnamic">
+                    <li class="btn m-dnamic" title="Conceptos">
+                        <a href="#vs">
+                            <span class="btn-txt">Conceptos</span>
+                            <i class="fas fa-book btn-ico"></i>
+                        </a>
+                    </li>
+
+                    <li class="btn m-dnamic" title="Más">
                         <a href="#outro">
                             <span class="btn-txt">Más</span>
                             <i class="fas fa-plus btn-ico"></i>
                         </a>
                     </li>
 
-                    <li class="btn m-dnamic btn-dark w-25">
+                    <li class="btn m-dnamic btn-dark w-25" title="HTML5">
                         <a href="info/html5">
                             <span class="btn-txt">HTML5</span>
                             <i class="fab fa-html5 btn-ico"></i>
@@ -102,15 +129,16 @@
                 </menu>
             </section>
 
+            <!-- Begin of main content sections -->
             <section id="intro" class="parallax bgllax bg-1 cc-col">
-                <h2>¿Crees saber lo que es una página web?</h2>
+                <h2>¿Qué tanto conoces sobre las páginas web?</h2>
             </section>
 
             <section class="paraless">
                 <article class="data-wrapper">
                     <div class="data-content cc-col">
                         <p class="data-text">
-                            Todas las personas que tiene el privilegio de tener acceso a internet conocen de manera empirica lo que es una página web, saben por experiencia lo que contienen y cómo deben lucir. Generan un grupo de expectativas y buscan patrones de funcionamiento que le ayuden a navegar en las mismas.
+                            Todas las personas que tienen el privilegio de tener acceso a internet conocen de manera empirica lo que es una página web, saben por experiencia lo que contienen y cómo deben lucir. Generan un grupo de expectativas y buscan patrones de funcionamiento que le ayuden a navegar en las mismas.
 
                             Es decir, dan por hecho el funcionamiento y la estructura de la que una página web se debe componer, y sin embargo desconocen cómo son creadas las mismas.
 
@@ -138,10 +166,62 @@
                 <article class="data-wrapper">
                     <div class="data-content cc-col">
                         <p class="data-text">
-                            Y Gracias por tomarte el tiempo de participar en esta guía básica que tiene como principal proposito captar tu curiosidad, y sembrar la semilla del conocimiento en torno al desarrollo web.
+                            Y Gracias por tomarte el tiempo de participar en esta guía básica que tiene como principal propósito captar tu curiosidad, y sembrar la semilla del conocimiento en torno al desarrollo web.
 
-                            A lo largo de esta web encontraras ejemplos teóricos y demostrativos para brindate una experiencia enriquecedora y entretenida, que cautive tus ganas del saber y te brinden las bases necesarias para comenzar a incursionar en la creación de estos espacios digitales que llamamos páginas web.
+                            A lo largo de esta web encontraras ejemplos teóricos y demostrativos para brindarte una experiencia enriquecedora y entretenida, que cautive tus ganas del saber y te brinden las bases necesarias para comenzar a incursionar en la creación de estos espacios digitales que llamamos páginas web.
+
+                            Lo que viste al ingresar a los componentes que conforman la página web (o al visualizar la imagen) fue, aunque pequeño, un fundamental fragmento sobre el cuál se edifica el internet.
+
+                            Lo que visualizaste fue el código fuente de una página, compuesto por HTML, que es un lenguaje fundamental pues son las “palabras” que entiende tu navegador, y que en conjunto forman las instrucciones necesarias para que dicho programa pueda “dibujar” tu página web.
                         </p>
+                    </div>
+                </article>
+            </section>
+
+            <section id="vs" class="parallax bgllax bg-5 cc-col">
+                <h2>Primeros Conceptos</h2>
+            </section>
+
+            <section class="paraless">
+                <article class="data-wrapper">
+                    <div class="data-content cc-col">
+                        <div class="data-text">
+                            A continuación, estableceremos conceptos que serán necesarios para el resto de nuestra aventura como programadores. Comenzamos con la división de ámbito de las páginas web, en dos grandes secciones denominadas <i>Front End</i> y <i>Back End</i>
+
+                            En Palabras sencillas, <b>Front End</b> es todo aquello con lo que el usuario puede interactuar, es el arte puesto frente a sus ojos, está presente en el dinamismo de la página, y en la correcta visualización de la misma.
+                            Esta rama está comprendida principalmente por 3 tecnologías:
+
+                            &emsp; - HTML, ó Lenguaje de Marcado de Hipertexto, que podemos comparar con el esqueleto, pues es el único lenguaje que el navegador entiende para estructurar una página web.
+
+                            &emsp; - CSS, u Hojas de Estilo en Cascada, que representa la capacidad estética de tu página. Los colores, las animaciones, las formas y la estructura.
+
+                            &emsp; - JavaScript, que no es más que el responsable de poder modificar y reestructurar tu página web, aportarle utilidad, herramientas y dinamismo, y esta es solo una definición muy resumida.
+
+                            <hr class="h-divider w-75">
+                            Por otro lado, el ámbito <b>Back End</b> se encuentra determinado por 3 tecnologías a considerar:
+
+                            &emsp; - Un Lenguaje de Programación, los cuales son variados, cada uno con sus propias reglas y sintaxis, y que representan al cerebro de la página web.
+
+                            &emsp; - Bases de Datos, que son las responsables de almacenar información y por definición representan la memoria del portal.
+
+                            &emsp; - Los Servidores que, en conjunto con las redes y la infraestructura global, representan la razón por la cual el mundo se encuentra interconectado actualmente.
+                        </div>
+
+                        <pre>
+                            <code class="language-html" data-info="sc1">
+                                
+                            </code>
+
+                            <textarea>
+                                // html
+
+                                <button> Click! </button>
+                            </textarea>
+                        </pre>
+
+                        <div class="data-text">
+                            En la presente guía estaremos enfocándonos en las tecnologías que comprenden el ámbito del Front End, y todos los conceptos, palabras y definiciones serán no solamente explorados a profundidad en cada una de las secciones de este manual, pero, además serán colocados en un glosario donde podrán ser revisados de manera individual.
+                        </div>
                     </div>
                 </article>
             </section>
@@ -187,20 +267,24 @@
                     </div>
                 </article>
             </section>
+            <!-- End of main content sections -->
         </main>
 
+        <!-- Footer -->
         <footer class="footer cc-row">
             <span class="foot-data">
                 Copyright © Antwoord Creative Lab. 
                 <wbr>
-                 Powered by <a href="https://www.coderhouse.com/">CODERHOUSE</a>
+                 Powered by <a href="https://www.coderhouse.com/" target="_blank">CODERHOUSE</a>
             </span>
         </footer>
-            
+        
+        <!-- Core JavaScript -->
         <script src="./plugins/jquery/jquery.min.js"></script>
         <script src="./src/js/main.js"></script>
         <script src="./plugins/prism/prism.js"></script>
 
+        <!-- Handler invoker -->
         <script type="text/javascript">
             document.addEventListener("DOMContentLoaded", ()=>{
                 pageListenersIndex();

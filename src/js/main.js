@@ -21,10 +21,11 @@
                 let modal = document.createElement('aside');
                 modal.classList.add('modal', 'fadeIn');
                 let close = document.createElement('i');
+                close.setAttribute('title','Cerrar');
                 close.classList.add('fas','fa-times-circle','close');
                 modal.append(close);
-                
                 body.append(modal);
+                
                 modal.querySelector('.close').addEventListener('click', ()=>{
                     modalManager(false);
                 });
@@ -54,6 +55,7 @@
                             let img = document.createElement('img');
                             img.setAttribute('src',src);
                             img.setAttribute('alt',alt);
+                            img.setAttribute('title',alt);
                             img.classList.add('dinamus-img');
                             let place = modalManager();
 
@@ -98,11 +100,54 @@
             let list = main.querySelectorAll('.data-text');
 
             for (let i = 0; i < list.length; i++) {
-                let cleaned = list[i].textContent;
+                let cleaned = list[i].innerHTML;
 
-                list[i].textContent = cleaned.trim()
+                list[i].innerHTML = cleaned.trim()
             }
         }
+
+//----------------------------------------------------------------------
+// Listeners
+//----------------------------------------------------------------------
+    
+    // --------------------------------------
+    // | Index |
+    // --------------------------------------
+
+        function pageListenersIndex(){
+            modalElementCreator();
+            pCleaner();
+        };
+
+    // --------------------------------------
+    // | JavaScript |
+    // --------------------------------------
+
+        function pageListenersJS(){
+
+            const alert   = document.getElementById('alert');
+            const confirm = document.getElementById('confirm');
+            const reverse = document.getElementById('reverse');
+            const evenGrp = document.querySelector('.play');
+
+            alert.addEventListener('click',()=>{
+                window.alert('Hola Mundo');
+            });
+
+            confirm.addEventListener('click',()=>{
+                window.confirm('de veritas de veritas?');
+            });
+
+            reverse.addEventListener('click',()=>{
+                evenGrp.classList.contains('reverse') ? evenGrp.classList.remove('reverse') : evenGrp.classList.add('reverse');
+            });
+
+            pCleaner();
+        };
+
+//----------------------------------------------------------------------
+// Global rules
+//----------------------------------------------------------------------
 
     // --------------------------------------
     //  Nav Bar
@@ -115,63 +160,33 @@
         main.addEventListener('click',()=>{
             body.classList.remove('toggled');
         });
-
-//----------------------------------------------------------------------
-// Listeners
-//----------------------------------------------------------------------
     
-    function pageListenersIndex(){
-        modalElementCreator();
+    // --------------------------------------
+    //  Code Format
+    // --------------------------------------
 
-        pCleaner();
-    };
+        let codeList = document.querySelectorAll('code');
 
-    function pageListenersJS(){
+        if (codeList) {
+            for (let i = 0; i < codeList.length; i++) {
+                if((codeList[i].classList.contains('language-html')) || (codeList[i].classList.contains('lang-html'))){
+                    let codeX = codeList[i].nextElementSibling;
 
-        const alert   = document.getElementById('alert');
-        const confirm = document.getElementById('confirm');
-        const reverse = document.getElementById('reverse');
-        const evenGrp = document.querySelector('.play');
+                    if(codeX){
+                        let container  = document.createElement('script');
+                        container.type = 'text/plain';
+                        container.style.display = 'block';
 
-        alert.addEventListener('click',()=>{
-            window.alert('Hola Mundo');
-        });
+                        let code  = codeX.value;
 
-        confirm.addEventListener('click',()=>{
-            window.confirm('de veritas de veritas?');
-        });
+                        container.textContent = code;
 
-        reverse.addEventListener('click',()=>{
-            evenGrp.classList.contains('reverse') ? evenGrp.classList.remove('reverse') : evenGrp.classList.add('reverse');
-        });
+                        codeList[i].append(container);
 
-        pCleaner();
-    };
+                        codeX.remove();
+                    }
+                }
 
-//----------------------------------------------------------------------
-// Global rules
-//----------------------------------------------------------------------
-
-    let codeList = document.querySelectorAll('code');
-
-    for (let i = 0; i < codeList.length; i++) {
-        if((codeList[i].classList.contains('language-html')) || (codeList[i].classList.contains('lang-html'))){
-            let codeX = codeList[i].nextElementSibling;
-
-            if(codeX){
-                let container  = document.createElement('script');
-                container.type = 'text/plain';
-                container.style.display = 'block';
-
-                let code  = codeX.value;
-
-                container.textContent = code;
-
-                codeList[i].append(container);
-
-                codeX.remove();
+                codeCleaner(codeList[i]);
             }
         }
-
-        codeCleaner(codeList[i]);
-    }
