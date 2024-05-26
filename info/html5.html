@@ -1,25 +1,41 @@
 <!DOCTYPE html>
 <html lang="es">
     <head>
+        <!-- Meta SEO -->
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta name="description" content="">
+        <meta name="description" content="Guía básica sobre HTML5. Sintaxis, semantica, reglas, y mucho más ">
+        <meta name="keywords" content="desarrollo, web, guía, instructivo, html5, css, javascript, frontEnd">
         <meta name="author" content="Antwoord Creative Lab">
         <title>Antwoord Learning | HTML5</title>
+
+        <!-- Preloads -->
+        <link rel="preload" fetchpriority="high" as="font" href="../plugins/fontawesome-free/webfonts/fa-brands-400.woff2" type="font/woff2" crossorigin>
+        <link rel="preload" fetchpriority="high" as="font" href="../plugins/fontawesome-free/webfonts/fa-solid-900.woff2" type="font/woff2" crossorigin>
+        <link rel="preload" fetchpriority="high" as="image" href="../src/img/html/html1.webp" type="image/webp">
+        <link rel="preload" fetchpriority="high" as="image" href="../src/img/html/html2.webp" type="image/webp">
+        <link rel="preload" fetchpriority="high" as="image" href="../src/img/bg/bg5.webp"     type="image/webp">
+        <link rel="preload" fetchpriority="high" as="image" href="../src/img/bg/bg7.webp"     type="image/webp">
+
+        <!-- Styles -->
         <link rel="shortcut icon" href="../src/img/antico.png">
         <link rel="stylesheet" type="text/css" href="../src/css/style.css">
     </head>
 
     <body class="body">
+        <!-- Nav bar place -->
         <aside class="aside cc-col">
+            <!-- Aside Nav Bar -->
             <nav class="nav">
+                <!-- Top logo -->
                 <figure class="logo cc-col h-divider m-0">
                     <a href="../" title="Die Antwoord" aria-label="Volver al Menú principal">
                         <img src="../src/img/anth.png" alt="logo" width="35" height="35">
                     </a>    
                 </figure>
 
+                <!-- Nav Options -->
                 <menu class="menu ce-col">
                     <li>
                         <a href="../" title="inicio" aria-label="Volver al Menú principal">
@@ -54,13 +70,16 @@
             </nav>
         </aside>
 
+        <!-- Header -->
         <header class="header">
+            <!-- Main Title -->
             <span class="title v-divider">
                 <h1>
                     HTML5 <i class="fab fa-html5 ml-2"></i>
                 </h1>
             </span>
             
+            <!-- Back To Portfolio -->
             <span class="toPort cc-col">
                 <a href="https://ricardocristopher.github.io/" title="Volver al Portafolio" aria-label="Volver al Portafolio">
                     <i class="fas fa-th imgHover"></i>
@@ -68,10 +87,12 @@
             </span>
         </header>
 
-        <main class="main cs-col">
-            <section id="menu" class="menu-wrapper z-prior">
-                <menu class="navMenu ce-row btn-group">
-                    <li class="btn m-dnamic btn-dark w-25">
+        <!-- Main Section -->
+        <main class="main">
+            <!-- Main Nav Bar -->
+            <section id="menu" class="menu-wrapper">
+                <menu class="navMenu ce-row btn-group flat">
+                    <li class="btn m-dnamic btn-dark w-50">
                         <a href="../">
                             <span class="btn-txt">Inicio</span>
                             <i class="fas fa-home btn-ico"></i>
@@ -79,8 +100,15 @@
                     </li>
 
                     <li class="btn m-dnamic">
+                        <a href="#intro">
+                            <span class="btn-txt">Conceptos</span>
+                            <i class="fas fa-book btn-ico"></i>
+                        </a>
+                    </li>
+
+                    <li class="btn m-dnamic">
                         <a href="#html">
-                            <span class="btn-txt">Html</span>
+                            <span class="btn-txt">HTML5</span>
                             <i class="fab fa-html5 btn-ico"></i>
                         </a>
                     </li>
@@ -88,7 +116,7 @@
                     <li class="btn m-dnamic">
                         <a href="#ejm">
                             <span class="btn-txt">Ejemplos</span>
-                            <i class="fas fa-book btn-ico"></i>
+                            <i class="fas fa-pen btn-ico"></i>
                         </a>
                     </li>
 
@@ -99,7 +127,7 @@
                         </a>
                     </li>
 
-                    <li class="btn m-dnamic btn-dark w-25">
+                    <li class="btn m-dnamic btn-dark w-50">
                         <a href="./css">
                             <span class="btn-txt">CSS</span>
                             <i class="fab fa-css3 btn-ico"></i>
@@ -108,61 +136,138 @@
                 </menu>
             </section>
 
-            <section id="html">
-                <hr class="h-divider w-100 my-4">
+            <!-- Begin of main content sections -->
+            <section id="intro" class="parallax bgllax html-1 cc-col">
+                <h2>Primeros Conceptos</h2>
+            </section>
 
-                <h2>Qué es HTML?</h2>
-
+            <section class="paraless">
                 <article class="data-wrapper">
                     <div class="data-content cc-col">
                         <p class="data-text">
-                            El Lenguaje de Marcado de Hipertexto (HTML) es el código que se utiliza para estructurar y desplegar una página web y sus contenidos. Por ejemplo, sus contenidos podrían ser párrafos, una lista con viñetas, o imágenes y tablas de datos.
+                            Todas las personas que tienen el privilegio de tener acceso a internet conocen de manera empirica lo que es una página web, y saben por experiencia lo que contienen y cómo deben lucir. Generan un grupo de expectativas y buscan patrones de funcionamiento que le ayuden a navegar en las mismas.
+
+                            Es decir, dan por hecho el funcionamiento y la estructura de la que una página web se debe componer, y sin embargo desconocen cómo son creadas las mismas.
+
+                            Te instamos a que mires cómo se ve realmente los componentes de una página web, Y para ello tienes 3 opciones:
+
+                            &emsp; 1. Si estás en una Computadora puedes hacer click derecho en cualquier parte de esta página e ingresar a la opción <i>"ver código fuente de la página"</i>
+
+                            &emsp; 2. De nuevo, si estás en una Computadora puedes usar la combinación de teclas Ctrl + U
+
+                            &emsp; 3. Si no puedes realizar ninguna de las dos opciones anteriores seguramente estás en un dispositivo movil, por lo cuál te dejamos a continuación una imagen que revela la estructura interna real de una página web.
                         </p>
+
+                        <button type="button" class="btn createImg mt-3" data-src="./src/img/codeEx.webp" data-alt="Ejemplo de código HTML" data-class="rounded">
+                            Ver Ejemplo
+                        </button>
                     </div>
                 </article>
             </section>
 
-            <section id="ejm">
-                <article class="data-wrapper">
-                    <hr class="h-divider w-100 my-4">
+            <!-- info zone -->
+            <section id="html" class="parallax bgllax html-2 cc-col">
+                <h2>Bienvenido a esta iniciativa educativa</h2>
+            </section>
 
-                    <h2>Ejemplos:</h2>
+            <section class="paraless">
+                <article class="data-wrapper">
+                    <div class="data-content cc-col">
+                        <p class="data-text">
+                            Gracias por tomarte el tiempo de participar en esta guía básica que tiene como principal propósito captar tu curiosidad, y sembrar la semilla del conocimiento en torno al desarrollo web.
+
+                            Lo que acabamos de ver al realizar los pasos anteriores fue echar un vistazo "el código fuente" de una página web, el cual cumple una función primordial pues es el único lenguaje que entiende tu navegador para, una vez interpretado el código, proceder a "pintar" el sitio al que el usuario ingresó.
+
+                            A lo largo de esta web encontraras ejemplos teóricos y demostrativos para brindarte una experiencia enriquecedora y entretenida, que cautive tus ganas del saber y te brinden las bases necesarias para comenzar a incursionar en la creación de estos espacios digitales que llamamos páginas web.
+                        </p>
+
+                        <hr class="h-divider w-75 my-4">
+                        <pre class="my-2">
+                            <code class="language-html"></code>
+
+                            <textarea>
+                                <!-- HTML -->
+
+                                <p>Hola y Bienvenidos :D</p>
+                            </textarea>
+                        </pre>
+                    </div>
+                </article>
+            </section>
+
+            <!-- ejem zone -->
+            <section id="ejm" class="parallax bgllax bg-7 cc-col">
+                <h2>Primeros Conceptos</h2>
+            </section>
+
+            <section class="paraless">
+                <article class="data-wrapper">
+                    <div class="data-content cc-col">
+                        <div class="data-text">
+                            A continuación, estableceremos conceptos que serán necesarios para el resto de nuestra aventura como programadores. Comenzamos con la división de ámbito de las páginas web, en dos grandes secciones denominadas <i>Front End</i> y <i>Back End</i>
+
+                            En Palabras sencillas, <b>Front End</b> es todo aquello con lo que el usuario puede interactuar, es el arte puesto frente a sus ojos, está presente en el dinamismo de la página, y en la correcta visualización de la misma.
+                            Esta rama está comprendida principalmente por 3 tecnologías:
+
+                            &emsp; - <b>HTML</b>, ó Lenguaje de Marcado de Hipertexto, que podemos comparar con el esqueleto, pues es el único lenguaje que el navegador entiende para estructurar una página web.
+
+                            &emsp; - <b>CSS</b>, u Hojas de Estilo en Cascada, que representa la capacidad estética de tu página. Los colores, las animaciones, las formas y la estructura.
+
+                            &emsp; - <b>JavaScript</b>, que no es más que el responsable de poder modificar y reestructurar tu página web, aportarle utilidad, herramientas y dinamismo. Advertencia! esta es una definición muy resumida.
+
+                            <hr class="h-divider w-75">
+                            Por otro lado, el ámbito <b>Back End</b> se encuentra determinado por 3 tecnologías a considerar:
+
+                            &emsp; - <b>Un Lenguaje de Programación</b>, los cuales son variados, cada uno con sus propias reglas y sintaxis, y que representan al cerebro de la página web.
+
+                            &emsp; - <b>Bases de Datos</b>, que son las responsables de almacenar información y por definición representan la memoria del portal.
+
+                            &emsp; - Los <b>Servidores</b> que, en conjunto con las <b>Redes</b> y la infraestructura global, representan la razón por la cual el mundo se encuentra interconectado actualmente.
+                        </div>
+
+                        <hr class="h-divider w-75 my-4">
+
+                        <div class="data-text">
+                            En la presente guía estaremos enfocándonos en las tecnologías que comprenden el ámbito del <b>Front End</b>, y todos los conceptos, palabras y definiciones serán exploradas a profundidad en cada una de las secciones de este manual.
+                        </div>
+                    </div>
+                </article>
+            </section>
+
+            <!-- outro zone -->
+            <section id="outro" class="parallax bgllax bg-5 cc-col">
+                <h2>La base del Desarrollo Web </h2>
+            </section>
+
+            <section class="paraless">
+                <article class="data-wrapper">
+                    <div class="data-content cc-col">
+                        <p class="data-text">
+                            Antes de comenzar a crear nuestra primera página web, es importante conocer cuáles son todas las tecnologías que confluyen en esta actividad y de las cuales haremos uso sin excepción.
+
+                            Puedes ingresar en el siguiente enlace o navegar con libertad en esta guía, para descubrir todos los puntos de partida que necesitas para comenzar a construir el conocimiento necesario en cada una de las tecnologías que componen el ámbito del desarrollo Front End.
+
+                            Recuerda que solo vamos a repasar los conceptos iniciales para crear un boceto conceptual que te permita crear tu propio criterio como programador.
+
+                            Por último, y por más gracioso que parezca, la única forma de aprender a programar es, irónicamente, programando. No temas jamás a fallar, pues recuerda que estamos en el mundo digital. Simplemente creamos una copia de seguridad, experimentamos, y si sale mal, reiniciamos y lo volvemos a intentar.
+                        </p>
+                    </div>
+
+                    <hr class="h-divider w-75 my-4">
+
+                    <h3>Comencemos por la base, Aprendamos HTML5:</h3>
 
                     <div class="data-content e-dinamic">
-                        <button title="<button></button>">Botón</button>
-
-                        <table border="1" title="<table></table>">
-                            <tr>
-                                <td>
-                                    tabla
-                                </td>
-                            </tr>
-                        </table>
-
-                        <img src="../src/img/antico.png" alt="img example" title="<img src='foo'>" class="imgExp">
-
-                        <p class="unformat" title="<p></p>">Texto</p>
-
-                        <input type="text" name="foo" title="<input>" maxlength="10" placeholder="Ingreso de datos" onclick="this.value = ''">
+                        <figure class="data-img">
+                            <a href="info/html5"><i class="fab fa-html5" title="Guía de HTML5"></i></a>
+                        </figure>
                     </div>
                 </article>
             </section>
-
-            <section id="outro">
-                <article class="data-wrapper">
-                    <hr class="h-divider w-100 my-4">
-
-                    <h2>Conclusión:</h2>
-
-                    <div class="data-content cc-col">
-                        <p class="data-text">
-                            Todos estos elementos se crean a partir de etiquetas, y representan el esqueleto de toda página web, pues es el único lenguaje que entienden los navegadores.
-                        </p>
-                    </div>
-                </article>
-            </section>
+            <!-- End of main content sections -->
         </main>
 
+        <!-- Footer -->
         <footer class="footer cc-row">
             <span class="foot-data">
                 Copyright © Antwoord Creative Lab. 
@@ -170,13 +275,17 @@
                  Powered by <a href="https://www.coderhouse.com/" target="_blank">CODERHOUSE</a>
             </span>
         </footer>
-        
+
+        <!-- Core Javascript -->
         <script src="../plugins/jquery/jquery.min.js"></script>
         <script src="../src/js/main.js"></script>
         <script src="../plugins/prism/prism.js"></script>   
 
+        <!-- Handler invoker -->
         <script type="text/javascript">
-            
+            document.addEventListener("DOMContentLoaded", ()=>{
+                pageListenersHTML5();
+            });
         </script>
     </body>
 </html>
