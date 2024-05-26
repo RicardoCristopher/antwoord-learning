@@ -2770,6 +2770,10 @@ margin-right:.125rem
     border-right: 0;
 }
 
+.btn-group.flat .btn, .btn-group-vertical.flat .btn{
+    border-radius: 0 !important;
+}
+
 .dropdown-toggle-split{
     padding-right:.5625rem;
     padding-left:.5625rem

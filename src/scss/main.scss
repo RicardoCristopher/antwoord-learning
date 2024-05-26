@@ -9,7 +9,7 @@
         display: grid;
         overflow: hidden;
         grid-template-columns: 60px 1fr; 
-        grid-template-rows: 70px 1fr 30px; 
+        grid-template-rows: 60px 1fr 30px; 
         gap: 0px 0px; 
         grid-template-areas: 
             "aside header"
@@ -30,28 +30,9 @@
             height: 100%;
             position: relative;
             z-index: 1;
-            /*overflow: hidden;*/
             background-color: #fbb03b;
-            background-image: linear-gradient(180deg, #d99936 70%, #291717 100%);
-            background-image: -webkit-gradient(linear, left top, left bottom, color-stop(70%, #d99936), to(#291717));
-        }
-
-        .aside .nav{
-            height: 100%;
-            text-align: center;
-            position: absolute;
-            width: 60px;
-            left: 0;
-
-            display: grid;
-            grid-template-columns: 1fr; 
-            grid-template-rows: 70px 1fr; 
-            gap: 0px 0px; 
-            grid-template-areas: 
-                "logo"
-                "menu";
-
-            transition: left .2s;
+            background-image: linear-gradient(180deg, #fbb03b 10%, #291717 100%);
+            background-image: -webkit-gradient(linear, left top, left bottom, color-stop(10%, #fbb03b), to(#291717));
         }
 
         .aside::after{
@@ -73,104 +54,130 @@
             font-variant: normal;
             text-rendering: auto;
             line-height: 1;
-            color: var(--light);
+            color: #2b2b2b;
+            box-shadow: inset 1px -1px 9px 0px #ffffff5c;
         }
 
-        @media (max-width: 650px) or (orientation: portrait) {
-            .body{
-                grid-template-columns: 0 100vw;
-
-                transition: grid-template-columns .2s;
-            }
+        /* ----------------------------
+        <<<<<<<<<<<< navBar >>>>>>>>>>>
+        ---------------------------- */
 
             .aside .nav{
-                left: -60px;
+                height: 100%;
+                text-align: center;
+                position: absolute;
+                width: 60px;
+                left: 0;
+
+                display: grid;
+                grid-template-columns: 1fr; 
+                grid-template-rows: 60px 1fr; 
+                gap: 0px 0px; 
+                grid-template-areas: 
+                    "logo"
+                    "menu";
 
                 transition: left .2s;
             }
 
-            .aside::after{
+            .aside .nav .logo{
+                grid-area: logo;
+
+                margin-block-start: unset;
+                margin-block-end: unset;
+                margin-inline-start: unset;
+                margin-inline-end: unset;
+                unicode-bidi: unset;
+                width: 100%;
+                padding: 1%;
+            }
+
+            .aside .nav .logo img{
+                width: 100%;
+            }
+
+            .aside .nav .menu{
+                grid-area: menu;
+
+                list-style: none;
+                margin-block-start: unset;
+                margin-block-end: unset;
+                margin-inline-start: unset;
+                margin-inline-end: unset;
+                padding-inline-start: unset;
+                unicode-bidi: unset;
+                color: #fff;
+                height: 100%;
                 display: flex;
-                justify-content: center;
+                flex-direction: column;
                 align-items: center;
             }
 
-            .toggled .aside::after{
-                content: "\f053";
+            .aside .nav a, .aside .nav a:hover,.aside .nav a:has(.visited),
+            .aside .nav span, .aside .nav span:hover,.aside .nav span:has(.visited){
+                text-decoration: none;
+                color: inherit;
+                text-align: center;
             }
 
-            .body.toggled {
-                grid-template-columns: 60px 100vw;
-
-                transition: grid-template-columns .2s;
+            .aside .nav .menu li{
             }
 
-            .toggled .aside .nav{
-                left: 0;
-
-                transition: left .5s;
+            .aside .nav .menu li i{
+                font-size: 1.6rem;
+                transition: all .1s;
             }
-        }
 
-        .aside .nav .logo{
-            grid-area: logo;
+            .aside .nav .menu li:hover i:not(.visited){
+                text-shadow:  5px 5px 5px #0003;
+                transform: scale(1.1);
+                transition: all .1s;
+            }
 
-            margin-block-start: unset;
-            margin-block-end: unset;
-            margin-inline-start: unset;
-            margin-inline-end: unset;
-            unicode-bidi: unset;
-            width: 100%;
-            padding: 1%;
-        }
+            .aside .nav .menu li i.visited{
+                text-shadow:  5px 5px 5px #0003;
+                transform: scale(1.1);
+                transition: all .1s;
+            }
 
-        .aside .nav .logo img{
-            width: 100%;
-        }
+        /* ----------------------------
+        <<<<< Toggling bar rules >>>>>>
+        ---------------------------- */
+            @media (max-width: 650px) or (orientation: portrait) {
+                .body{
+                    grid-template-columns: 0 100vw;
 
-        .aside .nav .menu{
-            grid-area: menu;
+                    transition: grid-template-columns .2s;
+                }
 
-            list-style: none;
-            margin-block-start: unset;
-            margin-block-end: unset;
-            margin-inline-start: unset;
-            margin-inline-end: unset;
-            padding-inline-start: unset;
-            unicode-bidi: unset;
-            color: #fff;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
+                .aside .nav{
+                    left: -60px;
 
-        .aside .nav a, .aside .nav a:hover,.aside .nav a:has(.visited),
-        .aside .nav span, .aside .nav span:hover,.aside .nav span:has(.visited){
-            text-decoration: none;
-            color: inherit;
-            text-align: center;
-        }
+                    transition: left .2s;
+                }
 
-        .aside .nav .menu li{
-        }
+                .aside::after{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
 
-        .aside .nav .menu li i{
-            font-size: 1.6rem;
-            transition: all .1s;
-        }
+                .toggled .aside::after{
+                    content: "\f053";
+                }
 
-        .aside .nav .menu li:hover i:not(.visited){
-            text-shadow:  5px 5px 5px #0003;
-            transform: scale(1.1);
-            transition: all .1s;
-        }
+                .body.toggled {
+                    grid-template-columns: 60px 100vw;
 
-        .aside .nav .menu li i.visited{
-            text-shadow:  5px 5px 5px #0003;
-            transform: scale(1.1);
-            transition: all .1s;
-        }
+                    transition: grid-template-columns .2s;
+                }
+
+                .toggled .aside .nav{
+                    left: 0;
+
+                    transition: left .5s;
+                }
+            }
 
     /* ----------------------------
     <<<<<<<<<<<< Header >>>>>>>>>>>
@@ -181,7 +188,6 @@
 
             width: 100%;
             background: #fff;
-            box-shadow: 0px 5px 20px 0px #0003;
             padding: 0 0 0 1%;
             z-index: 3;
 
@@ -220,7 +226,6 @@
             height: 100%;
             overflow-y: auto;
             overflow-x: hidden;
-            padding: 0 2% 2%;
             perspective: 2px;
             text-align: center;
         }
@@ -240,7 +245,6 @@
                 position: sticky;
                 margin: unset;
                 top: 0;
-                margin-top: 2%;
                 z-index: 11;
             }
 
@@ -301,8 +305,6 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                background-color: #fff;
-                border-radius: 5px;
                 padding: 1%;
             }
 
@@ -322,6 +324,7 @@
                 width: 100%;
                 text-align: justify;
                 white-space: pre-line;
+                color: #2b2b2b;
             }
 
             .main .data-wrapper .data-content .data-img{
@@ -383,6 +386,70 @@
             }
 
         /* ----------------------------
+        <<<<<<<<<<< Parallax >>>>>>>>>>
+        ---------------------------- */
+
+            .paraless{
+                background-color: #ffe1b2;
+                z-index: 10;
+                padding: 8%;
+            }
+
+            .parallax{
+                height: 75vmin;
+                padding: 4%;
+            }
+
+            .parallax:not(.bgllax){
+                z-index: 1;
+            }
+
+            .parallax > * {
+                font-size: 7vmin;
+                color: #2b2b2b;
+                font-family: Poppins-Bold;
+            }
+
+            .parallax::before{
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: -6%;
+                transform: translateZ(-3px) scale(2.4);
+                background-size: 100%;
+                z-index: -1;
+                opacity: .3;
+            }
+
+            .bgllax::before{
+                background-size: 100% auto;
+                background-repeat: no-repeat;
+                width: 99vw;
+                height: 100%;
+                box-shadow: inset 0px 0px 8px 8px var(--light);
+            }
+
+            /* ----------------------------
+            <<<<< Parallax Bg control >>>>>
+            ---------------------------- */
+
+                @for $i from 1 through 10{
+                    /* <<<<< Init >>>>> */
+                    .init-#{$i}.bgllax::before{
+                        background-image: url(../img/init/init#{$i}.svg);
+                    }
+
+                    /* <<<<< bg >>>>> */
+                    .bg-#{$i}.bgllax::before{
+                        background-image: url(../img/bg/bg#{$i}.webp);
+                    }
+                }
+
+        /* ----------------------------
         <<<<<<<<<<<< Trynna >>>>>>>>>>>
         ---------------------------- */
 
@@ -424,76 +491,6 @@
             .reverse{
                 flex-direction: row-reverse !important;
             }
-
-        /* ----------------------------
-        <<<<<<<<<<< Parallax >>>>>>>>>>
-        ---------------------------- */
-
-            .paraless{
-                background-color: #fad577;
-                z-index: 10;
-                padding: 4%;
-                border-radius: 5px;
-            }
-
-            .parallax{
-                height: 75vmin;
-            }
-
-            .parallax:not(.bgllax){
-                z-index: 1;
-            }
-
-            .parallax > * {
-                font-size: 7vmin;
-                color: #2b2b2b;
-                font-family: Poppins-Bold;
-            }
-
-            .parallax::before{
-                content: '';
-                position: absolute;
-                width: 100%;
-                height: 100%;
-                top: 0;
-                right: 0;
-                bottom: 0;
-                left: -6%;
-                transform: translateZ(-3px) scale(2.4);
-                background-size: 100%;
-                z-index: -1;
-                opacity: .3;
-            }
-
-            .bgllax::before{
-                background-size: 100% auto;
-                background-repeat: no-repeat;
-                width: 99vw;
-                height: 100%;
-                box-shadow: inset 0px 0px 8px 8px var(--light);
-            }
-
-            /* ----------------------------
-            <<<<< Parallax Bg control >>>>>
-            ---------------------------- */
-
-                /* <<<<< index >>>>> */
-
-                .page-inicio .bg-1.bgllax::before{
-                    background-image: url(../img/trinity.svg);
-                }
-
-                .page-inicio .bg-2.bgllax::before{
-                    background-image: url(../img/init-bg2.webp);
-                }
-
-                .page-inicio .bg-4.bgllax::before{
-                    background-image: url(../img/init-bg4.jpg);
-                }
-
-                .page-inicio .bg-5.bgllax::before{
-                    background-image: url(../img/init-bg5.webp);
-                }
 
     /* ----------------------------
     <<<<<<<<<<<< Footer >>>>>>>>>>>

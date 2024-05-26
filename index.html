@@ -13,9 +13,10 @@
         <!-- Preloads -->
         <link rel="preload" fetchpriority="high" as="font" href="./plugins/fontawesome-free/webfonts/fa-brands-400.woff2" type="font/woff2" crossorigin>
         <link rel="preload" fetchpriority="high" as="font" href="./plugins/fontawesome-free/webfonts/fa-solid-900.woff2" type="font/woff2" crossorigin>
-        <link rel="preload" fetchpriority="high" as="image" href="./src/img/trinity.svg"   type="image/svg+xml">
-        <link rel="preload" fetchpriority="high" as="image" href="./src/img/init-bg5.webp" type="image/webp">
-        <link rel="preload" fetchpriority="high" as="image" href="./src/img/init-bg2.webp" type="image/webp">
+        <link rel="preload" fetchpriority="high" as="image" href="./src/img/init/init1.svg"   type="image/svg+xml">
+        <link rel="preload" fetchpriority="high" as="image" href="./src/img/bg/bg1.webp" type="image/webp">
+        <link rel="preload" fetchpriority="high" as="image" href="./src/img/bg/bg2.webp" type="image/webp">
+        <link rel="preload" fetchpriority="high" as="image" href="./src/img/bg/bg6.webp" type="image/webp">
 
         <!-- Styles -->
         <link rel="shortcut icon" href="./src/img/antico.png">
@@ -91,7 +92,7 @@
             <!-- Main Nav Bar -->
             <section id="menu" class="menu-wrapper">
                 <!-- main nav options -->
-                <menu class="navMenu ce-row btn-group">
+                <menu class="navMenu ce-row btn-group flat">
                     <li class="btn m-dnamic" title="Inicio">
                         <a href="#intro">
                             <span class="btn-txt">Inicio</span>
@@ -120,7 +121,7 @@
                         </a>
                     </li>
 
-                    <li class="btn m-dnamic btn-dark w-25" title="HTML5">
+                    <li class="btn m-dnamic btn-dark w-50" title="HTML5">
                         <a href="info/html5">
                             <span class="btn-txt">HTML5</span>
                             <i class="fab fa-html5 btn-ico"></i>
@@ -130,7 +131,7 @@
             </section>
 
             <!-- Begin of main content sections -->
-            <section id="intro" class="parallax bgllax bg-1 cc-col">
+            <section id="intro" class="parallax bgllax init-1 cc-col">
                 <h2>¿Qué tanto conoces sobre las páginas web?</h2>
             </section>
 
@@ -138,7 +139,7 @@
                 <article class="data-wrapper">
                     <div class="data-content cc-col">
                         <p class="data-text">
-                            Todas las personas que tienen el privilegio de tener acceso a internet conocen de manera empirica lo que es una página web, saben por experiencia lo que contienen y cómo deben lucir. Generan un grupo de expectativas y buscan patrones de funcionamiento que le ayuden a navegar en las mismas.
+                            Todas las personas que tienen el privilegio de tener acceso a internet conocen de manera empirica lo que es una página web, y saben por experiencia lo que contienen y cómo deben lucir. Generan un grupo de expectativas y buscan patrones de funcionamiento que le ayuden a navegar en las mismas.
 
                             Es decir, dan por hecho el funcionamiento y la estructura de la que una página web se debe componer, y sin embargo desconocen cómo son creadas las mismas.
 
@@ -151,14 +152,15 @@
                             &emsp; 3. Si no puedes realizar ninguna de las dos opciones anteriores seguramente estás en un dispositivo movil, por lo cuál te dejamos a continuación una imagen que revela la estructura interna real de una página web.
                         </p>
 
-                        <button type="button" class="btn createImg" data-src="./src/img/init-bg2.png" data-alt="Ejemplo de código HTML" data-class="rounded">
+                        <button type="button" class="btn createImg mt-3" data-src="./src/img/codeEx.webp" data-alt="Ejemplo de código HTML" data-class="rounded">
                             Ver Ejemplo
                         </button>
                     </div>
                 </article>
             </section>
 
-            <section id="tri" class="parallax cc-col">
+            <!-- Intro zone -->
+            <section id="tri" class="parallax bgllax bg-6 cc-col">
                 <h2>Bienvenido a esta iniciativa educativa</h2>
             </section>
 
@@ -166,19 +168,29 @@
                 <article class="data-wrapper">
                     <div class="data-content cc-col">
                         <p class="data-text">
-                            Y Gracias por tomarte el tiempo de participar en esta guía básica que tiene como principal propósito captar tu curiosidad, y sembrar la semilla del conocimiento en torno al desarrollo web.
+                            Gracias por tomarte el tiempo de participar en esta guía básica que tiene como principal propósito captar tu curiosidad, y sembrar la semilla del conocimiento en torno al desarrollo web.
+
+                            Lo que acabamos de ver al realizar los pasos anteriores fue echar un vistazo "el código fuente" de una página web, el cual cumple una función primordial pues es el único lenguaje que entiende tu navegador para, una vez interpretado el código, proceder a "pintar" el sitio al que el usuario ingresó.
 
                             A lo largo de esta web encontraras ejemplos teóricos y demostrativos para brindarte una experiencia enriquecedora y entretenida, que cautive tus ganas del saber y te brinden las bases necesarias para comenzar a incursionar en la creación de estos espacios digitales que llamamos páginas web.
-
-                            Lo que viste al ingresar a los componentes que conforman la página web (o al visualizar la imagen) fue, aunque pequeño, un fundamental fragmento sobre el cuál se edifica el internet.
-
-                            Lo que visualizaste fue el código fuente de una página, compuesto por HTML, que es un lenguaje fundamental pues son las “palabras” que entiende tu navegador, y que en conjunto forman las instrucciones necesarias para que dicho programa pueda “dibujar” tu página web.
                         </p>
+
+                        <hr class="h-divider w-75 my-4">
+                        <pre class="my-2">
+                            <code class="language-html"></code>
+
+                            <textarea>
+                                <!-- HTML -->
+
+                                <p>Hola y Bienvenidos :D</p>
+                            </textarea>
+                        </pre>
                     </div>
                 </article>
             </section>
 
-            <section id="vs" class="parallax bgllax bg-5 cc-col">
+            <!-- concept zone -->
+            <section id="vs" class="parallax bgllax bg-1 cc-col">
                 <h2>Primeros Conceptos</h2>
             </section>
 
@@ -191,77 +203,57 @@
                             En Palabras sencillas, <b>Front End</b> es todo aquello con lo que el usuario puede interactuar, es el arte puesto frente a sus ojos, está presente en el dinamismo de la página, y en la correcta visualización de la misma.
                             Esta rama está comprendida principalmente por 3 tecnologías:
 
-                            &emsp; - HTML, ó Lenguaje de Marcado de Hipertexto, que podemos comparar con el esqueleto, pues es el único lenguaje que el navegador entiende para estructurar una página web.
+                            &emsp; - <b>HTML</b>, ó Lenguaje de Marcado de Hipertexto, que podemos comparar con el esqueleto, pues es el único lenguaje que el navegador entiende para estructurar una página web.
 
-                            &emsp; - CSS, u Hojas de Estilo en Cascada, que representa la capacidad estética de tu página. Los colores, las animaciones, las formas y la estructura.
+                            &emsp; - <b>CSS</b>, u Hojas de Estilo en Cascada, que representa la capacidad estética de tu página. Los colores, las animaciones, las formas y la estructura.
 
-                            &emsp; - JavaScript, que no es más que el responsable de poder modificar y reestructurar tu página web, aportarle utilidad, herramientas y dinamismo, y esta es solo una definición muy resumida.
+                            &emsp; - <b>JavaScript</b>, que no es más que el responsable de poder modificar y reestructurar tu página web, aportarle utilidad, herramientas y dinamismo. Advertencia! esta es una definición muy resumida.
 
                             <hr class="h-divider w-75">
                             Por otro lado, el ámbito <b>Back End</b> se encuentra determinado por 3 tecnologías a considerar:
 
-                            &emsp; - Un Lenguaje de Programación, los cuales son variados, cada uno con sus propias reglas y sintaxis, y que representan al cerebro de la página web.
+                            &emsp; - <b>Un Lenguaje de Programación</b>, los cuales son variados, cada uno con sus propias reglas y sintaxis, y que representan al cerebro de la página web.
 
-                            &emsp; - Bases de Datos, que son las responsables de almacenar información y por definición representan la memoria del portal.
+                            &emsp; - <b>Bases de Datos</b>, que son las responsables de almacenar información y por definición representan la memoria del portal.
 
-                            &emsp; - Los Servidores que, en conjunto con las redes y la infraestructura global, representan la razón por la cual el mundo se encuentra interconectado actualmente.
+                            &emsp; - Los <b>Servidores</b> que, en conjunto con las <b>Redes</b> y la infraestructura global, representan la razón por la cual el mundo se encuentra interconectado actualmente.
                         </div>
 
                         <hr class="h-divider w-75 my-4">
-                        <pre class="my-2">
-                            <code class="language-css">
-                                /*css*/
-
-                                p{
-                                    color: #fff;
-                                }
-                            </code>
-                        </pre>
 
                         <div class="data-text">
-                            En la presente guía estaremos enfocándonos en las tecnologías que comprenden el ámbito del Front End, y todos los conceptos, palabras y definiciones serán exploradas a profundidad en cada una de las secciones de este manual.
+                            En la presente guía estaremos enfocándonos en las tecnologías que comprenden el ámbito del <b>Front End</b>, y todos los conceptos, palabras y definiciones serán exploradas a profundidad en cada una de las secciones de este manual.
                         </div>
                     </div>
                 </article>
             </section>
 
+            <!-- outro zone -->
             <section id="outro" class="parallax bgllax bg-2 cc-col">
-                <h2>La Triada del Desarrollo Web </h2>
+                <h2>La base del Desarrollo Web </h2>
             </section>
 
             <section class="paraless">
                 <article class="data-wrapper">
                     <div class="data-content cc-col">
                         <p class="data-text">
-                            Antes de comenzar a crear nuestra primera página web, es importante conocer cuales son todas las tecnologías que confluyen en esta actividad y de las cuales haceremos uso sin excepción.
+                            Antes de comenzar a crear nuestra primera página web, es importante conocer cuáles son todas las tecnologías que confluyen en esta actividad y de las cuales haremos uso sin excepción.
 
-                            Entre las más importantes se pueden destacar 3.
+                            Puedes ingresar en el siguiente enlace o navegar con libertad en esta guía, para descubrir todos los puntos de partida que necesitas para comenzar a construir el conocimiento necesario en cada una de las tecnologías que componen el ámbito del desarrollo Front End.
+
+                            Recuerda que solo vamos a repasar los conceptos iniciales para crear un boceto conceptual que te permita crear tu propio criterio como programador.
+
+                            Por último, y por más gracioso que parezca, la única forma de aprender a programar es, irónicamente, programando. No temas jamás a fallar, pues recuerda que estamos en el mundo digital. Simplemente creamos una copia de seguridad, experimentamos, y si sale mal, reiniciamos y lo volvemos a intentar.
                         </p>
                     </div>
 
+                    <hr class="h-divider w-75 my-4">
+
+                    <h3>Comencemos por la base, Aprendamos HTML5:</h3>
+
                     <div class="data-content e-dinamic">
                         <figure class="data-img">
-                            <i class="fab fa-html5"></i>
-
-                            <div class="labeling">
-                                <a href="info/html5">HTML</a>
-                            </div>
-                        </figure>
-
-                        <figure class="data-img">
-                            <i class="fab fa-css3-alt"></i>
-
-                            <div class="labeling">
-                                <a href="info/css">CSS</a>
-                            </div>
-                        </figure>
-
-                        <figure class="data-img">
-                            <i class="fab fa-js-square"></i>
-
-                            <div class="labeling">
-                                <a href="info/js">JavaScript</a>
-                            </div>
+                            <a href="info/html5"><i class="fab fa-html5" title="Guía de HTML5"></i></a>
                         </figure>
                     </div>
                 </article>

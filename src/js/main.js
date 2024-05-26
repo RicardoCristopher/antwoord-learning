@@ -16,8 +16,6 @@
 
         function modalManager(toggle = true){
             if(toggle){
-                main.classList.add('lockdown');
-
                 let modal = document.createElement('aside');
                 modal.classList.add('modal', 'fadeIn');
                 let close = document.createElement('i');
@@ -32,7 +30,6 @@
 
                 return modal;
             }else{
-                main.classList.remove('lockdown');
                 document.querySelector('.modal').remove();
             }
         }
@@ -150,16 +147,24 @@
 //----------------------------------------------------------------------
 
     // --------------------------------------
-    //  Nav Bar
+    //  Nav Bar | screen width must match css
     // --------------------------------------
 
         aside.addEventListener('click',()=>{
-            body.classList.add('toggled');
+            if(window.innerWidth <= 650){
+                navBarToggling(!body.classList.contains('toggled'));
+            }
         });
 
         main.addEventListener('click',()=>{
-            body.classList.remove('toggled');
+            if(window.innerWidth <= 650){
+                navBarToggling(false)
+            }
         });
+
+        function navBarToggling(mode){
+            mode ? body.classList.add('toggled') : body.classList.remove('toggled');
+        }
     
     // --------------------------------------
     //  Code Format
