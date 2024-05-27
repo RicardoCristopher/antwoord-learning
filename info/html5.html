@@ -44,9 +44,9 @@
                     </li>
 
                     <li>
-                        <a class="href" title="Qué es HTML5?" aria-label="información sobre HTML5">
+                        <span class="href" title="Qué es HTML5?" aria-label="información sobre HTML5">
                             <i class="fab fa-html5 visited"></i>
-                        </a>
+                        </span>
                     </li>
 
                     <li>
@@ -100,13 +100,6 @@
                     </li>
 
                     <li class="btn m-dnamic">
-                        <a href="#intro">
-                            <span class="btn-txt">Conceptos</span>
-                            <i class="fas fa-book btn-ico"></i>
-                        </a>
-                    </li>
-
-                    <li class="btn m-dnamic">
                         <a href="#html">
                             <span class="btn-txt">HTML5</span>
                             <i class="fab fa-html5 btn-ico"></i>
@@ -114,9 +107,16 @@
                     </li>
 
                     <li class="btn m-dnamic">
-                        <a href="#ejm">
-                            <span class="btn-txt">Ejemplos</span>
-                            <i class="fas fa-pen btn-ico"></i>
+                        <a href="#rulez">
+                            <span class="btn-txt">Normas</span>
+                            <i class="fas fa-book btn-ico"></i>
+                        </a>
+                    </li>
+
+                    <li class="btn m-dnamic">
+                        <a href="#conv">
+                            <span class="btn-txt">Convenciones</span>
+                            <i class="fas fa-hands-helping btn-ico"></i>
                         </a>
                     </li>
 
@@ -137,48 +137,23 @@
             </section>
 
             <!-- Begin of main content sections -->
-            <section id="intro" class="parallax bgllax html-1 cc-col">
-                <h2>Primeros Conceptos</h2>
+            <section id="html" class="parallax bgllax html-1 cc-col">
+                <h2>¿Qué es HTML5?</h2>
             </section>
 
             <section class="paraless">
                 <article class="data-wrapper">
                     <div class="data-content cc-col">
                         <p class="data-text">
-                            Todas las personas que tienen el privilegio de tener acceso a internet conocen de manera empirica lo que es una página web, y saben por experiencia lo que contienen y cómo deben lucir. Generan un grupo de expectativas y buscan patrones de funcionamiento que le ayuden a navegar en las mismas.
+                            HTML es un "lenguaje" que permite crear documentos para web. Permite indicar dónde queremos cada elemento (párrafos, negritas, itálicas, imágenes, etc). Sólo se encarga de lo estructural, y aunque es posible definir el estilo de esta estructura directamente en cada uno de los elemento de HTML, esta practica es ampliamente rechazada, pues por practicidad y capacidad de escalabilidad, se recomienda que el diseño, colores y tamaños sean responsabilidad de CSS.
 
-                            Es decir, dan por hecho el funcionamiento y la estructura de la que una página web se debe componer, y sin embargo desconocen cómo son creadas las mismas.
+                            Cada elemento que es creado en HTML es representado por una etiqueta, es decir, una palabra encerrada entre corchetes angulares <i>(signos de desigualdad matemática "&lt; >")</i>, y toma la forma en el <b>DOM</b> <i>(Document Object Model, ó documento web)</i> de una "caja", la cuál puede ser moldeada, redondeada, alterada u ocultada, pero es importante contemplar que el espacio que ocupa todo elemento es representado por un objeto cuadrado o rectangular.
 
-                            Te instamos a que mires cómo se ve realmente los componentes de una página web, Y para ello tienes 3 opciones:
+                            Cada etiqueta tiene un sentido semantico que se ve representado en una palabra que tiene relación con el objeto a crear. Así, si deseamos crear un botón, existe la etiqueta <b>&lt;button></b> y si queremos crear un párrafo de texto como el que lees actualmente debes usar la etiqueta <b>&lt;p></b> <i>(p = paragraph, párrafo en inglés)</i>.
 
-                            &emsp; 1. Si estás en una Computadora puedes hacer click derecho en cualquier parte de esta página e ingresar a la opción <i>"ver código fuente de la página"</i>
+                            No obstante, una vez agotadas todas las etiquetas semánticas que tenemos a nuestra disposición, tenemos dos objetos "comodín" que pueden asumir el rol que deseemos, y cuyo límite está directamente delimitado por nuestra imaginación. Estos comodines son la etiqueta <b>&lt;div></b>, para elementos que busquen abarcar toda el área disponible, y la etiqueta &lt;span>, para elementos que ocupan solo el espacio necesario, permitiendo a otras etiquetas ubicarse al lado del elemento en cuestión.
 
-                            &emsp; 2. De nuevo, si estás en una Computadora puedes usar la combinación de teclas Ctrl + U
-
-                            &emsp; 3. Si no puedes realizar ninguna de las dos opciones anteriores seguramente estás en un dispositivo movil, por lo cuál te dejamos a continuación una imagen que revela la estructura interna real de una página web.
-                        </p>
-
-                        <button type="button" class="btn createImg mt-3" data-src="./src/img/codeEx.webp" data-alt="Ejemplo de código HTML" data-class="rounded">
-                            Ver Ejemplo
-                        </button>
-                    </div>
-                </article>
-            </section>
-
-            <!-- info zone -->
-            <section id="html" class="parallax bgllax html-2 cc-col">
-                <h2>Bienvenido a esta iniciativa educativa</h2>
-            </section>
-
-            <section class="paraless">
-                <article class="data-wrapper">
-                    <div class="data-content cc-col">
-                        <p class="data-text">
-                            Gracias por tomarte el tiempo de participar en esta guía básica que tiene como principal propósito captar tu curiosidad, y sembrar la semilla del conocimiento en torno al desarrollo web.
-
-                            Lo que acabamos de ver al realizar los pasos anteriores fue echar un vistazo "el código fuente" de una página web, el cual cumple una función primordial pues es el único lenguaje que entiende tu navegador para, una vez interpretado el código, proceder a "pintar" el sitio al que el usuario ingresó.
-
-                            A lo largo de esta web encontraras ejemplos teóricos y demostrativos para brindarte una experiencia enriquecedora y entretenida, que cautive tus ganas del saber y te brinden las bases necesarias para comenzar a incursionar en la creación de estos espacios digitales que llamamos páginas web.
+                            <i><b>Spoiler Alert:</b>  todas las normas son modificables con CSS. </i> <i class="fas fa-grin-wink"></i>
                         </p>
 
                         <hr class="h-divider w-75 my-4">
@@ -188,47 +163,73 @@
                             <textarea>
                                 <!-- HTML -->
 
-                                <p>Hola y Bienvenidos :D</p>
+                                <p>Párrafo</p>
+
+                                <button>Botón</button>
+
+                                <section>Secciones</section>
+
+                                <nav>Barras de navegación</nav>
+
+                                <div>La imaginación es el límite</div>
                             </textarea>
                         </pre>
                     </div>
                 </article>
             </section>
 
-            <!-- ejem zone -->
-            <section id="ejm" class="parallax bgllax bg-7 cc-col">
-                <h2>Primeros Conceptos</h2>
+            <!-- rulez zone -->
+            <section id="rulez" class="parallax bgllax html-2 cc-col">
+                <h2>Sintaxis y Semántica</h2>
+            </section>
+
+            <section class="paraless">
+                <article class="data-wrapper">
+                    <div class="data-content cc-col">
+                        <p class="data-text">
+                            Para comenzar, definamos 2 conceptos:
+
+                            &emsp;- <b>Sintaxis</b>, son las reglas y principios sobre cómo construir expresiones interpretables por el lenguaje humano ó, en este caso, el digital. Nos indica pues, las diversas palabras reservadas, expresiones especiales y recursos que el lenguaje pone a nuesta dispocisión.
+
+                            &emsp;- <b>Semántica</b>, es el significado atribuible a expresiones sintácticamente bien formadas. Es decír, no basta con conocer las palabras y recursos del lenguaje elegido, pero además debemos crear el conjunto instrucciones que queremos darle en una determinada secuencia, a fin de que sean correctamente interpretadas.
+
+                            Como se indicó anteriormente, todo elemento HTML es creado utilizando una palabra reservada encerrada entre corchetes angulares <i>( "&lt; >")</i>. En casi todos los casos, las etiquetas tienen una apertura y un cierre, dando origen a dos tipos de etiquetas. 
+
+                            Las <b>etiquetas cerradas</b>, las cuales cuentan con la apertura <i>(&lt;p>)</i>; el contenido de la etiqueta que se escribe inmediatamente después que ella; y su cierre el cual es similar a la apertura, pero adicionalmente debe llevar una barra diagonal <i>(&lt;<b>/</b>p>)</i>. 
+
+                            Y las <b>etiquetas abiertas</b>, las cuales no requieren un cierre, y sin embargo se aconseja colocar la barra diagonal al final de las mismas para aumentar la compatibilidad con otros lenguajes.
+                        </p>
+                        
+                        <pre class="my-2">
+                            <code class="language-html"></code>
+
+                            <textarea>
+                                <!-- Etiqueta Cerrada -->
+                                <p>Hola y Bienvenidos :D</p>
+
+                                <!-- Etiqueta Abierta -->
+                                <input value="Hola y Bienvenidos :D"/>
+                            </textarea>
+                        </pre>
+
+                        <hr class="h-divider w-75 my-4">
+                        <p class="data-text">
+                            Adicionalmente
+                        </p>
+                    </div>
+                </article>
+            </section>
+
+            <!-- conv zone -->
+            <section id="conv" class="parallax bgllax bg-7 cc-col">
+                <h2>Convenciones</h2>
             </section>
 
             <section class="paraless">
                 <article class="data-wrapper">
                     <div class="data-content cc-col">
                         <div class="data-text">
-                            A continuación, estableceremos conceptos que serán necesarios para el resto de nuestra aventura como programadores. Comenzamos con la división de ámbito de las páginas web, en dos grandes secciones denominadas <i>Front End</i> y <i>Back End</i>
-
-                            En Palabras sencillas, <b>Front End</b> es todo aquello con lo que el usuario puede interactuar, es el arte puesto frente a sus ojos, está presente en el dinamismo de la página, y en la correcta visualización de la misma.
-                            Esta rama está comprendida principalmente por 3 tecnologías:
-
-                            &emsp; - <b>HTML</b>, ó Lenguaje de Marcado de Hipertexto, que podemos comparar con el esqueleto, pues es el único lenguaje que el navegador entiende para estructurar una página web.
-
-                            &emsp; - <b>CSS</b>, u Hojas de Estilo en Cascada, que representa la capacidad estética de tu página. Los colores, las animaciones, las formas y la estructura.
-
-                            &emsp; - <b>JavaScript</b>, que no es más que el responsable de poder modificar y reestructurar tu página web, aportarle utilidad, herramientas y dinamismo. Advertencia! esta es una definición muy resumida.
-
-                            <hr class="h-divider w-75">
-                            Por otro lado, el ámbito <b>Back End</b> se encuentra determinado por 3 tecnologías a considerar:
-
-                            &emsp; - <b>Un Lenguaje de Programación</b>, los cuales son variados, cada uno con sus propias reglas y sintaxis, y que representan al cerebro de la página web.
-
-                            &emsp; - <b>Bases de Datos</b>, que son las responsables de almacenar información y por definición representan la memoria del portal.
-
-                            &emsp; - Los <b>Servidores</b> que, en conjunto con las <b>Redes</b> y la infraestructura global, representan la razón por la cual el mundo se encuentra interconectado actualmente.
-                        </div>
-
-                        <hr class="h-divider w-75 my-4">
-
-                        <div class="data-text">
-                            En la presente guía estaremos enfocándonos en las tecnologías que comprenden el ámbito del <b>Front End</b>, y todos los conceptos, palabras y definiciones serán exploradas a profundidad en cada una de las secciones de este manual.
+                            &emsp; Las <b>Convenciones</b> no son más que un grupo de acuerdos y normas tácitas que aunque no interfieren con la semantica del lenguaje, buscan la estandarización del mismo con el fin de crear código limpio, entendible y escalable.
                         </div>
                     </div>
                 </article>
