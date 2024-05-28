@@ -33,6 +33,7 @@ Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
     --danger:#e74a3b;
     --light:#f8f9fc;
     --dark:#5a5c69;
+    --black-less:#2b2b2b;
     --breakpoint-xs:0;
     --breakpoint-sm:576px;
     --breakpoint-md:768px;
@@ -93,7 +94,7 @@ body{
     font-size: calc(.3rem + 2vmin);
     font-weight:400;
     line-height:1.5;
-    color: var(--gray-dark);
+    color: var(--black-less);
     text-align:left;
     background-color:#fff;
     height: 100vh;
@@ -571,7 +572,7 @@ kbd kbd{
 pre{
     display:block;
     font-size:87.5%;
-    color:#3a3b45
+    color:#3a3b45;
 }
 
 pre code{

@@ -15,7 +15,7 @@
         <link rel="preload" fetchpriority="high" as="font" href="../plugins/fontawesome-free/webfonts/fa-solid-900.woff2" type="font/woff2" crossorigin>
         <link rel="preload" fetchpriority="high" as="image" href="../src/img/html/html1.webp" type="image/webp">
         <link rel="preload" fetchpriority="high" as="image" href="../src/img/html/html2.webp" type="image/webp">
-        <link rel="preload" fetchpriority="high" as="image" href="../src/img/bg/bg5.webp"     type="image/webp">
+        <link rel="preload" fetchpriority="high" as="image" href="../src/img/bg/bg4.webp"     type="image/webp">
         <link rel="preload" fetchpriority="high" as="image" href="../src/img/bg/bg7.webp"     type="image/webp">
 
         <!-- Styles -->
@@ -93,42 +93,42 @@
             <section id="menu" class="menu-wrapper">
                 <menu class="navMenu ce-row btn-group flat">
                     <li class="btn m-dnamic btn-dark w-50">
-                        <a href="../">
+                        <a href="../" title="inicio">
                             <span class="btn-txt">Inicio</span>
                             <i class="fas fa-home btn-ico"></i>
                         </a>
                     </li>
 
                     <li class="btn m-dnamic">
-                        <a href="#html">
+                        <a href="#html" title="HTML5">
                             <span class="btn-txt">HTML5</span>
                             <i class="fab fa-html5 btn-ico"></i>
                         </a>
                     </li>
 
                     <li class="btn m-dnamic">
-                        <a href="#rulez">
+                        <a href="#rulez" title="Normas">
                             <span class="btn-txt">Normas</span>
                             <i class="fas fa-book btn-ico"></i>
                         </a>
                     </li>
 
                     <li class="btn m-dnamic">
-                        <a href="#conv">
+                        <a href="#conv" title="Convenciones">
                             <span class="btn-txt">Convenciones</span>
                             <i class="fas fa-hands-helping btn-ico"></i>
                         </a>
                     </li>
 
-                    <li class="btn m-dnamic">
-                        <a href="#outro">
+                    <li class="btn m-dnamic" title="Más">
+                        <a href="#outro"  title="Más">
                             <span class="btn-txt">Más</span>
                             <i class="fas fa-plus btn-ico"></i>
                         </a>
                     </li>
 
                     <li class="btn m-dnamic btn-dark w-50">
-                        <a href="./css">
+                        <a href="./css" title="CSS">
                             <span class="btn-txt">CSS</span>
                             <i class="fab fa-css3 btn-ico"></i>
                         </a>
@@ -186,19 +186,39 @@
             <section class="paraless">
                 <article class="data-wrapper">
                     <div class="data-content cc-col">
+                        <h3>
+                            Conceptos necesarios
+                        </h3>
+
                         <p class="data-text">
                             Para comenzar, definamos 2 conceptos:
 
                             &emsp;- <b>Sintaxis</b>, son las reglas y principios sobre cómo construir expresiones interpretables por el lenguaje humano ó, en este caso, el digital. Nos indica pues, las diversas palabras reservadas, expresiones especiales y recursos que el lenguaje pone a nuesta dispocisión.
 
-                            &emsp;- <b>Semántica</b>, es el significado atribuible a expresiones sintácticamente bien formadas. Es decír, no basta con conocer las palabras y recursos del lenguaje elegido, pero además debemos crear el conjunto instrucciones que queremos darle en una determinada secuencia, a fin de que sean correctamente interpretadas.
+                            &emsp;- <b>Semántica</b>, es el significado atribuible a expresiones sintácticamente bien formadas. Es decír, no basta con conocer las palabras y recursos del lenguaje elegido, pero además debemos crear el conjunto instrucciones con unas determinadas normas, a fin de que puedan ser correctamente interpretadas.
+                        </p>
 
+                        <hr class="h-divider w-75 my-4">
+
+                        <h3>
+                            Creando Elementos
+                        </h3>
+
+                        <p class="data-text">
                             Como se indicó anteriormente, todo elemento HTML es creado utilizando una palabra reservada encerrada entre corchetes angulares <i>( "&lt; >")</i>. En casi todos los casos, las etiquetas tienen una apertura y un cierre, dando origen a dos tipos de etiquetas. 
 
                             Las <b>etiquetas cerradas</b>, las cuales cuentan con la apertura <i>(&lt;p>)</i>; el contenido de la etiqueta que se escribe inmediatamente después que ella; y su cierre el cual es similar a la apertura, pero adicionalmente debe llevar una barra diagonal <i>(&lt;<b>/</b>p>)</i>. 
 
                             Y las <b>etiquetas abiertas</b>, las cuales no requieren un cierre, y sin embargo se aconseja colocar la barra diagonal al final de las mismas para aumentar la compatibilidad con otros lenguajes.
+
+                            Para conocer todas las etiquetas que pueden ser creadas, te dejamos el siguiente botón que te llevará a una excelente biblioteca virtual que recopila toda la documentación necesaria para el uso de HTML (y muchos lenguajes más).
                         </p>
+
+                        <a class="btn mt-4 px-2" href="https://www.w3schools.com/tags/" title="Etiquetas HTML" target="_blank">
+                            w3schools | HTML
+                        </a>
+
+                        <hr class="h-divider w-75 my-4">
                         
                         <pre class="my-2">
                             <code class="language-html"></code>
@@ -213,9 +233,77 @@
                         </pre>
 
                         <hr class="h-divider w-75 my-4">
+
+                        <h3>
+                            Atributos de los Elementos
+                        </h3>
+
                         <p class="data-text">
-                            Adicionalmente
+                            Dentro de cada apertura de etiqueta HTML se pueden colocar palabras especiales que permiten, como su nombre lo indica, dotar al elemento creado de un conjunto de propiedades con funciones inherentes al atributo asignado.
+
+                            Observemos el siguiente Ejemplo:
                         </p>
+
+                        <pre class="my-2">
+                            <code class="language-html"></code>
+
+                            <textarea>
+                                <!-- Etiqueta SIN atributos -->
+                                <p>
+                                    párrafo
+                                </p>
+
+                                <!-- Etiqueta con el atributo de clases -->
+                                <p class="p-vert">
+                                    párrafo
+                                </p>
+
+                                <!-- Etiqueta con atributos de clase e identificador -->
+                                <p id="p-1" class="p-vert">
+                                    párrafo
+                                </p>
+                            </textarea>
+                        </pre>
+
+                        <p class="data-text">
+                            Cada uno de estos atributos tiene una función definida y algunos de ellos son obligatorios para el correcto funcionamiento de algunas etiquetas, o necesarios para tener un buen puntaje de SEO (ranking de posicionamiento de tu página web en los buscadores).
+
+                            Dentro de los atributos opcionales más importantes a tener en cuenta (y todos son importantes), podemos destacar 2:
+
+                            &emsp;- <b>id</b>, atributo que debe asignarse de manera única por página web(no por sitio web, sino en cada documento), debido a que este atributo identifica al elemento, lo cual permite usarlo o modificarlo únicamente a él.
+
+                            &emsp;- <b>class</b>, su función es asignarle una clase al elemento, lo cual es una "palabra especial" creada por el usuario para poder ubicar a este, y todos los elementos que tengan dicha clase, para ser modificados desde la hoja de estilos (CSS).
+
+                            Estos serán los más usados en el diario porvenir de nuestra aventura como desarrolladores web, sin embargo, y antes de mostrar algunos ejemplos de atributos obligatorios, queremos una vez más, brindarte un enlace a <b>w3schools</b>, donde podrás encontrar todos los atributos que existen, y cuales elementos pueden contenerlos.
+                        </p>
+
+                        <a class="btn mt-4 px-2" href="https://www.w3schools.com/tags/ref_attributes.asp" title="Atributos HTML" target="_blank">
+                            w3schools | Atributos
+                        </a>
+
+                        <hr class="h-divider w-75 my-4">
+                        
+                        <pre class="my-2">
+                            <code class="language-html"></code>
+
+                            <textarea>
+                                <!-- La Etiq. <a> sirve para crear links, la dirección de ese link se coloca en el atributo "href" -->
+
+                                <a href="www.w3schools.com">
+                                    Click me!
+                                </a>
+
+                                <!-- La Etiq. <img> sirve para crear imagenes, y es obligatorio que cuente con el atributo "src" (source, fuente en inglés) pues es el que indica el lugar donde se encuentra ubicada la imagen que deseas mostrar -->
+
+                                <img src="my-project/img/hola.jpg" />
+
+                                <!-- Además y a pesar de ser "opcional", para mejorar tu SEO, todas las imagenes deben tener el atributo "alt", el cuál debe ser una breve descripción de la imagen a mostrar -->
+                                
+                                <img src="..." alt="emoticono de saludo" />
+                            </textarea>
+                        </pre>
+
+                        <hr class="h-divider w-75 my-4">
                     </div>
                 </article>
             </section>
@@ -229,38 +317,236 @@
                 <article class="data-wrapper">
                     <div class="data-content cc-col">
                         <div class="data-text">
-                            &emsp; Las <b>Convenciones</b> no son más que un grupo de acuerdos y normas tácitas que aunque no interfieren con la semantica del lenguaje, buscan la estandarización del mismo con el fin de crear código limpio, entendible y escalable.
+                            &emsp; Las <b>Convenciones</b> son un grupo de acuerdos y normas tácitas que aunque no interfieren con la semantica del lenguaje, buscan la estandarización del mismo con el fin de crear código limpio, entendible y escalable.
+
+                            Es por ello que en aras de promover las buenas practicas, a continuación expondremos algunas de las convenciones que existen para HTML.
                         </div>
+
+                        <div class="data-text">
+                            &emsp;1. <b>Siempre se debe declarar el tipo de documento en la primera línea en el documento:</b>
+                        </div>
+
+                        <pre class="my-2">
+                            <code class="language-html"></code>
+
+                            <textarea>
+                                <!DOCTYPE html>
+                            </textarea>
+                        </pre>
+
+                        <hr class="h-divider w-75 my-2">
+
+                        <div class="data-text">
+                            &emsp;2. <b>Usar nombres de elementos en minúsculas:</b>
+                            Aunque HTML5 permite mezclar letras mayúsculas y minúsculas en los nombres de elementos. Se recomienda usar nombres de elementos en minúsculas pues es más fácil de escribir y luce más limpio.
+                        </div>
+
+                        <pre class="my-2">
+                            <code class="language-html"></code>
+
+                            <textarea>
+                                <!-- Bien :) -->
+                                <div>Mira las etiquetas.</div>
+
+                                <!-- regular :( -->
+                                <DIV>Mira las etiquetas.</DIV>
+
+                                <!-- Por favor, no x_x -->
+                                <DiV>Mira las etiquetas.</dIv>
+                            </textarea>
+                        </pre>
+
+                        <hr class="h-divider w-75 my-2">
+
+                        <div class="data-text">
+                            &emsp;3. <b>Cerrar todos los elementos HTML:</b>
+                            En HTML5, no es necesario cerrar todos los elementos como por ejemplo la etiqueta &lt;p>, pero es recomendable cerrar todos.
+                        </div>
+
+                        <pre class="my-2">
+                            <code class="language-html"></code>
+
+                            <textarea>
+                                <!-- Válido pero no recomendado -->
+                                <section>
+                                    <p>Esto es un párrafo.
+                                </section>
+
+                                <!-- Válido y recomendado -->
+                                <section>
+                                    <p>Esto es un párrafo.</p>
+                                </section>
+                            </textarea>
+                        </pre>
+
+                        <hr class="h-divider w-75 my-2">
+
+                        <div class="data-text">
+                            &emsp;4. <b>Usar nombres de atributos en minúsculas:</b>
+                        </div>
+
+                        <pre class="my-2">
+                            <code class="language-html"></code>
+
+                            <textarea>
+                                <!--  Permitido  -->
+                                <div CLASS="menu">
+
+                                <!--  Recomendado  -->
+                                <div class="menu">
+                            </textarea>
+                        </pre>
+
+                        <hr class="h-divider w-75 my-2">
+
+                        <div class="data-text">
+                            &emsp;5. <b>Usar comillas en los valores de atributos:</b>
+                            HTML5 permite atributos sin comillas, sin embargo se recomienda el uso de comillas debido a que es más fácil de leer y además, debe usarse si el valor contiene espacios.
+                        </div>
+
+                        <pre class="my-2">
+                            <code class="language-html"></code>
+
+                            <textarea>
+                                <!-- Funciona pero no es recomendable -->
+                                <table class=striped>
+
+                                <!-- Esto no funciona porque el valor contiene espacios -->
+                                <table class=table striped>
+                                
+                                <!-- Funciona sin problemas, por eso es lo recomendado -->
+                                <table class="table striped">
+                            </textarea>
+                        </pre>
+
+                        <hr class="h-divider w-75 my-2">
+
+                        <div class="data-text">
+                            &emsp;6. <b>Usar comillas en los valores de atributos:</b>
+                            HTML5 permite atributos sin comillas, sin embargo se recomienda el uso de comillas debido a que es más fácil de leer y además, debe usarse si el valor contiene espacios.
+                        </div>
+
+                        <pre class="my-2">
+                            <code class="language-html"></code>
+
+                            <textarea>
+                                <!-- Funciona pero no es recomendable -->
+                                <table class=striped>
+
+                                <!-- Esto no funciona porque el valor contiene espacios -->
+                                <table class=table striped>
+                                
+                                <!-- Funciona sin problemas, por eso es lo recomendado -->
+                                <table class="table striped">
+                            </textarea>
+                        </pre>
+
+                        <hr class="h-divider w-75 my-2">
+
+                        <div class="data-text">
+                            &emsp;7. <b>Espacios y Signos de Igualdad:</b>
+                            HTML5 permite los espacios alrededor de los signos igual (=), pero sin los espacios es más fácil de leer y agrupa mejor las entidades.
+                        </div>
+
+                        <pre class="my-2">
+                            <code class="language-html"></code>
+
+                            <textarea>
+                                <!-- Funciona pero es confuso para leer -->
+                                <link rel = "stylesheet" href = "styles.css">
+
+                                <!-- Funciona y es fácil de leer -->
+                                <link rel="stylesheet" href="style.css">
+                            </textarea>
+                        </pre>
+
+                        <hr class="h-divider w-75 my-2">
+
+                        <div class="data-text">
+                            &emsp;8. <b>Indentación:</b>
+                            Es la sangría que debe llevar todo elemento "hijo", anidado dentro de un elemento "padre". Es utilizada para mejorar la legibilidad del código fuente por parte de los programadores, y en algunos lenguajes es parte de la semántica del código, por lo cual dejaría de ser considerada una convención, pues pertenece a la sintaxis necesaria del lenguaje.
+                        </div>
+
+                        <pre class="my-2">
+                            <code class="language-html"></code>
+
+                            <textarea>
+                                <!-- Funciona pero es confuso para leer -->
+                                <section>
+                                <article>
+                                <p></p>
+                                </article>
+                                </section>
+
+                                <!-- Funciona y es fácil de leer -->
+                                <section>
+                                    <article>
+                                        <p></p>
+                                    </article>
+                                </section>
+                            </textarea>
+                        </pre>
                     </div>
                 </article>
             </section>
 
             <!-- outro zone -->
-            <section id="outro" class="parallax bgllax bg-5 cc-col">
-                <h2>La base del Desarrollo Web </h2>
+            <section id="outro" class="parallax bgllax bg-4 cc-col">
+                <h2>"La única forma de aprender desarrollo web es, desarrollando"</h2>
             </section>
 
             <section class="paraless">
                 <article class="data-wrapper">
                     <div class="data-content cc-col">
                         <p class="data-text">
-                            Antes de comenzar a crear nuestra primera página web, es importante conocer cuáles son todas las tecnologías que confluyen en esta actividad y de las cuales haremos uso sin excepción.
+                            Llegado a este punto, y teniendo una base conceptual sobre HTML, no nos queda más que alentarle a poner los conocimientos adquiridos en práctica.
 
-                            Puedes ingresar en el siguiente enlace o navegar con libertad en esta guía, para descubrir todos los puntos de partida que necesitas para comenzar a construir el conocimiento necesario en cada una de las tecnologías que componen el ámbito del desarrollo Front End.
+                            Para ello se requiere de 2 cosas:
 
-                            Recuerda que solo vamos a repasar los conceptos iniciales para crear un boceto conceptual que te permita crear tu propio criterio como programador.
-
-                            Por último, y por más gracioso que parezca, la única forma de aprender a programar es, irónicamente, programando. No temas jamás a fallar, pues recuerda que estamos en el mundo digital. Simplemente creamos una copia de seguridad, experimentamos, y si sale mal, reiniciamos y lo volvemos a intentar.
                         </p>
+
+                        <p class="data-text">
+                            &emsp;- <b>Un Editor de texto</b>, pues aunque para comenzar puede hacer uso de bloc de notas, la realidad es que existen herramientas que le facilitaran el trabajo de edición de su código.
+
+                            Entre las más recomendadas destacamos 2.
+                        </p>
+                    </div>
+
+                    <div class="data-content e-dinamic">
+                        <a class="btn mt-2 px-2" href="https://www.sublimetext.com/" title="Editor Sublime Text" target="_blank">
+                            Sublime Text
+                        </a>
+
+                        <a class="btn mt-4 px-2" href="https://code.visualstudio.com/" title="Editor VSC" target="_blank">
+                            Visual Studio Code
+                        </a>
                     </div>
 
                     <hr class="h-divider w-75 my-4">
 
-                    <h3>Comencemos por la base, Aprendamos HTML5:</h3>
+                    <div class="data-content cc-col">
+                        <p class="data-text">
+                            &emsp;- <b>Habilitar la extensión de los archivos</b>. Todos los archivos tienen una extensión, un valor que indica a qué tipo pertenece el archivo en cuestión. Por ejemplo, los documentos de Microsoft Word terminan en ".doc", las imágenes, usualmente tienen el formato ".jpg" ó "png", e incluso, uno de los formatos de compresión de música más reconocidos es el ".mp3". Usualmente no vemos estas extensiones, pero son necesarias pues los archivos que pretendemos que sean interpretados por nuestro navegador a la hora de practicar, deben tener la extensión ".html". Además, por convención, el nombre de archivo no debe contener caracteres especiales ni letras que no existan en inglés y debe estar en minúsculas. 
+
+                            Para poder habilitar las extensiones de los archivos te dejo a continuación un video corto.
+                        </p>
+                    </div>
+
+                    <div class="data-content e-dinamic">
+                        <a class="btn mt-4 px-2" href="https://www.youtube.com/watch?v=RJDeDGmo8R0" title="Video sobre extensiones de archivos" target="_blank">
+                            Ver Extensiones
+                        </a>
+                    </div>
+
+                    <hr class="h-divider w-75 my-4">
+
+                    <h3>Una vez asimilada y practicada la información anterior, es momento de conocer al resto de la estructura estética de un sitio web. Aprendamos CSS:</h3>
 
                     <div class="data-content e-dinamic">
                         <figure class="data-img">
-                            <a href="info/html5"><i class="fab fa-html5" title="Guía de HTML5"></i></a>
+                            <a href="./css" title="Guía de CSS">
+                                <i class="fab fa-css3-alt"></i>
+                            </a>
                         </figure>
                     </div>
                 </article>

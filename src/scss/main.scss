@@ -218,7 +218,7 @@
             grid-template-areas: 
                 "title toPort";
             align-items: center;
-            transition: box-shadow .2s;
+            transition: box-shadow .2s, padding-left .2s;
         }
 
         .header .title{
@@ -233,7 +233,7 @@
             .body:not(.toggled) .header{
                 box-shadow: inset 4px 0 0px 0px var(--primary) !important;
                 padding-left: 10px;
-                transition: box-shadow .2s;
+                transition: box-shadow .2s, padding-left .2s;
             }
         }
 
@@ -289,12 +289,11 @@
                 width: 100%;
             }
 
-            /*
-            OJAZO
+            
             .main .navMenu .m-dnamic .btn-ico{
                 display: none;
             }
-            */
+            
 
             @media (max-width: 650px){
                 .main .navMenu .m-dnamic .btn-txt{
@@ -391,7 +390,7 @@
             }
 
             .parallax{
-                height: 86vh;
+                height: 87vh;
                 padding: 8%;
             }
 
@@ -790,10 +789,12 @@
 
     pre{
         user-select: text !important;
+        max-width: 100%;
     }
 
     code {
         user-select: text !important;
+        white-space: pre-wrap !important;
     }
 
     code * {
