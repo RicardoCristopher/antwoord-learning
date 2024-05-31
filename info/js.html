@@ -1,25 +1,33 @@
 <!DOCTYPE html>
 <html lang="es">
     <head>
+        <!-- Meta SEO -->
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta name="description" content="">
+        <meta name="description" content="Guía básica sobre JavaScript. Sintaxis, semántica, reglas, y mucho más ">
+        <meta name="keywords" content="desarrollo, web, guía, instructivo, html5, css, javascript, frontEnd">
         <meta name="author" content="Antwoord Creative Lab">
-        <title>Antwoord Learning | JavaScript</title>
+        <title>JavaScript | Antwoord Learning</title>
+
+        <!-- Styles -->
         <link rel="shortcut icon" href="../src/img/antico.png">
         <link rel="stylesheet" type="text/css" href="../src/css/style.css">
     </head>
 
     <body class="body">
+        <!-- Nav bar place -->
         <aside class="aside cc-col">
+            <!-- Aside Nav Bar -->
             <nav class="nav">
+                <!-- Top logo -->
                 <figure class="logo cc-col h-divider m-0">
                     <a href="../" title="Die Antwoord" aria-label="Volver al Menú principal">
                         <img src="../src/img/anth.png" alt="logo" width="35" height="35">
                     </a>    
                 </figure>
 
+                <!-- Nav Options -->
                 <menu class="menu ce-col">
                     <li>
                         <a href="../" title="inicio" aria-label="Volver al Menú principal">
@@ -40,9 +48,9 @@
                     </li>
 
                     <li>
-                        <a class="href" title="Qué es JavaScript?" aria-label="información sobre JavaScript">
+                        <span class="href" title="Qué es JavaScript?" aria-label="información sobre JavaScript">
                             <i class="fab fa-js-square visited"></i>
-                        </a>
+                        </span>
                     </li>
 
                     <li>
@@ -54,13 +62,16 @@
             </nav>
         </aside>
 
+        <!-- Header -->
         <header class="header">
+            <!-- Main Title -->
             <span class="title v-divider">
                 <h1>
                     JavaScript <i class="fab fa-js-square ml-2"></i>
                 </h1>
             </span>
             
+            <!-- Back To Portfolio -->
             <span class="toPort cc-col">
                 <a href="https://ricardocristopher.github.io/" title="Volver al Portafolio" aria-label="Volver al Portafolio">
                     <i class="fas fa-th imgHover"></i>
@@ -68,10 +79,12 @@
             </span>
         </header>
 
-        <main class="main cs-col">
-            <section id="menu" class="menu-wrapper z-prior">
-                <menu class="navMenu ce-row btn-group">
-                    <li class="btn m-dnamic btn-dark w-25">
+        <!-- Main Section -->
+        <main class="main">
+            <!-- Main Nav Bar -->
+            <section id="menu" class="menu-wrapper">
+                <menu class="navMenu ce-row btn-group flat">
+                    <li class="btn m-dnamic btn-dark w-50">
                         <a href="./css">
                             <span class="btn-txt">CSS</span>
                             <i class="fab fa-css3 btn-ico"></i>
@@ -99,7 +112,7 @@
                         </a>
                     </li>
 
-                    <li class="btn m-dnamic btn-dark w-25">
+                    <li class="btn m-dnamic btn-dark w-50">
                         <a href="./webDev">
                             <span class="btn-txt">Dev</span>
                             <i class="fas fa-code btn-ico"></i>
@@ -108,7 +121,8 @@
                 </menu>
             </section>
 
-            <section id="js">
+            <!-- Begin of main content sections -->
+            <section id="js" class="paraless">
                 <article>
                     <hr class="h-divider w-100 my-4">
 
@@ -122,7 +136,7 @@
                 </article>
             </section>
 
-            <section id="ejm">
+            <section id="ejm" class="paraless">
                 <article class="data-wrapper">
                     <hr class="h-divider w-100 my-4">
 
@@ -140,7 +154,7 @@
                 </article>
             </section>
 
-            <section id="outro">
+            <section id="outro" class="paraless">
                 <article class="data-wrapper">
                     <hr class="h-divider w-100 my-4">
                     
@@ -153,8 +167,10 @@
                     </div>
                 </article>
             </section>
+            <!-- End of main content sections -->
         </main>
 
+        <!-- Footer -->
         <footer class="footer cc-row">
             <span class="foot-data">
                 Copyright © Antwoord Creative Lab. 
@@ -163,10 +179,12 @@
             </span>
         </footer>
         
+        <!-- Core Javascript -->
         <script src="../plugins/jquery/jquery.min.js"></script>
         <script src="../src/js/main.js"></script>
         <script src="../plugins/prism/prism.js"></script>   
         
+        <!-- Handler invoker -->
         <script type="text/javascript">
             document.addEventListener("DOMContentLoaded", ()=>{
                 pageListenersJS();

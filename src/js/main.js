@@ -75,8 +75,7 @@
         function codeCleaner($code){
             let lines = $code.textContent.split('\n');
 
-            if (lines[0] === '')
-            {
+            if (lines[0] === ''){
                 lines.shift()
             }
 
@@ -103,10 +102,6 @@
             }
         }
 
-        function htmlToText(html){
-            
-        }
-
 //----------------------------------------------------------------------
 // Listeners
 //----------------------------------------------------------------------
@@ -125,7 +120,16 @@
     // --------------------------------------
 
         function pageListenersHTML5(){
-            modalElementCreator();
+            //modalElementCreator();
+            pCleaner();
+        };
+
+    // --------------------------------------
+    // | CSS |
+    // --------------------------------------
+
+        function pageListenersCSS(){
+            //modalElementCreator();
             pCleaner();
         };
 
@@ -163,6 +167,10 @@
     //  Nav Bar | screen width must match css
     // --------------------------------------
 
+        function navBarToggling(mode){
+            mode ? body.classList.add('toggled') : body.classList.remove('toggled');
+        }
+
         aside.addEventListener('click',()=>{
             if(window.innerWidth <= 650){
                 navBarToggling(!body.classList.contains('toggled'));
@@ -174,10 +182,6 @@
                 navBarToggling(false)
             }
         });
-
-        function navBarToggling(mode){
-            mode ? body.classList.add('toggled') : body.classList.remove('toggled');
-        }
     
     // --------------------------------------
     //  Code Format

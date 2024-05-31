@@ -8,15 +8,18 @@
         <meta name="description" content="Guía básica sobre HTML5. Sintaxis, semantica, reglas, y mucho más ">
         <meta name="keywords" content="desarrollo, web, guía, instructivo, html5, css, javascript, frontEnd">
         <meta name="author" content="Antwoord Creative Lab">
-        <title>Antwoord Learning | HTML5</title>
+        <title>HTML5 | Antwoord Learning</title>
 
         <!-- Preloads -->
         <link rel="preload" fetchpriority="high" as="font" href="../plugins/fontawesome-free/webfonts/fa-brands-400.woff2" type="font/woff2" crossorigin>
         <link rel="preload" fetchpriority="high" as="font" href="../plugins/fontawesome-free/webfonts/fa-solid-900.woff2" type="font/woff2" crossorigin>
+        <link rel="preload" fetchpriority="high" as="font" href="../plugins/poppins/Poppins-Bold.ttf" type="font/ttf" crossorigin>
+        <link rel="preload" fetchpriority="high" as="font" href="../plugins/poppins/Poppins-Medium.ttf" type="font/ttf" crossorigin>
         <link rel="preload" fetchpriority="high" as="image" href="../src/img/html/html1.webp" type="image/webp">
         <link rel="preload" fetchpriority="high" as="image" href="../src/img/html/html2.webp" type="image/webp">
+        <link rel="preload" fetchpriority="high" as="image" href="../src/img/html/html3.webp" type="image/webp">
         <link rel="preload" fetchpriority="high" as="image" href="../src/img/bg/bg4.webp"     type="image/webp">
-        <link rel="preload" fetchpriority="high" as="image" href="../src/img/bg/bg7.webp"     type="image/webp">
+        <link rel="preload" fetchpriority="high" as="image" href="../src/img/bg/bg2.webp"     type="image/webp">
 
         <!-- Styles -->
         <link rel="shortcut icon" href="../src/img/antico.png">
@@ -120,6 +123,13 @@
                         </a>
                     </li>
 
+                    <li class="btn m-dnamic">
+                        <a href="#exp" title="Ejemplos">
+                            <span class="btn-txt">Ejemplos</span>
+                            <i class="fas fa-code btn-ico"></i>
+                        </a>
+                    </li>
+
                     <li class="btn m-dnamic" title="Más">
                         <a href="#outro"  title="Más">
                             <span class="btn-txt">Más</span>
@@ -149,14 +159,15 @@
 
                             Cada elemento que es creado en HTML es representado por una etiqueta, es decir, una palabra encerrada entre corchetes angulares <i>(signos de desigualdad matemática "&lt; >")</i>, y toma la forma en el <b>DOM</b> <i>(Document Object Model, ó documento web)</i> de una "caja", la cuál puede ser moldeada, redondeada, alterada u ocultada, pero es importante contemplar que el espacio que ocupa todo elemento es representado por un objeto cuadrado o rectangular.
 
-                            Cada etiqueta tiene un sentido semantico que se ve representado en una palabra que tiene relación con el objeto a crear. Así, si deseamos crear un botón, existe la etiqueta <b>&lt;button></b> y si queremos crear un párrafo de texto como el que lees actualmente debes usar la etiqueta <b>&lt;p></b> <i>(p = paragraph, párrafo en inglés)</i>.
+                            Cada etiqueta tiene un sentido semántico que se ve representado en una palabra que tiene relación con el objeto a crear. Así, si deseamos crear un botón, existe la etiqueta <b>&lt;button></b> y si queremos crear un párrafo de texto como el que lees actualmente debes usar la etiqueta <b>&lt;p></b> <i>(p = paragraph, párrafo en inglés)</i>.
 
                             No obstante, una vez agotadas todas las etiquetas semánticas que tenemos a nuestra disposición, tenemos dos objetos "comodín" que pueden asumir el rol que deseemos, y cuyo límite está directamente delimitado por nuestra imaginación. Estos comodines son la etiqueta <b>&lt;div></b>, para elementos que busquen abarcar toda el área disponible, y la etiqueta &lt;span>, para elementos que ocupan solo el espacio necesario, permitiendo a otras etiquetas ubicarse al lado del elemento en cuestión.
 
                             <i><b>Spoiler Alert:</b>  todas las normas son modificables con CSS. </i> <i class="fas fa-grin-wink"></i>
                         </p>
 
-                        <hr class="h-divider w-75 my-4">
+                        <!-- ----------------------------- --> <hr class="h-divider w-75 my-4"> <!-- ----------------------------- -->
+
                         <pre class="my-2">
                             <code class="language-html"></code>
 
@@ -178,8 +189,8 @@
                 </article>
             </section>
 
-            <!-- rulez zone -->
-            <section id="rulez" class="parallax bgllax html-2 cc-col">
+            <!-- Sintaxis -->
+            <section id="rulez" class="parallax bgllax bg-2  cc-col">
                 <h2>Sintaxis y Semántica</h2>
             </section>
 
@@ -193,12 +204,12 @@
                         <p class="data-text">
                             Para comenzar, definamos 2 conceptos:
 
-                            &emsp;- <b>Sintaxis</b>, son las reglas y principios sobre cómo construir expresiones interpretables por el lenguaje humano ó, en este caso, el digital. Nos indica pues, las diversas palabras reservadas, expresiones especiales y recursos que el lenguaje pone a nuesta dispocisión.
+                            &emsp;- <b>Sintaxis</b>, son las reglas y principios sobre cómo construir expresiones interpretables por el lenguaje humano ó, en este caso, el digital. Nos indica pues, las diversas palabras reservadas, expresiones especiales y recursos que el lenguaje pone a nuestra disposición.
 
-                            &emsp;- <b>Semántica</b>, es el significado atribuible a expresiones sintácticamente bien formadas. Es decír, no basta con conocer las palabras y recursos del lenguaje elegido, pero además debemos crear el conjunto instrucciones con unas determinadas normas, a fin de que puedan ser correctamente interpretadas.
+                            &emsp;- <b>Semántica</b>, es el significado atribuible a expresiones sintácticamente bien formadas. Es decir, no basta con conocer las palabras y recursos del lenguaje elegido, pero además debemos crear el conjunto instrucciones con unas determinadas normas, a fin de que puedan ser correctamente interpretadas.
                         </p>
 
-                        <hr class="h-divider w-75 my-4">
+                        <!-- ----------------------------- --> <hr class="h-divider w-75 my-4"> <!-- ----------------------------- -->
 
                         <h3>
                             Creando Elementos
@@ -218,7 +229,7 @@
                             w3schools | HTML
                         </a>
 
-                        <hr class="h-divider w-75 my-4">
+                        <!-- ----------------------------- --> <hr class="h-divider w-75 my-4"> <!-- ----------------------------- -->
                         
                         <pre class="my-2">
                             <code class="language-html"></code>
@@ -232,7 +243,7 @@
                             </textarea>
                         </pre>
 
-                        <hr class="h-divider w-75 my-4">
+                        <!-- ----------------------------- --> <hr class="h-divider w-75 my-4"> <!-- ----------------------------- -->
 
                         <h3>
                             Atributos de los Elementos
@@ -268,7 +279,7 @@
                         <p class="data-text">
                             Cada uno de estos atributos tiene una función definida y algunos de ellos son obligatorios para el correcto funcionamiento de algunas etiquetas, o necesarios para tener un buen puntaje de SEO (ranking de posicionamiento de tu página web en los buscadores).
 
-                            Dentro de los atributos opcionales más importantes a tener en cuenta (y todos son importantes), podemos destacar 2:
+                            Dentro de los <b>atributos opcionales</b> más importantes a tener en cuenta <b>(y todos son importantes)</b>, podemos destacar 2:
 
                             &emsp;- <b>id</b>, atributo que debe asignarse de manera única por página web(no por sitio web, sino en cada documento), debido a que este atributo identifica al elemento, lo cual permite usarlo o modificarlo únicamente a él.
 
@@ -281,7 +292,7 @@
                             w3schools | Atributos
                         </a>
 
-                        <hr class="h-divider w-75 my-4">
+                        <!-- ----------------------------- --> <hr class="h-divider w-75 my-4"> <!-- ----------------------------- -->
                         
                         <pre class="my-2">
                             <code class="language-html"></code>
@@ -293,23 +304,23 @@
                                     Click me!
                                 </a>
 
-                                <!-- La Etiq. <img> sirve para crear imagenes, y es obligatorio que cuente con el atributo "src" (source, fuente en inglés) pues es el que indica el lugar donde se encuentra ubicada la imagen que deseas mostrar -->
+                                <!-- La Etiq. <img> sirve para crear imágenes, y es obligatorio que cuente con el atributo "src" (source, fuente en inglés) pues es el que indica el lugar donde se encuentra ubicada la imagen que deseas mostrar -->
 
                                 <img src="my-project/img/hola.jpg" />
 
-                                <!-- Además y a pesar de ser "opcional", para mejorar tu SEO, todas las imagenes deben tener el atributo "alt", el cuál debe ser una breve descripción de la imagen a mostrar -->
+                                <!-- Además y a pesar de ser "opcional", para mejorar tu SEO, todas las imágenes deben tener el atributo "alt", el cuál debe ser una breve descripción de la imagen a mostrar -->
                                 
                                 <img src="..." alt="emoticono de saludo" />
                             </textarea>
                         </pre>
 
-                        <hr class="h-divider w-75 my-4">
+                        <!-- ----------------------------- --> <hr class="h-divider w-75 my-2"> <!-- ----------------------------- -->
                     </div>
                 </article>
             </section>
 
-            <!-- conv zone -->
-            <section id="conv" class="parallax bgllax bg-7 cc-col">
+            <!-- Convenciones -->
+            <section id="conv" class="parallax bgllax html-2 cc-col">
                 <h2>Convenciones</h2>
             </section>
 
@@ -317,7 +328,7 @@
                 <article class="data-wrapper">
                     <div class="data-content cc-col">
                         <div class="data-text">
-                            &emsp; Las <b>Convenciones</b> son un grupo de acuerdos y normas tácitas que aunque no interfieren con la semantica del lenguaje, buscan la estandarización del mismo con el fin de crear código limpio, entendible y escalable.
+                            &emsp; Las <b>Convenciones</b> son un grupo de acuerdos y normas tácitas que aunque no interfieren con la semántica del lenguaje, buscan la estandarización del mismo con el fin de crear código limpio, entendible y escalable.
 
                             Es por ello que en aras de promover las buenas practicas, a continuación expondremos algunas de las convenciones que existen para HTML.
                         </div>
@@ -334,7 +345,7 @@
                             </textarea>
                         </pre>
 
-                        <hr class="h-divider w-75 my-2">
+                        <!-- ----------------------------- --> <hr class="h-divider w-75 my-4"> <!-- ----------------------------- -->
 
                         <div class="data-text">
                             &emsp;2. <b>Usar nombres de elementos en minúsculas:</b>
@@ -356,7 +367,7 @@
                             </textarea>
                         </pre>
 
-                        <hr class="h-divider w-75 my-2">
+                        <!-- ----------------------------- --> <hr class="h-divider w-75 my-4"> <!-- ----------------------------- -->
 
                         <div class="data-text">
                             &emsp;3. <b>Cerrar todos los elementos HTML:</b>
@@ -379,7 +390,7 @@
                             </textarea>
                         </pre>
 
-                        <hr class="h-divider w-75 my-2">
+                        <!-- ----------------------------- --> <hr class="h-divider w-75 my-4"> <!-- ----------------------------- -->
 
                         <div class="data-text">
                             &emsp;4. <b>Usar nombres de atributos en minúsculas:</b>
@@ -397,7 +408,7 @@
                             </textarea>
                         </pre>
 
-                        <hr class="h-divider w-75 my-2">
+                        <!-- ----------------------------- --> <hr class="h-divider w-75 my-4"> <!-- ----------------------------- -->
 
                         <div class="data-text">
                             &emsp;5. <b>Usar comillas en los valores de atributos:</b>
@@ -419,32 +430,10 @@
                             </textarea>
                         </pre>
 
-                        <hr class="h-divider w-75 my-2">
+                        <!-- ----------------------------- --> <hr class="h-divider w-75 my-4"> <!-- ----------------------------- -->
 
                         <div class="data-text">
-                            &emsp;6. <b>Usar comillas en los valores de atributos:</b>
-                            HTML5 permite atributos sin comillas, sin embargo se recomienda el uso de comillas debido a que es más fácil de leer y además, debe usarse si el valor contiene espacios.
-                        </div>
-
-                        <pre class="my-2">
-                            <code class="language-html"></code>
-
-                            <textarea>
-                                <!-- Funciona pero no es recomendable -->
-                                <table class=striped>
-
-                                <!-- Esto no funciona porque el valor contiene espacios -->
-                                <table class=table striped>
-                                
-                                <!-- Funciona sin problemas, por eso es lo recomendado -->
-                                <table class="table striped">
-                            </textarea>
-                        </pre>
-
-                        <hr class="h-divider w-75 my-2">
-
-                        <div class="data-text">
-                            &emsp;7. <b>Espacios y Signos de Igualdad:</b>
+                            &emsp;6. <b>Espacios y Signos de Igualdad:</b>
                             HTML5 permite los espacios alrededor de los signos igual (=), pero sin los espacios es más fácil de leer y agrupa mejor las entidades.
                         </div>
 
@@ -460,10 +449,10 @@
                             </textarea>
                         </pre>
 
-                        <hr class="h-divider w-75 my-2">
+                        <!-- ----------------------------- --> <hr class="h-divider w-75 my-4"> <!-- ----------------------------- -->
 
                         <div class="data-text">
-                            &emsp;8. <b>Indentación:</b>
+                            &emsp;7. <b>Indentación:</b>
                             Es la sangría que debe llevar todo elemento "hijo", anidado dentro de un elemento "padre". Es utilizada para mejorar la legibilidad del código fuente por parte de los programadores, y en algunos lenguajes es parte de la semántica del código, por lo cual dejaría de ser considerada una convención, pues pertenece a la sintaxis necesaria del lenguaje.
                         </div>
 
@@ -490,8 +479,218 @@
                 </article>
             </section>
 
-            <!-- outro zone -->
-            <section id="outro" class="parallax bgllax bg-4 cc-col">
+            <!-- Ejemplos -->
+            <section id="exp" class="parallax bgllax bgCover bg-4 cc-col">
+                <h2>Ejemplos</h2>
+            </section>
+
+            <section class="paraless">
+                <article class="data-wrapper">
+                    <div class="data-content cc-col">
+                        <p class="data-text">
+                            ¡Pasemos a la Acción!, a continuación te dejamos una serie de ejemplos de código HTML5 junto con su resultado, además de consejos adicionales a tener en consideración.
+                        </p>
+
+                        <!-- ----------------------------- --> <hr class="h-divider w-75 my-4"> <!-- --------------------------------- -->
+
+                        <p class="data-text">
+                            &emsp;1. <b>Elementos Interactivos:</b>
+
+                            Botones, enlaces, iconos. Todos los elementos necesarios para que el usuario interactúe dinámicamente con la página
+                        </p>
+
+                        <pre class="my-2">
+                            <code class="language-html"></code>
+
+                            <textarea>
+                                <!-- Enlaces con su atributo "href" -->
+                                <a href="https://www.google.com/" target="_blank">Click me!</a>
+                                <!-- tip: Si usas el atributo "target" y le das el valor "_blank" el enlace abrirá en otra pestaña -->
+
+                                <!-- Botones con su atributo "type" -->
+                                <button type="button">Botón</button>
+                                <!-- tip: Si define el "type" de un botón va a poseer diversas propiedades. type="submit" envía un formulario, type="reset" reinicia los valores del formulario -->
+                            </textarea>
+                        </pre>
+
+                        <div><i class="fas fa-chevron-down"></i></div>
+
+                        <div class="code-result e-dinamic">
+                            <a href="https://www.google.com/" target="_blank">Click me!</a>
+
+                            <button>Botón</button>
+                        </div>
+
+                        <!-- ----------------------------- --> <hr class="h-divider w-75 my-4"> <!-- --------------------------------- -->
+
+                        <p class="data-text">
+                            &emsp;2. <b>Elementos para Ingreso de Datos:</b>
+
+                            Ingreso de texto, ingreso de imágenes, selectores, y agrupaciones de estos que forman formularios completos para que los usuarios ingresen datos
+                        </p>
+
+                        <pre class="my-2">
+                            <code class="language-html"></code>
+
+                            <textarea>
+                                <!-- Input es el elemento básico para ingreso de datos -->
+                                <input type="text" name="dni" placeholder="Escribe Aquí" />
+
+                                <!-- Select crea un selector desplegable -->
+                                <select name="dni">
+                                    <option value=""> Seleccione </option>
+                                    <option value="123456"> Juan </option>
+                                    <option value="654321"> Maria </option>
+                                </select>
+                                <!-- tip: todas las <option> necesitan el atributo "value", no importa si está vació-->
+
+                                <!-- textarea es parecido a un input, pero su tamaño puede ser reajustado por el usuario, pues está pensado para textos grandes -->
+                                <textarea name="dni" placeholder="Reajusta mi tamaño">&lt;/textarea>
+
+                                <!-- tip: TODOS los elementos de ingreso de datos necesitan el atributo "name", pues será "el nombre" que almacenará valor del elemento. Con el atributo "placeholder" colocas un texto por defecto para cuando tu campo esté vacío, solo funciona en Input y Textarea, para select, puedes dejar la primera opción como el preview -->
+                            </textarea>
+                        </pre>
+
+                        <div><i class="fas fa-chevron-down"></i></div>
+
+                        <div class="code-result e-dinamic">
+                            <input type="text" name="dni" placeholder="Escribe Aquí" />
+
+                            <select name="dni" aria-label="Test">
+                                <option value=""> Seleccione </option>
+                                <option value="123456"> Juan </option>
+                                <option value="654321"> Maria </option>
+                            </select>
+
+                            <textarea name="dni" placeholder="Reajusta mi tamaño"></textarea>
+                        </div>
+
+                        <!-- ----------------------------- --> <hr class="h-divider w-75 my-4"> <!-- --------------------------------- -->
+
+                        <p class="data-text">
+                            &emsp;3. <b>Elementos de multimedia o de texto:</b>
+
+                            Ingreso de Imágenes, videos, párrafos y en general, todo lo que necesitas para brindarle información al usuario
+                        </p>
+
+                        <pre class="my-2">
+                            <code class="language-html"></code>
+
+                            <textarea>
+                                <!-- <img> permite crear imágenes, siempre debe ir acompañado del atributo ALT debido a la SEO -->
+                                <img src="../src/img/antico.png" alt="Icono de Antwoord Lab" width="30" height="30" />
+
+                                <!-- <p> permite crear secciones de texto, NO Obstante.. -->
+                                <p>El atributo Alt permite mostrar un texto provisional mientras carga la imagen</p>
+
+                                <!-- El texto puede ser creado dentro de cualquier elemento -->
+                                <span>Elemento &lt;span></span>
+                            </textarea>
+                        </pre>
+
+                        <div><i class="fas fa-chevron-down"></i></div>
+
+                        <div class="code-result e-dinamic">
+                            <img src="../src/img/antico.png" alt="Icono de Antwoord Lab" width="30" height="30" />
+
+                            <p>El atributo Alt permite mostrar un texto provisional mientras carga la imagen</p>
+
+                            <span>Elemento &lt;span></span>
+                        </div>
+
+                        <!-- ----------------------------- --> <hr class="h-divider w-75 my-4"> <!-- --------------------------------- -->
+
+                        <p class="data-text">
+                            &emsp;4. <b>Elementos de organización:</b>
+
+                            Cuando requieres que tu página tenga un orden especifico, puedes recurrir al elemento &lt;table>, pues crea una grilla preformateada para colocar tus elementos, no obstante ese sistema se considera un tanto obsoleto, y se recomienda usar las herramientas de organización que conoceremos al aprender CSS.
+                        </p>
+
+                        <pre class="my-2">
+                            <code class="language-html"></code>
+
+                            <textarea>
+                                <!-- <table> tiene su propia semántica y atributos -->
+
+                                <!-- Apertura y cierre -->    
+                                <table>
+                                    <!-- Cabeza, cuerpo y pie (opcionales) -->
+                                    <thead>
+                                        <!-- <tr> table row (fila, imperativo)  -->
+                                        <tr>
+                                            <!-- <th> para cabeceras, <td> para datos (imperativo) -->
+                                            <th colspan="2"> Cabecera </th>
+                                        </tr>
+                                    </thead>
+                                    
+                                    <tbody>
+                                        <tr>
+                                            <td> dato 1 </td>
+
+                                            <td> dato 2 </td>
+                                        </tr>
+                                    </tbody>
+
+                                    <tfoot>
+                                        <tr>
+                                            <!-- Colspan indica el tamaño de espacio a ocupar  -->
+                                            <!-- Según la cantidad de columnas de la tabla -->
+                                            <td colspan="2"> Pie </td> 
+                                        </tr>
+                                    </tfoot>
+                                </table>
+                            </textarea>
+                        </pre>
+
+                        <div><i class="fas fa-chevron-down"></i></div>
+
+                        <div class="code-result e-dinamic">
+                            <table border="1">
+                                <thead>
+                                    <tr>
+                                        <th colspan="2">
+                                            Cabecera
+                                        </th>
+                                    </tr>
+                                </thead>
+                                
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            dato 1
+                                        </td>
+
+                                        <td>
+                                            dato 2
+                                        </td>
+                                    </tr>
+                                </tbody>
+
+                                <tfoot>
+                                    <tr>
+                                        <td colspan="2">
+                                            Pie
+                                        </td>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+
+                        <!-- ----------------------------- --> <hr class="h-divider w-75 my-4"> <!-- --------------------------------- -->
+
+                        <p class="data-text">
+                            Acabamos entonces de exponer los elementos básicos que te brindan el punto de partida para la investigación, desarrollo y práctica en la creación de una página web.
+
+                            Te recordamos que aún hay mucha información por descubrir, y que puedes servirte de páginas como <a href="https://www.w3schools.com/" class="btn px-2">w3schools.com</a> ó la sección de <a href="https://developer.mozilla.org/es/" class="btn px-2">Desarrolladores</a> de Mozilla.
+                        </p>
+
+                        <h3>¡Visita estos sitios para ampliar tus conocimientos!.</h3>
+                    </div>
+                </article>
+            </section>
+
+            <!-- Outro -->
+            <section id="outro" class="parallax bgllax bgCover html-3 cc-col">
                 <h2>"La única forma de aprender desarrollo web es, desarrollando"</h2>
             </section>
 
@@ -522,11 +721,13 @@
                         </a>
                     </div>
 
-                    <hr class="h-divider w-75 my-4">
+                    <!-- ----------------------------- --> <hr class="h-divider w-75 my-4"> <!-- ----------------------------- -->
 
                     <div class="data-content cc-col">
                         <p class="data-text">
-                            &emsp;- <b>Habilitar la extensión de los archivos</b>. Todos los archivos tienen una extensión, un valor que indica a qué tipo pertenece el archivo en cuestión. Por ejemplo, los documentos de Microsoft Word terminan en ".doc", las imágenes, usualmente tienen el formato ".jpg" ó "png", e incluso, uno de los formatos de compresión de música más reconocidos es el ".mp3". Usualmente no vemos estas extensiones, pero son necesarias pues los archivos que pretendemos que sean interpretados por nuestro navegador a la hora de practicar, deben tener la extensión ".html". Además, por convención, el nombre de archivo no debe contener caracteres especiales ni letras que no existan en inglés y debe estar en minúsculas. 
+                            &emsp;- <b>Habilitar la extensión de los archivos</b>. Todos los archivos tienen una extensión, un valor que indica a qué tipo pertenece el archivo en cuestión. Por ejemplo, los documentos de Microsoft Word terminan en ".doc", las imágenes, usualmente tienen el formato ".jpg" ó "png", e incluso, uno de los formatos de compresión de música más reconocidos es el ".mp3". Usualmente no vemos estas extensiones, pero son necesarias pues los archivos que pretendemos que sean interpretados por nuestro navegador a la hora de practicar, deben tener la extensión ".html".
+
+                            <b>Además, por convención, el nombre de archivo no debe contener caracteres especiales ni letras que no existan en inglés y debe estar en minúsculas.</b>
 
                             Para poder habilitar las extensiones de los archivos te brindamos a continuación un video corto.
                         </p>
@@ -538,7 +739,7 @@
                         </a>
                     </div>
 
-                    <hr class="h-divider w-75 my-4">
+                    <!-- ----------------------------- --> <hr class="h-divider w-75 my-4"> <!-- ----------------------------- -->
 
                     <h3>Una vez asimilada y practicada la información anterior, es momento de conocer al resto de la estructura estética de un sitio web. Aprendamos CSS:</h3>
 

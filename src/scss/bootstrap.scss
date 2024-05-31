@@ -194,8 +194,6 @@ a{
     color: unset;
     text-decoration:none;
     background-color:transparent;
-    *width: 100%;
-    *height: 100%;
 }
 
 .grid-section-wrapper > a{
@@ -203,8 +201,7 @@ a{
     height: 100%;
 }
 
-a:not(:has(.btn-txt)):hover, .href:not(:has(.btn-txt)):hover{
-    color: var(--primary);
+a:not(.btn,:has(.btn-txt)):hover, .href:not(.btn,:has(.btn-txt)):hover{
     text-decoration:unset;
 }
 
@@ -399,7 +396,8 @@ template{
 .h1,.h2,.h3,.h4,.h5,.h6,h1,h2,h3,h4,h5,h6{
     margin-bottom:.5rem;
     font-weight:400;
-    line-height:1.2
+    line-height:1.2;
+    font-family: 'Poppins-Bold'
 }
 
 .h1,h1{

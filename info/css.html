@@ -1,25 +1,44 @@
 <!DOCTYPE html>
 <html lang="es">
     <head>
+        <!-- Meta SEO -->
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta name="description" content="">
+        <meta name="description" content="Guía básica sobre CSS. Sintaxis, semántica, reglas, y mucho más ">
+        <meta name="keywords" content="desarrollo, web, guía, instructivo, html5, css, javascript, frontEnd">
         <meta name="author" content="Antwoord Creative Lab">
-        <title>Antwoord Learning | CSS</title>
+        <title>CSS | Antwoord Learning</title>
+
+        <!-- Preloads -->
+        <link rel="preload" fetchpriority="high" as="font" href="../plugins/fontawesome-free/webfonts/fa-brands-400.woff2" type="font/woff2" crossorigin>
+        <link rel="preload" fetchpriority="high" as="font" href="../plugins/fontawesome-free/webfonts/fa-solid-900.woff2" type="font/woff2" crossorigin>
+        <link rel="preload" fetchpriority="high" as="font" href="../plugins/poppins/Poppins-Bold.ttf" type="font/ttf" crossorigin>
+        <link rel="preload" fetchpriority="high" as="font" href="../plugins/poppins/Poppins-Medium.ttf" type="font/ttf" crossorigin>
+        <link rel="preload" fetchpriority="high" as="image" href="../src/img/css/css1.webp" type="image/webp">
+        <link rel="preload" fetchpriority="high" as="image" href="../src/img/css/css2.webp" type="image/webp">
+        <link rel="preload" fetchpriority="high" as="image" href="../src/img/css/css3.webp" type="image/webp">
+        <link rel="preload" fetchpriority="high" as="image" href="../src/img/bg/bg2.webp"   type="image/webp">
+        <link rel="preload" fetchpriority="high" as="image" href="../src/img/bg/bg5.webp"   type="image/webp">
+
+        <!-- Styles -->
         <link rel="shortcut icon" href="../src/img/antico.png">
         <link rel="stylesheet" type="text/css" href="../src/css/style.css">
     </head>
 
     <body class="body">
+        <!-- Nav bar place -->
         <aside class="aside cc-col">
+            <!-- Aside Nav Bar -->
             <nav class="nav">
+                <!-- Top logo -->
                 <figure class="logo cc-col h-divider m-0">
                     <a href="../" title="Die Antwoord" aria-label="Volver al Menú principal">
                         <img src="../src/img/anth.png" alt="logo" width="35" height="35">
                     </a>    
                 </figure>
 
+                <!-- Nav Options -->
                 <menu class="menu ce-col">
                     <li>
                         <a href="../" title="inicio" aria-label="Volver al Menú principal">
@@ -34,9 +53,9 @@
                     </li>
 
                     <li>
-                        <a class="href" title="Qué es CSS?" aria-label="información sobre CSS">
+                        <span class="href" title="Qué es CSS?" aria-label="información sobre CSS">
                             <i class="fab fa-css3-alt visited"></i>
-                        </a>
+                        </span>
                     </li>
 
                     <li>
@@ -54,6 +73,7 @@
             </nav>
         </aside>
 
+        <!-- Header -->
         <header class="header">
             <span class="title v-divider">
                 <h1>
@@ -68,39 +88,55 @@
             </span>
         </header>
 
-        <main class="main cs-col">
+        <!-- Main Section -->
+        <main class="main">
+            <!-- Main Nav Bar -->
             <section id="menu" class="menu-wrapper z-prior">
-                <menu class="navMenu ce-row btn-group">
-                    <li class="btn m-dnamic btn-dark w-25">
-                        <a href="./html5">
+                <menu class="navMenu ce-row btn-group flat">
+                    <li class="btn m-dnamic btn-dark w-50">
+                        <a href="./html5" title="Volver a HTML">
                             <span class="btn-txt">HTML5</span>
                             <i class="fab fa-html5 btn-ico"></i>
                         </a>
                     </li>
 
                     <li class="btn m-dnamic">
-                        <a href="#css">
+                        <a href="#css" title="¿Qué es CSS?">
                             <span class="btn-txt">CSS</span>
+                            <i class="fab fa-css3 btn-ico"></i>
+                        </a>
+                    </li>
+
+                    <li class="btn m-dnamic">
+                        <a href="#rulez" title="Sintaxis y Semántica">
+                            <span class="btn-txt">Normas</span>
                             <i class="fas fa-book btn-ico"></i>
                         </a>
                     </li>
 
                     <li class="btn m-dnamic">
-                        <a href="#ejm">
-                            <span class="btn-txt">Ejemplos</span>
+                        <a href="#selc" title="Selectores">
+                            <span class="btn-txt">Selectores</span>
                             <i class="fas fa-code btn-ico"></i>
                         </a>
                     </li>
 
                     <li class="btn m-dnamic">
-                        <a href="#outro">
+                        <a href="#conv" title="Convenciones">
+                            <span class="btn-txt">Convenciones</span>
+                            <i class="fas fa-hands-helping btn-ico"></i>
+                        </a>
+                    </li>
+
+                    <li class="btn m-dnamic">
+                        <a href="#outro" title="Más">
                             <span class="btn-txt">Más</span>
                             <i class="fas fa-plus btn-ico"></i>
                         </a>
                     </li>
 
-                    <li class="btn m-dnamic btn-dark w-25">
-                        <a href="./js">
+                    <li class="btn m-dnamic btn-dark w-50">
+                        <a href="./js" title="Ir a JS">
                             <span class="btn-txt">JS</span>
                             <i class="fab fa-js btn-ico"></i>
                         </a>
@@ -108,66 +144,1109 @@
                 </menu>
             </section>
 
-            <section id="css">
-                <article class="data-wrapper">
-                    <hr class="h-divider w-100 my-4">
-
-                    <h2>Qué es CSS?</h2>
-
-                    <div class="data-content">
-                        <p class="data-text">
-                            CSS son las siglas en inglés de Cascading Style Sheets, que significa «hojas de esilo en cascada». Es un lenguaje que se usa para estilizar elementos escritos en un lenguaje de marcado como HTML.
-
-                            CSS no es técnicamente una necesidad, pero no querrás tener un sitio que solo tenga HTML, ya que se vería completamente básico.
-                        </p>
-                    </div>
-                </article>
+            <!-- Begin of main content sections -->
+            <section id="css" class="parallax bgllax css-1 cc-col">
+                <h2>¿Qué es CSS?</h2>
             </section>
 
-            <section id="ejm">
+            <section class="paraless">
                 <article class="data-wrapper">
-                    <hr class="h-divider w-100 my-4">
-
-                    <div class="data-switch">
-                        <h2 class="p">Coloca el puntero sobre los siguientes elementos html:</h2>
-                        <h2 class="m">Presione los siguientes elementos html:</h2>
-                    </div>
-                        
-                    <div class="data-content">
-                        <div class="data-content e-dinamic">
-                            <button class="trymeBtn" title="<button></button>">Botón</button>
-
-                            <table  class="trymeTbl" border="1" title="<table></table>">
-                                <tr>
-                                    <td>
-                                        tabla
-                                    </td>
-                                </tr>
-                            </table>
-
-                            <p class="unformat trymeTxt" title="<p></p>">Texto</p>
-
-                            <input type="text" name="foo" title="<input>" maxlength="10" placeholder="Ingreso de datos" onclick="this.value = ''" class="trymeInp">
-                        </div>
-                    </div>
-                </article>
-            </section>
-
-            <section id="outro">
-                <article class="data-wrapper">
-                    <hr class="h-divider w-100 my-4">
-
-                    <h2>Conclusión:</h2>
-
-                    <div class="data-content">
+                    <div class="data-content cc-col">
                         <p class="data-text">
+                            CSS son las siglas en inglés de Cascading Style Sheets, que significa «hojas de estilo en cascada». Es un lenguaje que se usa para estilizar elementos escritos en un lenguaje de marcado como HTML.
+
                             La relación entre HTML y CSS es muy fuerte. Dado que HTML es un lenguaje de marcado (es decir, constituye la base de un sitio) y CSS enfatiza el estilo (toda la parte estética de un sitio web), van de la mano.
+
+                            CSS no es técnicamente una necesidad, pero no querrás tener un sitio que solo tenga HTML, ya que se vería completamente desnudo. La diferencia entre un sitio web que implementa CSS y uno que no, es enorme y definitivamente se nota.
+
+                            Quizás hayas visto algún sitio web que no se puede cargar por completo y tiene un fondo blanco con la mayor parte del texto en azul y negro. Eso significa que la parte CSS del sitio no se cargó correctamente o no existe.
+
+                            Así es como se ve un sitio con solo HTML, y creo que estaremos de acuerdo en que no luce muy bien.
+
+                            Antes de CSS, todo el estilo debía incluirse en el marcado HTML. Esto significa que había que describir por separado todos los fondos, los colores de fuente, las alineaciones, etc.
+
+                            CSS permite estilizar todo en un archivo diferente, creando el estilo allí y después integrando el archivo CSS sobre el marcado HTML. Esto hace que el marcado HTML sea mucho más limpio y fácil de mantener.
+
+                            En resumen, con CSS no tienes que describir repetidamente cómo se ven los elementos individuales. Esto ahorra tiempo, hace el código más corto y menos propenso a errores.
                         </p>
+
+                        <!-- ---------------------------- --> <hr class="h-divider w-75 my-4"> <!-- -------------------------------- -->
+
+                        <pre class="my-2">
+                            <code class="language-css">
+                              /*|Selector|*/
+                                    p{
+                                      /*|-Propiedad-| |valor|*/ 
+
+                                            color    :  red
+
+                                    }/*|-----Declaración-----|*/   
+                            </code>
+                        </pre>
                     </div>
                 </article>
             </section>
+
+            <!-- Sintaxis -->
+            <section id="rulez" class="parallax bgllax bg-2  cc-col">
+                <h2>Sintaxis y Semántica</h2>
+            </section>
+
+            <section class="paraless">
+                <article class="data-wrapper">
+                    <div class="data-content cc-col">
+                        <h3>
+                            Sintaxis
+                        </h3>
+
+                        <p class="data-text">
+                            Toda regla CSS está compuesta por 3 partes
+                        </p>
+
+                        <pre class="my-2">
+                            <code class="language-css">
+                                /* El Selector, que apunta al elemento a modificar*/
+                                div{ }
+
+                                /* La Propiedad, que es el aspecto del elemento que deseas modificar*/
+                                background-color:
+
+                                /* El Valor, el cual se le asigna a la propiedad*/
+                                : darkred
+
+                                /* y como resultado */
+                                div{
+                                    background-color: darkred;
+                                }
+                            </code>
+                        </pre>
+
+                        <div><i class="fas fa-chevron-down"></i></div>
+
+                        <div class="code-result e-dinamic">
+                            <style type="text/css">
+                                div.css-try-1{
+                                    background-color: darkred;
+                                    color: #fff;
+                                }
+                            </style>
+
+                            <div class="css-try-1"> Fondo Rojo! </div>
+                        </div>
+
+                         <!-- --------------------------- --> <hr class="h-divider w-75 my-4"> <!-- ------------------------------- -->
+
+                        <h3>
+                            Semántica
+                        </h3>
+
+                        <p class="data-text">
+                            1. La apertura y el cierre de toda regla debe hacerse con el selector, seguido de los corchetes <b>{}</b>, y recuerda siempre que <b>Las reglas CSS se leen de arriba hacia abajo, no existe saltos, es una lectura secuencial, y esto significa que las normas que se encuentran más abajo en el documento tienen la prioridad sobre las que se encuentran más arriba </b>.
+
+                            2. Los selectores pueden apuntar a:
+                            &emsp;- El ID de los elementos.
+                            &emsp;- El atributo class de los elementos.
+                            &emsp;- El elemento mismo.
+                            &emsp;- Una pseudo clase.
+
+                            3. Al conjunto de Propiedades y valores encerradas en un selector se le llama "declaración", y después de cada valor, debe colocarse un punto y coma <b>;</b> con el propósito de separar cada una de las declaraciones.
+
+                            4. Ten en cuenta que hay propiedades que son inherentes al tipo de elemento que estás afectando con CSS, por ejemplo, no puedes añadir la propiedad "font-style" (que pertenece a los textos) a una caja &lt;div>.
+
+                            5. Puedes insertar código CSS en cualquier lugar de tu código HTML gracias a el elemento &lt;style> y al atributo "style, de las siguientes maneras:
+                        </p>
+
+                        <pre class="my-2">
+                            <code class="language-html"></code>
+
+                            <textarea>
+                                <!-- Esto funciona pero no se aconseja -->
+                                <style type="text/css">
+                                    div{
+                                        background-color: darkred;
+                                        color: #fff;
+                                    }
+                                </style>
+
+                                <div> 
+                                    Fondo Rojo! 
+                                </div>
+
+
+                                <!-- Por favor, no x_x -->
+                                <div style="background-color:darkred;">
+                                    Por favor, no hagas esto :(
+                                </div>
+                            </textarea>
+                        </pre>
+
+                        <p class="data-text">
+                            Sin embargo, lo aconsejable es mantener los estilos fuera de los documentos HTML, para ser controlados desde un archivo de extensión ".css", y para argumentar este punto podemos hacer la siguiente reflexión:
+
+                            Si tienes 2 o 3, ó 10 páginas html y con ellas creas un sitio web, y en todas y cada una de ellas deseas tener contenedores con fondo rojo, ¿qué es más fácil de mantener en el tiempo?
+
+                                &emsp;1. Tener que buscar y editar en las 10 páginas html el fragmento de código que controla a los contenedores rojos
+
+                                &emsp;2. Controlar todos los contenedores de fondo rojo, desde una simple linea de código
+
+                            Podemos convenir en que la respuesta es más que evidente, y para ello, puedes insertar tu archivo css, desde donde vas a controlar todos los aspectos estéticos de tu página web, en la etiqueta &lt;head> de tus páginas web de la siguiente manera:
+                        </p>
+
+                        <pre class="my-2">
+                            <code class="language-html"></code>
+
+                            <textarea>
+                                <head>
+                                    <link rel="stylesheet" type="text/css" href="ubicación/del/archivo/style.css">
+                                </head>
+                            </textarea>
+                        </pre>
+
+                        <p class="data-text">
+                            Y listo, ya tendrás la capacidad de afectar estéticamente a tus archivos HTML, desde tu archivo CSS.
+
+                            Sin embargo y antes de avanzar, quisiéramos definir la conversión semántica y lógica más importante:
+
+                            No escribas CSS para elementos particulares constantemente, trata de crear elementos rehusables, normas generales que te sirvan para utilizarlas una y otra vez en distintos elementos.
+
+                            Estructura, proyecta y escribe código multipropósito con el final de hacer tus desarrollos mucho más fluidos y rápidos.
+                        </p>
+
+                        <!-- ----------------------------- --> <hr class="h-divider w-75 my-2"> <!-- --------------------------------- -->
+                    </div>
+                </article>
+            </section>
+
+            <!-- Selectores -->
+            <section id="selc" class="parallax bgllax css-2  cc-col">
+                <h2>Selectores y Ejemplos</h2>
+            </section>
+
+            <section class="paraless">
+                <article class="data-wrapper">
+                    <div class="data-content cc-col">
+                        <p class="data-text">
+                            Si bien los selectores forman parte de la sintaxis del CSS, debemos reconocer que son el aspecto fundamental de la escritura de dicho lenguaje.
+
+                            Conocer las propiedades que pueden ser modificables por CSS es fácil, pero hacer el selector correcto para afectar <i>el</i> o <i>los</i> elementos correctos, ya es arena de otro costal.
+
+                            Entonces, debido no solo a que son la piedra angular del lenguaje, pero además, porque <b>son sumamente esenciales en el desarrollo de JavaScript</b>, hemos decidido destacar esta lección del aprendizaje para enfatizar la importancia de conocer a profundidad el cómo escribir, utilizar y combinar los selectores, y fungir como punto de apoyo a tu curiosidad.
+
+                            A continuación, vamos a exponer los selectores de manera básica, sin embargo para revisar la documentación detallada del lenguaje te dejamos el siguiente enlace:
+                        </p>
+
+                        <a href="https://developer.mozilla.org/es/docs/Web/CSS/CSS_selectors" class="btn my-1" target="_blank">
+                            Selectores
+                        </a>
+
+                        <!-- ---------------------------- --> <hr class="h-divider w-75 my-4"> <!-- -------------------------------- -->
+
+                        <h3>
+                            Selectores Primarios
+                        </h3>
+
+                        <p class="data-text">
+                            &emsp;1. <b>Selectores de Tipo:</b>
+
+                            Elementos HTML en bruto, sin puntos, sin adornos, sin corchetes angulares, ¿quieres afectar a todos los &lt;div>? use el selector <b>div{}</b>.
+
+                            <b>Sintaxis:</b> Elemento-Html{...}, div{...}, p{...}
+                        </p>
+
+                        <pre class="my-2">
+                            <code class="language-css">
+                                /* CSS */
+
+                                /* &lt;div> con fondos rojos */
+                                div{
+                                    background: darkred;
+                                }
+
+                                /* &lt;p> con letras blancas */
+                                p{
+                                    color: white;
+                                }
+
+                                /* HTML */
+                                &lt;div>
+                                    &lt;p>
+                                        Fondo rojo, letras blancas
+                                    &lt;/p>
+                                &lt;/div>
+                            </code>
+                        </pre>
+
+                        <div><i class="fas fa-chevron-down"></i></div>
+
+                        <div class="code-result e-dinamic">
+                            <style type="text/css">
+                                div.css-try-2{
+                                    background: darkred;
+                                }
+
+                                .css-try-2 p{
+                                    color: white;
+                                }
+                            </style>
+
+                            <div class="css-try-2">
+                                <p>
+                                    Fondo rojo, letras blancas
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- ---------------------------- --> <hr class="h-divider w-75 my-4"> <!-- -------------------------------- -->
+
+                        <p class="data-text">
+                            &emsp;2. <b>Selectores de ID (#):</b>
+
+                            Al colocar a un elemento HTML el atributo ID, lo haces único; Puedes usar este ID para que el CSS modifique exclusivamente al elemento objetivo.
+
+                            <b>Sintaxis:</b> #id{...}
+                        </p>
+
+                        <pre class="my-2">
+                            <code class="language-css">
+                                /* Considera este HTML */
+                                &lt;div>
+                                    &lt;p> Div rojo &lt;/p>
+                                &lt;/div>
+
+                                &lt;div id="azul">
+                                    &lt;p> Fondo azul &lt;/p>
+                                &lt;/div>
+
+                                &lt;div>
+                                    &lt;p> Div rojo &lt;/p>
+                                &lt;/div>
+
+                                /* 
+                                    Ahora, deseo que el div del medio sea azul,
+                                    así que lo selecciono con su ID 
+                                */
+
+                                #azul{
+                                    background: darkblue;
+                                }
+                            </code>
+                        </pre>
+
+                        <div><i class="fas fa-chevron-down"></i></div>
+
+                        <div class="code-result e-dinamic">
+                            <style type="text/css">
+                                .css-try-3 div{
+                                    background: darkred;
+                                }
+
+                                .css-try-3 p{
+                                    color: white;
+                                }
+
+                                .css-try-3 #azul{
+                                    background: darkblue;
+                                }
+                            </style>
+
+                            <div class="css-try-3 e-dinamic">
+                                <div>
+                                    <p>
+                                        Div rojo
+                                    </p>
+                                </div>
+
+                                <div id="azul">
+                                    <p>
+                                        #azul
+                                    </p>
+                                </div>
+
+                                <div>
+                                    <p>
+                                        Div rojo
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- ---------------------------- --> <hr class="h-divider w-75 my-4"> <!-- -------------------------------- -->
+
+                        <p class="data-text">
+                            &emsp;3. <b>Selectores de Atributo ([attr]):</b>
+
+                            El más lento de los 4 selectores primarios, ubica al elemento HTML con determinado atributo, omitiendo a los demás elementos hermanos que no lo posean. Se debe usar sabiamente, en casos estratégicos.
+
+                            <b>Sintaxis:</b> elem[atributo], elem[atributo="valor"]{...}
+                        </p>
+
+                        <pre class="my-2">
+                            <code class="language-css">
+                                /* Considera este HTML */
+                                &lt;button type="button" disabled>
+                                    Deshabilitado
+                                &lt;/button>
+
+                                &lt;button type="button">
+                                    Habilitado
+                                &lt;/button>
+
+                                &lt;button type="button">
+                                    Habilitado
+                                &lt;/button>
+
+                                /* 
+                                    Ahora crearemos un CSS que me 
+                                    permita Mostrar al usuario cuando 
+                                    un Botón está deshabilitado
+                                */
+
+                                button{
+                                    background: #575757;
+                                    color: #fff;
+                                    border-radius: 10px;
+                                }
+
+                                button[disabled]{
+                                    background: #e6e6e6;
+                                    color: #b5b5b5;
+                                }
+                            </code>
+                        </pre>
+
+                        <div><i class="fas fa-chevron-down"></i></div>
+
+                        <div class="code-result e-dinamic">
+                            <style type="text/css">
+                                .css-try-4 button{
+                                    background: #575757;
+                                    color: #fff;
+                                    border-radius: 10px;
+                                }
+
+                                .css-try-4 button[disabled]{
+                                    background: #e6e6e6;
+                                    color: #b5b5b5;
+                                }
+                            </style>
+
+                            <div class="css-try-4 e-dinamic">
+                                <button type="button" disabled>
+                                    Deshabilitado
+                                </button>
+
+                                <button type="button">
+                                    Habilitado
+                                </button>
+
+                                <button type="button">
+                                    Habilitado
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- ---------------------------- --> <hr class="h-divider w-75 my-4"> <!-- -------------------------------- -->
+
+                        <p class="data-text">
+                            &emsp;4. <b>Selectores de Clase (.ClassName):</b>
+
+                            No se dejen asustar por las "Clases", sobre todo si vienes de programar en BackEnd, donde las "Class" significan algo totalmente distinto.
+
+                            En palabras lúdicas e informales, las clases son nombres que inventamos para crear una palabra rastreable por CSS que pueda ser rehusada, a diferencia de los IDs que son únicos.
+
+                            Puedo asignarle "la clase" a varios elementos HTML sin ningún tipo de restricción, y modificar su estética simultáneamente con CSS, y todo esto, a través del atributo "class" de html.
+
+                            <b>Les presento entonces, al selector por excelencia de CSS</b>
+
+                            <b>Sintaxis:</b>  .ClassName{...}
+                        </p>
+
+                        <pre class="my-2">
+                            <code class="language-css">
+                                /*
+                                    Ahora crearemos 2 clases
+                                    1 para crear DIVs de fondo rojo
+                                    Otra para crear DIVs de fondo azul
+                                    Presta atención a cómo seccionar las
+                                    responsabilidades de CSS
+                                */
+
+                                .lt-white{
+                                    color: #fff;
+                                }
+
+                                .bg-red{
+                                    background-color: darkred;
+                                }
+
+                                .bg-blue{
+                                    background-color: darkblue;
+                                }
+                                -
+                            </code>
+
+                            <code class="language-html"></code>
+
+                            <textarea>
+                                -
+                                <!-- Considera este HTML -->
+                                <div class="bg-blue">
+                                    <p class="lt-white"> ¿Qué </p>
+                                </div>
+
+                                <div class="bg-red">
+                                    <p class="lt-white"> te </p>
+                                </div>
+
+                                <div class="bg-blue">
+                                    <p class="lt-white"> Parece? </p>
+                                </div> 
+                            </textarea>
+                        </pre>
+
+                        <div><i class="fas fa-chevron-down"></i></div>
+
+                        <div class="code-result e-dinamic">
+                            <style type="text/css">
+                                .css-try-5 .lt-white{
+                                    color: #fff;
+                                }
+
+                                .css-try-5 .bg-red{
+                                    background-color: darkred;
+                                }
+
+                                .css-try-5 .bg-blue{
+                                    background-color: darkblue;
+                                }
+                            </style>
+
+                            <div class="css-try-5 e-dinamic">
+                                <div class="bg-blue">
+                                    <p class="lt-white"> ¿Qué </p>
+                                </div>
+
+                                <div class="bg-red">
+                                    <p class="lt-white"> te </p>
+                                </div>
+
+                                <div class="bg-blue">
+                                    <p class="lt-white"> Parece? </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <p class="data-text my-2">
+                            Este es el momento donde le decimos a los chicos de BackEnd que los engañamos.
+
+                            La realidad es que la versatilidad del selector "class" reside en que gracias a él, puedes proyectar un sitio web entero con base en la creación de objetos reutilizables que llevan a <b>la metodología "DRY", ó "Don't Repeat Yourself"</b>, la cual por ejemplo, te insta a no colocarle el color blanco de las letras a TODOS los elementos que estás creado cuando en su lugar, puedes crear una clase llamada ".letras-blancas" y reutilizarla en TODOS los elementos que necesites.
+
+                            <b>Porque sí, un objeto HTML puede tener infinita cantidad de valores dentro de su atributo "class"</b>
+                        </p>
+
+                        <!-- ---------------------------- --> <hr class="h-divider w-75 my-4"> <!-- -------------------------------- -->
+
+                        <p class="data-text my-2">
+                            Antes de Avanzar con los selectores queremos subir la apuesta y traer colación algo que puedes haber intuido ya ..
+
+                            ¡¡Los Selectores Pueden Combinarse!!
+
+                            Así pues, puedes crear clases especiales que solo afecten a determinados objetos, aumentando así la especificidad del selector.
+
+                            Y si bien la especificidad es algo que se debe tratar con cuidado, para evitar crear problemas al momento de aumentar la escala de tu proyecto y la refactorización de código, <b>conocer cómo crear selectores complejos te puede ayudar a solucionar problemas en proyectos, librerías o marcos de trabajo (frameworks) ya existentes</b>.
+                        </p>
+
+                        <!-- ---------------------------- --> <hr class="h-divider w-75 my-4"> <!-- -------------------------------- -->
+
+                        <h3>
+                            Selectores Especiales ó Pseudo-clases
+                        </h3>
+
+                        <p class="data-text">
+                            ¿Cómo se muestran los "placeholders" en los elementos &lt;input> si no los veo en HTML?, ¿cómo puedo afectar a elementos &lt;div> que tengan elementos &lt;p> SIN afectar a los otros &lt;div>? ¿cómo puedo afectar a un elemento solamente cuando el cursor está encima de él?
+
+                            La respuesta a todas estas preguntas y más, son <b>los selectores especiales</b>, capaces de ayudarte a seleccionar elementos con atributos específicos, activar eventos especiales e incluso crear o apuntar a pseudoelementos que no existen, en términos de código, en el DOM.
+
+                            Son muchos para ser especificados en una guía básica, pero vamos a exponer algunos con el objetivo de tentar tu curiosidad. Recuerda que esta guía es un punto de partida para tu propia investigación.
+                        </p>
+
+                        <!-- ---------------------------- --> <hr class="h-divider w-75 my-4"> <!-- -------------------------------- -->
+
+                        <p class="data-text">
+                            &emsp;1. <b>Selector ":hover":</b>
+
+                            El selector especial clásico, el más usado, jamás pasa de moda. Te permite activar código CSS solo cuando el puntero del ratón pasa por encima del elemento, ó en el caso de los dispositivos móviles, cuando se presiona el elemento
+                        </p>
+
+                        <pre class="my-2">
+                            <code class="language-css">
+                                /*  
+                                    OJO
+                                    A partir de Ahora, el CSS de los ejemplos
+                                    tendrá un poco más de complejidad.
+                                */
+
+                                .caja{
+                                    background-color: gray;
+                                    padding: .5% 1%;
+                                }
+
+                                .txt{
+                                    color: #fff
+                                }
+
+                                .redon{
+                                    border-radius: 10px;
+                                }
+
+                                .azul:hover{
+                                    background-color: darkblue;
+                                }
+
+                                .rojo:hover{
+                                    background-color: darkred;
+                                }
+
+                                -
+                            </code>
+
+                            <code class="language-html"></code>
+
+                            <textarea>
+                                -
+
+                                <!--
+                                    Considera este HTML
+
+                                    fijate como las clases se 
+                                    pueden usar independientemente
+                                    del tipo de elemento.
+                                -->
+
+                                <div class="caja rojo">
+                                    <p class="txt">Div</p>
+                                </div>
+
+                                <button class="caja redon azul txt">
+                                    Botón
+                                </button>
+
+                                <span class="caja rojo">
+                                    <p class="txt">span</p>
+                                </span>
+                            </textarea>
+                        </pre>
+
+                        <div><i class="fas fa-chevron-down"></i></div>
+
+                        <div class="code-result e-dinamic">
+                            <style type="text/css">
+                                .css-try-6 .caja{
+                                    background-color: gray;
+                                    padding: .5% 1%;
+                                }
+
+                                .css-try-6 .txt{
+                                    color: #fff
+                                }
+
+                                .css-try-6 .redon{
+                                    border-radius: 10px;
+                                }
+
+                                .css-try-6 .azul:hover{
+                                    background-color: darkblue;
+                                }
+
+                                .css-try-6 .rojo:hover{
+                                    background-color: darkred;
+                                }
+                            </style>
+
+                            <div class="css-try-6 e-dinamic">
+                                <div class="caja rojo">
+                                    <p class="txt">Div</p>
+                                </div>
+
+                                <button class="caja redon azul txt">
+                                    Botón
+                                </button>
+
+                                <span class="caja rojo">
+                                    <p class="txt">span</p>
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- ---------------------------- --> <hr class="h-divider w-75 my-4"> <!-- -------------------------------- -->
+
+                        <p class="data-text">
+                            &emsp;2. <b>Selector ":not()":</b>
+
+                            Un selector especial que te permite afectar a un grupo de elementos que "NOT" contengan una determinada clase, o atributo, o que no sean un determinado elemento. Además, tiene una capa de complejidad más profunda cuando se mezcla con otros selectores.
+
+                            <b>Sintaxis:</b> selector-primario:not(selectores a excluir){...}
+                        </p>
+
+                        <pre class="my-2">
+                            <code class="language-css">
+                                /*  
+                                    Tenemos un grupo de elementos
+                                    todos son de clase ".caja"
+                                    NO queremos afectar a los que tengan
+                                    la clase ".gray"
+                                */
+
+                                .caja{
+                                    background-color: gray;
+                                    padding: .5% 1%;
+                                }
+
+                                .caja:not(.gray){
+                                    background-color: lightblue;
+                                }
+
+                                -
+                            </code>
+
+                            <code class="language-html"></code>
+
+                            <textarea>
+                                -
+
+                                <!--
+                                    Considera este HTML
+                                -->
+
+                                <div class="caja">
+                                    <p class="txt">Div</p>
+                                </div>
+
+                                <button class="caja">
+                                    Botón
+                                </button>
+
+                                <span class="caja gray">
+                                    <p class="txt">span</p>
+                                </span>
+                            </textarea>
+                        </pre>
+
+                        <div><i class="fas fa-chevron-down"></i></div>
+
+                        <div class="code-result e-dinamic">
+                            <style type="text/css">
+                                .css-try-7 .caja{
+                                    background-color: gray;
+                                    padding: .5% 1%;
+                                }
+
+                                .css-try-7 .caja:not(.gray){
+                                    background-color: lightblue;
+                                }
+
+                                .css-try-7 .redon{
+                                    border-radius: 10px;
+                                }
+                            </style>
+
+                            <div class="css-try-7 e-dinamic">
+                                <div class="caja">
+                                    <p class="txt">Div</p>
+                                </div>
+
+                                <button class="caja">
+                                    Botón
+                                </button>
+
+                                <span class="caja gray">
+                                    <p class="txt">span</p>
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- ---------------------------- --> <hr class="h-divider w-75 my-4"> <!-- -------------------------------- -->
+
+                        <p class="data-text">
+                            &emsp;3. <b>Selector ":has()":</b>
+
+                            Un selector especial que te permite afectar a un grupo de elementos que "CONTENGA" una determinada clase, o atributo, o un determinado elemento <b>entre sus elementos Descendientes</b>. Además, tiene una capa de complejidad más profunda cuando se mezcla con otros selectores.
+
+                            <b>Sintaxis:</b> selector-primario:has(selectores hijos a incluir){...}
+                        </p>
+
+                        <pre class="my-2">
+                            <code class="language-css">
+                                /*  
+                                    Tenemos un grupo de elementos
+                                    todos son de clase ".caja"
+                                    QUEREMOS afectar a los que tengan
+                                    la clase ".txt" en alguno de sus hijos
+                                */
+
+                                .caja{
+                                    background-color: gray;
+                                    padding: .5% 1%;
+                                }
+
+                                .caja:has(.txt){
+                                    background-color: lightblue;
+                                }
+
+                                -
+                            </code>
+
+                            <code class="language-html"></code>
+
+                            <textarea>
+                                -
+
+                                <!--
+                                    Considera este HTML
+                                -->
+
+                                <div class="caja">
+                                    <p class="txt">Div</p>
+                                </div>
+
+                                <button class="caja">
+                                    Botón
+                                </button>
+
+                                <span class="caja gray">
+                                    <p class="txt">span</p>
+                                </span>
+                            </textarea>
+                        </pre>
+
+                        <div><i class="fas fa-chevron-down"></i></div>
+
+                        <div class="code-result e-dinamic">
+                            <style type="text/css">
+                                .css-try-8 .caja{
+                                    background-color: gray;
+                                    padding: .5% 1%;
+                                }
+
+                                .css-try-8 .caja:has(.txt){
+                                    background-color: lightblue;
+                                }
+                            </style>
+
+                            <div class="css-try-8 e-dinamic">
+                                <div class="caja">
+                                    <p class="txt">Div</p>
+                                </div>
+
+                                <button class="caja">
+                                    Botón
+                                </button>
+
+                                <span class="caja">
+                                    <p class="txt">span</p>
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- ---------------------------- --> <hr class="h-divider w-75 my-4"> <!-- -------------------------------- -->
+
+                        <h3>
+                            Combinadores y Separadores
+                        </h3>
+
+                        <p class="data-text">
+                            Para finalizar queremos aumentar aún más la complejidad, al introducir los combinadores y separadores, que son simbolos que te van a permitir mezclar los selectores y brindar aún más posibilidades a la hora de crear selectores.
+
+                            Vamos a exponer brevemente algunos de ellos.
+                        </p>
+
+                        <!-- ---------------------------- --> <hr class="h-divider w-75 my-4"> <!-- -------------------------------- -->
+
+                        <p class="data-text">
+                            &emsp;1. <b>Combinador de descendientes " <i>un espacio vacío</i> ":</b>
+
+                            El combinador más básico y más usado, no está representado por ningún símbolo, es literalmente un espacio en blanco, y permite seleccionar a todos selectores hijos dentro del selector padre.
+
+                            <b>Sintaxis:</b> .padre <i>un espacio vacío</i> .descendiente{...}
+                        </p>
+
+                        <pre class="my-2">
+                            <code class="language-css">
+                                /*  
+                                    Ejemplo
+
+                                    Quieres afectar a las clases ".txt"
+                                    que estén dentro de la clase ".caja"
+                                */
+
+                                /* |padre| |hijo| */
+
+                                    .caja  .txt{
+
+                                    }
+                            </code>
+                        </pre>
+
+                        <!-- ---------------------------- --> <hr class="h-divider w-75 my-4"> <!-- -------------------------------- -->
+
+                        <p class="data-text">
+                            &emsp;2. <b>Combinador de hijos ">":</b>
+
+                            A diferencia del combinador anterior, que afecta a TODOS los descendientes de un selector padre, este combinador, que es representado por un corchete angular, permite seleccionar SOLAMENTE a los descendientes directos de un elemento padre.
+
+                            <b>Sintaxis:</b> .padre > .hijo{...}
+                        </p>
+
+                        <pre class="my-2">
+                            <code class="language-css">
+                                /*  
+                                    Ejemplo
+
+                                    Quieres afectar a las clases ".txt"
+                                    pero solo a aquellas que sean elementos
+                                    que están en el primer nivel de profundidad
+                                    de una clase .caja
+                                */
+
+                                /* |padre|  |hijo| */
+
+                                    .caja > .txt{ ... }
+                            </code>
+                        </pre>
+
+                        <!-- ---------------------------- --> <hr class="h-divider w-75 my-4"> <!-- -------------------------------- -->
+
+                        <p class="data-text">
+                            &emsp;3. <b>Combinador de Hermano Adjunto "+":</b>
+
+                            Este combinador permite seleccionar a los hermanos inmediatamente siguientes al selector base.
+
+                            <b>Sintaxis:</b> .hermano-base + .hermano-directo{...}
+                        </p>
+
+                        <pre class="my-2">
+                            <code class="language-css">
+                                /*  
+                                    Ejemplo
+
+                                    El Presente código css solo va
+                                    a afectar a los elementos &lt;p>
+                                    cuyo hermano anterior era un
+                                    elemento &lt;img>
+                                */
+
+                                /* |padre|  |hijo| */
+
+                                    img + p{ ... }
+                            </code>
+                        </pre>
+
+                        <!-- ---------------------------- --> <hr class="h-divider w-75 my-4"> <!-- -------------------------------- -->
+
+                        <p class="data-text">
+                            Y hasta aquí llegamos con la introducción básica y resumida de los selectores.
+
+                            La realidad es que es un tema profundamente amplio que abarcaremos mejor en subsiguientes guías, sin embargo, esperamos haber motivado tu curiosidad lo suficiente para que investigues sobre este fragmento fundamental de CSS.
+                        </p>
+
+                        <a href="https://developer.mozilla.org/es/docs/Web/CSS/CSS_selectors" class="btn my-1" target="_blank">
+                            Selectores
+                        </a>
+
+                        <!-- ---------------------------- --> <hr class="h-divider w-75 my-2"> <!-- -------------------------------- -->
+                    </div>
+                </article>
+            </section>
+
+            <!-- Convenciones -->
+            <section id="conv" class="parallax bgllax bg-5 cc-col">
+                <h2>Convenciones</h2>
+            </section>
+
+            <section class="paraless">
+                <article class="data-wrapper">
+                    <div class="data-content cc-col">
+                        <div class="data-text">
+                            Una vez más, en aras de promover las buenas practicas, a continuación expondremos algunas de las convenciones que existen para CSS.
+                        </div>
+
+                        <div class="data-text">
+                            &emsp;1. <b>Utiliza Libremente los Saltos de Línea:</b>
+
+                            Utiliza todos los saltos de línea, espacios e indentaciones necesarias para que tu código sea legible.
+                        </div>
+
+                        <pre class="my-2">
+                            <code class="language-css">
+                                /* funciona pero es confuso */
+                                .p{color:red;}
+
+                                /* Recomendado*/
+                                .p{
+                                    color:red;
+                                }
+                            </code>
+                        </pre>
+
+                        <!-- ---------------------------- --> <hr class="h-divider w-75 my-4"> <!-- ---------------------------- -->
+
+                        <div class="data-text">
+                            &emsp;2. <b>CSS Inline vs. CSS Externo vs. CSS Interno:</b>
+
+                            <b>- inLine:</b> dentro del elemento HTML (no recomendado).
+
+                            <b>- Interno:</b> dentro del HTML, desde cualquier parte usando el elemento &lt;style>, <b>solo va poder afectar a los elementos que estén debajo de la etiqueta que lo contiene, OJO</b>.
+
+                            <b>- Externo:</b> fuera del elemento HTML, desde un archivo ".css" (recomendado).
+                        </div>
+
+                        <!-- ---------------------------- --> <hr class="h-divider w-75 my-4"> <!-- ---------------------------- -->
+
+                        <div class="data-text">
+                            &emsp;3. <b>Considera correctamente usar un Framework CSS:</b>
+
+                            <b>- Ventajas:</b> pueden facilitar el despliegue rápido de grandes proyectos, y también evitar errores. Y proporcionan la ventaja de la estandarización, que es esencial cuando varias personas trabajan en un proyecto al mismo tiempo.
+
+                            <b>- Desventajas:</b> dan lugar a sitios web de aspecto genérico y gran parte del código puede acabar sin utilizarse lo cuál es negativo pues los archivos de css del framework tienden a pesar bastante.
+                        </div>
+
+                        <!-- ---------------------------- --> <hr class="h-divider w-75 my-4"> <!-- ---------------------------- -->
+
+                        <div class="data-text">
+                            &emsp;4. <b>Evita la Redundancia:</b>
+
+                            Otra de las mejores prácticas de CSS que debes seguir es evitar la redundancia siempre y cuando puedas. Apegate al método DRY antes mencionado e intenta usar abreviaturas en CSS.
+                        </div>
+
+                        <pre class="my-2">
+                            <code class="language-css">
+                                /* Este grupo de declaraciones.. */
+                                .div{
+                                    background-color: red;
+                                    background-image: url(img.jpg);
+                                    background-position: center;
+                                    background-repeat: no-repeat;
+                                }
+
+                                /* Pueden ser abreviadas así*/
+                                .div{
+                                    background: red center no-repeat url(img.jpg);
+                                }
+                            </code>
+                        </pre>
+
+                        <!-- ---------------------------- --> <hr class="h-divider w-75 my-4"> <!-- ---------------------------- -->
+
+                        <div class="data-text">
+                            &emsp;5. <b>Combina los Elementos Cuando sea Posible:</b>
+
+                            En lugar de enumerar los elementos uno por uno, combínalos para ahorrar espacio y tiempo.
+                        </div>
+
+                        <pre class="my-2">
+                            <code class="language-css">
+                                /* Este grupo de reglas */
+                                h1{
+                                    color: red;
+                                }
+
+                                h2{
+                                    color: red;
+                                }
+
+                                h3{
+                                    color: red;
+                                }
+
+                                /* Pueden ser Combinadas así*/
+                                h1, h2, h3{
+                                    color: red;
+                                }
+                            </code>
+                        </pre>
+
+                        <!-- ---------------------------- --> <hr class="h-divider w-75 my-4"> <!-- ---------------------------- -->
+
+                        <div class="data-text">
+                            &emsp;6. <b>Evita los Selectores Adicionales Innecesarios:</b>
+
+                            Por ejemplo, si vas a dar estilo a las listas de tu sitio web, no necesitas utilizar selectores como <b>"html > body > main > div > ul > li {...}"</b> ..
+
+                            Asigna una clase al contenedor donde está la lista que deseas afectar, y simplemente apunta a la lista dentro de esa clase.
+
+                            <b>".lista-roja  li {...}"</b> ..
+                        </div>
+
+                        <!-- ---------------------------- --> <hr class="h-divider w-75 my-4"> <!-- ---------------------------- -->
+
+                        <div class="data-text">
+                            &emsp;7. <b>Prioriza Grid y Flex-Box sobre elementos "&lt;table>":</b>
+
+                            Para mejorar no solo las métricas de SEO, pero también la accesibilidad de la página, es importante tender hacia diseños ajustables al tamaño de la pantalla del dispositivo <b>(Responsividad)</b>, y que permita una excelente experiencia para todos los usuarios sin distinción <b>(Accesibilidad)</b>
+                        </div>
+
+                        <!-- ---------------------------- --> <hr class="h-divider w-75 my-2"> <!-- ---------------------------- -->
+                    </div>
+                </article>
+            </section>
+
+            <!-- Outro -->
+            <section id="outro" class="parallax bgllax css-3 cc-col">
+                <h2>"No dejes que te lo cuenten, vívelo."</h2>
+            </section>
+
+            <section class="paraless">
+                <article class="data-wrapper">
+                    <div class="data-content cc-col">
+                        <p class="data-text">
+                            ¡Por fin!, terminamos con el hermano elegante de la triada del desarrollo web.
+
+                            Si tenemos que hacer un resumen de la presente guía sería algo como:
+
+                            &emsp; - Mantén tu código limpio y abreviado.
+
+                            &emsp; - Emplea sabiamente los recursos y selectores a tu disposición.
+
+                            &emsp; - Por favor, no uses CSS en línea.
+
+                            &emsp; - No te repitas a ti mismo (DRY).
+
+                            &emsp; - Aprender sobre selectores es importante, nunca dejes de estudiar.
+
+                            &emsp; - En serio, por favor, no uses CSS en línea.
+
+                            Links para que continúes tus estudios:
+                        </p>
+                    </div>
+
+
+                    <div class="data-content e-dinamic my-2">
+                        <a class="btn px-2" href="https://developer.mozilla.org/es/docs/Web/CSS/CSS_selectors" target="_blank">
+                            Selectores
+                        </a>
+
+                        <a class="btn px-2" href="https://developer.mozilla.org/es/docs/Web/CSS/Reference" target="_blank">
+                            Lista de Referencias
+                        </a>
+                    </div>
+
+                    <!-- ---------------------------- --> <hr class="h-divider w-75 my-4"> <!-- ---------------------------- -->
+
+                    <h3>¿Recuerdas que hemos estado hablando de código estructurado, que se lee de arriba abajo y de izquierda a derecha, limpio, resumido y sencillo? Olvídate de todo eso, es hora de conocer al hermano rebelde de la triada web. Conozcamos a JavaScript.</h3>
+
+                    <div class="data-content e-dinamic">
+                        <figure class="data-img">
+                            <a href="./js" title="Guía de JS">
+                                <i class="fab fa-js-square"></i>
+                            </a>
+                        </figure>
+                    </div>
+                </article>
+            </section>
+            <!-- End of main content sections -->
         </main>
 
+        <!-- Footer -->
         <footer class="footer cc-row">
             <span class="foot-data">
                 Copyright © Antwoord Creative Lab. 
@@ -176,12 +1255,16 @@
             </span>
         </footer>
         
+        <!-- Core Javascript -->
         <script src="../plugins/jquery/jquery.min.js"></script>    
         <script src="../src/js/main.js"></script>
         <script src="../plugins/prism/prism.js"></script>   
 
+        <!-- Handler invoker -->
         <script type="text/javascript">
-            
+            document.addEventListener("DOMContentLoaded", ()=>{
+                pageListenersCSS();
+            });
         </script>
     </body>
 </html>
