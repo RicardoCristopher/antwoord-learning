@@ -42,9 +42,9 @@
         }
 
         .aside::after{
-            width: 20px;
+            width: 25px;
             height: 70px;
-            right: -20px;
+            right: -25px;
             position: absolute;
             background-color: #d99936;
             border-top-right-radius: 10px;
@@ -63,6 +63,8 @@
             line-height: 1;
             color: #2b2b2b;
             box-shadow: inset 1px -1px 9px 0px #ffffff5c;
+            opacity: .4;
+            transition: opacity .2s;
         }
 
         /* ----------------------------
@@ -184,6 +186,8 @@
 
                 .toggled .aside::after{
                     content: "\f053";
+                    opacity: .9;
+                    transition: opacity .2s;
                 }
 
                 .body.toggled {
