@@ -137,6 +137,15 @@
     // | JavaScript |
     // --------------------------------------
 
+        function ejemplo1(){
+            let boton = document.getElementById('jsexp1');
+
+            boton.addEventListener('click', ()=>{
+                alert('Bienvenidos :D');
+            });
+        }
+
+
         function pageListenersJS(){
 
             const alert   = document.getElementById('alert');
@@ -155,6 +164,8 @@
             reverse.addEventListener('click',()=>{
                 evenGrp.classList.contains('reverse') ? evenGrp.classList.remove('reverse') : evenGrp.classList.add('reverse');
             });
+
+            ejemplo1()
 
             pCleaner();
         };

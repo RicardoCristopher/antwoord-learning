@@ -474,6 +474,14 @@
                         }
 
                     }
+
+                /* <<<<< js >>>>> */
+                    @for $i from 1 through 3{
+                        .js-#{$i}.bgllax::before{
+                            background-image: url(../img/js/js#{$i}.webp);
+                        }
+
+                    }
                         
         /* ----------------------------
         <<<<<<<<<<<< Trynna >>>>>>>>>>>

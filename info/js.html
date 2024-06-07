@@ -10,6 +10,17 @@
         <meta name="author" content="Antwoord Creative Lab">
         <title>JavaScript | Antwoord Learning</title>
 
+        <!-- Preloads -->
+        <link rel="preload" fetchpriority="high" as="font" href="../plugins/fontawesome-free/webfonts/fa-brands-400.woff2" type="font/woff2" crossorigin>
+        <link rel="preload" fetchpriority="high" as="font" href="../plugins/fontawesome-free/webfonts/fa-solid-900.woff2" type="font/woff2" crossorigin>
+        <link rel="preload" fetchpriority="high" as="font"  href="../plugins/poppins/Poppins-Bold.ttf" type="font/ttf" crossorigin>
+        <link rel="preload" fetchpriority="high" as="font"  href="../plugins/poppins/Poppins-Medium.ttf" type="font/ttf" crossorigin>
+        <link rel="preload" fetchpriority="high" as="image" href="../src/img/js/js1.webp" type="image/webp">
+        <link rel="preload" fetchpriority="high" as="image" href="../src/img/js/js2.webp" type="image/webp">
+        <link rel="preload" fetchpriority="high" as="image" href="../src/img/js/js3.webp" type="image/webp">
+        <link rel="preload" fetchpriority="high" as="image" href="../src/img/bg/bg3.webp" type="image/webp">
+        <link rel="preload" fetchpriority="high" as="image" href="../src/img/bg/bg5.webp" type="image/webp">
+
         <!-- Styles -->
         <link rel="shortcut icon" href="../src/img/antico.png">
         <link rel="stylesheet" type="text/css" href="../src/css/style.css">
@@ -92,21 +103,35 @@
                     </li>
 
                     <li class="btn m-dnamic">
-                        <a href="#js">
-                            <span class="btn-txt">Inicio</span>
+                        <a href="#js" title="¿Qué es JavaScript?">
+                            <span class="btn-txt">Javascript</span>
+                            <i class="fab fa-js btn-ico"></i>
+                        </a>
+                    </li>
+
+                    <li class="btn m-dnamic">
+                        <a href="#rulez" title="Sintaxis y Semántica">
+                            <span class="btn-txt">Normas</span>
                             <i class="fas fa-book btn-ico"></i>
                         </a>
                     </li>
 
                     <li class="btn m-dnamic">
-                        <a href="#ejm">
+                        <a href="#exp" title="Ejemplos">
                             <span class="btn-txt">Ejemplos</span>
                             <i class="fas fa-code btn-ico"></i>
                         </a>
                     </li>
 
                     <li class="btn m-dnamic">
-                        <a href="#outro">
+                        <a href="#conv" title="Convenciones">
+                            <span class="btn-txt">Convenciones</span>
+                            <i class="fas fa-hands-helping btn-ico"></i>
+                        </a>
+                    </li>
+
+                    <li class="btn m-dnamic">
+                        <a href="#outro" title="Más">
                             <span class="btn-txt">Más</span>
                             <i class="fas fa-plus btn-ico"></i>
                         </a>
@@ -122,21 +147,147 @@
             </section>
 
             <!-- Begin of main content sections -->
-            <section id="js" class="paraless">
-                <article>
-                    <hr class="h-divider w-100 my-4">
+            <section id="js" class="parallax bgllax js-1 cc-col">
+                <h2>¿Qué es JavaScript?</h2>
+            </section>
 
-                    <h2>Qué es JavaScript?</h2>
+            <section class="paraless">
+                <article class="data-wrapper">
+                    <div class="data-content cc-col">
+                        <p class="data-text">
+                            Si HTML puede ser representado como el esqueleto, y CSS es equivalente a la piel, pintura y estilo, JavaScript es el alma y de un sitio web.
 
-                    <div class="content">
-                        <p class="w-100">
                             JavaScript es un lenguaje de programación o de secuencias de comandos que te permite implementar funciones complejas en páginas web, cada vez que una página web hace algo más que sentarse allí y mostrar información estática para que la veas, muestra oportunas actualizaciones de contenido, mapas interactivos, animación de Gráficos 2D/3D, desplazamiento de máquinas reproductoras de vídeo, etc., puedes apostar que probablemente JavaScript está involucrado. Es la tercera capa del pastel de las tecnologías web estándar.
+
+                            Con JavaScript puedes, entre otras cosas, hacerlo siguiente:
+                            &emsp;- Crear elementos HTML temporales, no escritos en el código original.
+                            &emsp;- Modificar elementos HTML existentes, sus atributos y propiedades.
+                            &emsp;- Eliminar elementos HTML existentes.
+                            &emsp;- Modificar secciones enteras para aumentar el dinamismo de tu página web.
+                            &emsp;- Crear páginas web que solo necesitan cargar 1 sola vez, y cuyo contenido va cambiando conforme el usuario interactúa con la página.
+                            &emsp;- Cálculo, validación o eliminación de datos ingresados por el usuario.
+                            &emsp;- Creación,envío y validación de formularios.
+                            &emsp;- Re-direcciones a otras páginas, internas o externas, sin necesidad de etiquetas <b>&lt;a></b>.
+                            &emsp;- Creación de Alertas y Confirmaciones, así como la activación o prevención de eventos.
+
+                            Y la lista podría ser 10 veces más larga y estaríamos solo rasgando la superficie pues la realidad es que JavaScript tiene un control completo del documento web cargado en tu navegador y se puede usar para modificarlo según sea requerido.
+
+                            La realidad es que esta tecnología requiere su propia guía, que exponga detalladamente todas sus bondades, sin embargo y como ya se ha establecido, nuestra intensión es generar en el lector focos de curiosidad para que sean el punto de partida a una mayor investigación.
+
+                            Es por este motivo que no vamos a revisar la profundidad de JavaScript en esta guía básica, sino a conocer brevemente los aspectos de los cuales se compone, algunos de sus usos básicos más útiles y las convenciones que debemos tener en consideración a la hora de utilizarlo.
+
+                            No queríamos comenzar sin aclarar que el nombre de esta tecnología siempre ha producido confusión, pues da la impresión de que el lenguaje es una prolongación de Java, y fue considerada por muchos como una estrategia de mercadotecnia de Netscape (su empresa creadora), sin embargo JavaScript y Java son dos lenguajes completamente diferentes y es importante aclararlo.
                         </p>
+
+                        <!-- ----------------------------- --> <hr class="h-divider w-75 my-4"> <!-- ----------------------------- -->
+
+                        <pre class="my-2">
+                            <code class="language-js">
+                                //Creo una función sencilla
+                                function ejemplo1(){
+                                    alert('Bienvenidos :D');
+                                }
+
+                                //Ubico al botón en mi DOM gracias a su id ÚNICO
+                                let boton = document.getElementById('jsexp1');
+
+                                //Le Adjunto un evento cuando el usuario haga click
+                                boton.addEventListener('click', ejemplo1);
+
+                                -
+                            </code>
+
+                            <code class="language-html"></code>
+
+                            <textarea>
+                                -
+
+                                <!--
+                                    Considere el siguiente HTML
+                                -->
+                                <button id="jsexp1">
+                                    Click me!
+                                </button>
+                            </textarea>
+                        </pre>
+
+                        <div><i class="fas fa-chevron-down"></i></div>
+
+                        <div class="code-result e-dinamic">
+                            <button id="jsexp1">
+                                Click me!
+                            </button>
+                        </div>
                     </div>
                 </article>
             </section>
 
-            <section id="ejm" class="paraless">
+            <!-- Sección de Normas -->
+            <section id="rulez" class="parallax bgllax bg-3 cc-col">
+                <h2>Conceptos Básicos y Sintaxis</h2>
+            </section>
+
+            <section class="paraless">
+                <article class="data-wrapper">
+                    <div class="data-content cc-col">
+                        <p class="data-text">
+                            JavaScript es una de las tecnologías web más emocionantes, y cuando comiences a ser bueno en su uso, tus sitios web entrarán en una nueva dimensión de energía y creatividad.
+
+                            Sin embargo, sentirse cómodo con JavaScript es un poco más difícil que sentirse cómodo con HTML y CSS. Deberás comenzar poco a poco y continuar trabajando en pasos pequeños y consistentes. Para comenzar, mostraremos cómo añadir JavaScript básico a tu página.
+
+                            Puedes añadir el código a tu HTML de 3 formas, exactamente iguales a las de CSS.                            
+                        </p>
+
+                        <!-- ----------------------------- --> <hr class="h-divider w-75 my-4"> <!-- ----------------------------- -->
+
+                        <p class="data-text">
+                            1. <b>En Línea (directamente en un elemento)</b>:
+                            Al igual que la capacidad de colocarlo directamente estilo sobre el elemento, es absolutamente desaconsejado, limitante y condena la escalabilidad de tu proyecto.
+                        </p>
+
+                        <pre class="my-2">
+                            <code class="language-html"></code>
+
+                            <textarea>
+                                <!-- HTML -->
+
+                                <button onclick="hazAlgo()">
+                                    Click Me!
+                                </button>
+                            </textarea>
+                        </pre>
+
+                        <!-- ----------------------------- --> <hr class="h-divider w-75 my-4"> <!-- ----------------------------- -->
+
+                        <p class="data-text">
+                            2. <b>Dentro de etiquetas &lt;script></b>:
+                            Creas una etiqueta script con el atributo "type" con el valor "text/javascript" y dentro colocas el código a ejecutar, además necesitas conocer esta forma para poder aplicar la primera opción, pues es absolutamente ineficiente escribir una función entera dentro de un elemento HTML.
+
+                            Por tal motivo, si se desea emplear la opción número 1, lo correcto seria activar una función o evento especial que se encuentre definida en otra sección del código.
+                        </p>
+
+                        <pre class="my-2">
+                            <code class="language-html"></code>
+
+                            <textarea>
+                                <!-- HTML -->
+
+                                &lt;script type="text/javascript">
+
+                                &lt;/script>
+                            </textarea>
+                        </pre>
+                        <!-- ----------------------------- --> <hr class="h-divider w-75 my-2"> <!-- ----------------------------- -->
+                    </div>
+                </article>
+            </section>
+
+            <!-- Sección de Ejemplos -->
+            <section id="exp" class="parallax bgllax js-2 cc-col">
+                <h2>Conceptos Básicos</h2>
+            </section>
+
+            <section class="paraless">
                 <article class="data-wrapper">
                     <hr class="h-divider w-100 my-4">
 
@@ -154,16 +305,89 @@
                 </article>
             </section>
 
-            <section id="outro" class="paraless">
+            <!-- Sección de Ejemplos -->
+            <section id="conv" class="parallax bgllax bg-5 cc-col">
+                <h2>Convenciones</h2>
+            </section>
+
+            <section class="paraless">
                 <article class="data-wrapper">
                     <hr class="h-divider w-100 my-4">
-                    
-                    <h2 class="mb-3">Dato Curioso:</h2>
+
+                    <h2 class="mb-3">Usos muy básicos:</h2>
 
                     <div class="data-content">
+                        <div class="btn-group cc-row play">
+                            <button class="btn" id="alert">Alertas</button>
+
+                            <button class="btn" id="confirm">Confirmaciones</button>
+
+                            <button class="btn btn-dark" id="reverse">Eventos Especiales</button>
+                        </div>
+                    </div>
+                </article>
+            </section>
+
+            <!-- Sección de Outro -->
+            <section id="outro" class="parallax bgllax js-3 cc-col">
+                <h2>«Un gran poder conlleva una gran responsabilidad»</h2>
+            </section>
+
+            <section class="paraless">
+                <article class="data-wrapper">
+                    <div class="data-content cc-col">
                         <p class="data-text">
-                            El Nombre de esta tecnología siempre ha producido confusión, pues da la impresión de que el lenguaje es una prolongación de Java, y fue considerada por muchos como una estrategia de mercadotecnia de Netscape (su empresa creadora)
+                            Llegado a este punto, y teniendo una base conceptual sobre HTML, no nos queda más que alentarle a poner los conocimientos adquiridos en práctica.
+
+                            Para ello se requiere de 2 cosas:
+
                         </p>
+
+                        <p class="data-text">
+                            &emsp;- <b>Un Editor de texto</b>, pues aunque para comenzar puede hacer uso de bloc de notas, la realidad es que existen herramientas que le facilitaran el trabajo de edición de su código.
+
+                            Entre las más recomendadas destacamos 2.
+                        </p>
+                    </div>
+
+                    <div class="data-content e-dinamic">
+                        <a class="btn mt-2 px-2" href="https://www.sublimetext.com/" title="Editor Sublime Text" target="_blank">
+                            Sublime Text
+                        </a>
+
+                        <a class="btn mt-2 px-2" href="https://code.visualstudio.com/" title="Editor VSC" target="_blank">
+                            Visual Studio Code
+                        </a>
+                    </div>
+
+                    <!-- ----------------------------- --> <hr class="h-divider w-75 my-4"> <!-- ----------------------------- -->
+
+                    <div class="data-content cc-col">
+                        <p class="data-text">
+                            &emsp;- <b>Habilitar la extensión de los archivos</b>. Todos los archivos tienen una extensión, un valor que indica a qué tipo pertenece el archivo en cuestión. Por ejemplo, los documentos de Microsoft Word terminan en ".doc", las imágenes, usualmente tienen el formato ".jpg" ó "png", e incluso, uno de los formatos de compresión de música más reconocidos es el ".mp3". Usualmente no vemos estas extensiones, pero son necesarias pues los archivos que pretendemos que sean interpretados por nuestro navegador a la hora de practicar, deben tener la extensión ".html".
+
+                            <b>Además, por convención, el nombre de archivo no debe contener caracteres especiales ni letras que no existan en inglés y debe estar en minúsculas.</b>
+
+                            Para poder habilitar las extensiones de los archivos te brindamos a continuación un video corto.
+                        </p>
+                    </div>
+
+                    <div class="data-content e-dinamic">
+                        <a class="btn mt-4 px-2" href="https://www.youtube.com/watch?v=RJDeDGmo8R0" title="Video sobre extensiones de archivos" target="_blank">
+                            Ver Extensiones
+                        </a>
+                    </div>
+
+                    <!-- ----------------------------- --> <hr class="h-divider w-75 my-4"> <!-- ----------------------------- -->
+
+                    <h3>Una vez asimilada y practicada la información anterior, es momento de conocer al resto de la estructura estética de un sitio web. Aprendamos CSS:</h3>
+
+                    <div class="data-content e-dinamic">
+                        <figure class="data-img">
+                            <a href="./css" title="Guía de CSS">
+                                <i class="fab fa-css3-alt"></i>
+                            </a>
+                        </figure>
                     </div>
                 </article>
             </section>
