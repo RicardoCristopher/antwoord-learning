@@ -155,7 +155,7 @@
                 <article class="data-wrapper">
                     <div class="data-content cc-col">
                         <p class="data-text">
-                            Si HTML puede ser representado como el esqueleto, y CSS es equivalente a la piel, pintura y estilo, JavaScript es el alma y de un sitio web.
+                            Si HTML puede ser considerado como el esqueleto, y CSS es equivalente a la piel, pintura y estilo, JavaScript es el alma y de un sitio web.
 
                             JavaScript es un lenguaje de programación o de secuencias de comandos que te permite implementar funciones complejas en páginas web, cada vez que una página web hace algo más que sentarse allí y mostrar información estática para que la veas, muestra oportunas actualizaciones de contenido, mapas interactivos, animación de Gráficos 2D/3D, desplazamiento de máquinas reproductoras de vídeo, etc., puedes apostar que probablemente JavaScript está involucrado. Es la tercera capa del pastel de las tecnologías web estándar.
 
@@ -166,7 +166,7 @@
                             &emsp;- Modificar secciones enteras para aumentar el dinamismo de tu página web.
                             &emsp;- Crear páginas web que solo necesitan cargar 1 sola vez, y cuyo contenido va cambiando conforme el usuario interactúa con la página.
                             &emsp;- Cálculo, validación o eliminación de datos ingresados por el usuario.
-                            &emsp;- Creación,envío y validación de formularios.
+                            &emsp;- Creación, envío y validación de formularios.
                             &emsp;- Re-direcciones a otras páginas, internas o externas, sin necesidad de etiquetas <b>&lt;a></b>.
                             &emsp;- Creación de Alertas y Confirmaciones, así como la activación o prevención de eventos.
 
@@ -233,12 +233,14 @@
                         <p class="data-text">
                             JavaScript es una de las tecnologías web más emocionantes, y cuando comiences a ser bueno en su uso, tus sitios web entrarán en una nueva dimensión de energía y creatividad.
 
-                            Sin embargo, sentirse cómodo con JavaScript es un poco más difícil que sentirse cómodo con HTML y CSS. Deberás comenzar poco a poco y continuar trabajando en pasos pequeños y consistentes. Para comenzar, mostraremos cómo añadir JavaScript básico a tu página.
-
-                            Puedes añadir el código a tu HTML de 3 formas, exactamente iguales a las de CSS.                            
+                            Sin embargo, sentirse cómodo con JavaScript es un poco más difícil que sentirse cómodo con HTML y CSS. Deberás comenzar poco a poco y continuar trabajando en pasos pequeños y consistentes. Para comenzar, mostraremos cómo añadir JavaScript básico a tu página.                       
                         </p>
 
                         <!-- ----------------------------- --> <hr class="h-divider w-75 my-4"> <!-- ----------------------------- -->
+
+                        <h3>
+                            Puedes añadir el código a tu HTML de 3 formas, exactamente iguales a las de CSS.
+                        </h3>
 
                         <p class="data-text">
                             1. <b>En Línea (directamente en un elemento)</b>:
@@ -273,10 +275,270 @@
                                 <!-- HTML -->
 
                                 &lt;script type="text/javascript">
-
+                                    // Su Código aquí
                                 &lt;/script>
                             </textarea>
                         </pre>
+
+                        <!-- ----------------------------- --> <hr class="h-divider w-75 my-4"> <!-- ----------------------------- -->
+
+                        <p class="data-text">
+                            3. <b>Desde una Fuente externa (recomendado)</b>:
+                            Creas una etiqueta script pero esta vez con el atributo "src" dentro colocas la dirección de el archivo que deseas incrustar en tu página, la misma se aconseja que se encuentre justo antes del cierre de la etiqueta &lt;body>, para tratar de garantizar que se hayan cargado todos los elementos con los cuales el script va a trabajar, no obstante el script puede ser insertado incluso en la etiqueta &lt;head>, suponiendo que no cumple ninguna función de modificación en los elementos HTML presentes en la página.
+
+                            Esto, al igual que con CSS, te va a permitir controlar en instancias separadas los aspectos de tu sitio wew.
+                        </p>
+
+                        <pre class="my-2">
+                            <code class="language-html"></code>
+
+                            <textarea>
+                                <!-- HTML -->
+
+                                &lt;script src="./lugar/de-tu/archivo.js"> &lt;/script>   
+                            </textarea>
+                        </pre>
+
+                        <!-- ----------------------------- --> <hr class="h-divider w-75 my-4"> <!-- ----------------------------- -->
+                        <h3>
+                            Conceptos Básicos Esenciales
+                        </h3>
+
+                        <p class="data-text">
+                            Una vez enlazado nuestro archivo JavaScript a nuestro proyecto, y antes de comenzar a escribir en dicho lenguaje, debemos conocer ciertos conceptos que utilizaremos a lo largo de nuestro aprendizaje de esta tecnología.
+                        </p>
+
+                        <p class="data-text">
+                            <b>Variable:</b>
+
+                            Las Variables son contenedores en los que puedes almacenar valores. Primero debes declarar la variable con la palabra clave "var" (menos recomendado) o "let", seguida del nombre que le quieras dar. Se recomienda más el uso de "let" que de "var":
+                        </p>
+
+                        <pre class="my-2">
+                            <code class="language-js">
+                                let nombreDeLaVariable;
+
+                                // Tras declarar una variable, puedes asignarle un valor:
+                                nombreDeLaVariable = "Bob";
+
+                                // Puedes hacer las dos cosas en la misma línea si lo necesitas:
+                                let nombreDeLaVariable = "Bob";
+
+                                // Puedes obtener el valor de la variable llamándola por su nombre:
+                                nombreDeLaVariable;
+
+                                // Después de haberle dado un valor a la variable, puedes volver a cambiarlo:
+                                let nombreDeLaVariable = "Bob";
+                                nombreDeLaVariable = "Steve";
+                            </code>
+                        </pre>
+
+                        <p class="data-text">
+                            <b>Tipos de Datos:</b>
+
+                            &emsp;- <b>String</b>, Esto es una secuencia de texto conocida como cadena. Para indicar que la variable es una cadena, debes escribirlo entre comillas..
+
+                            &emsp;- <b>Number</b>, Esto es un número. Los números no tienen comillas.
+
+                            &emsp;- <b>Boolean</b>, Tienen valor verdadero/falso. true/false son palabras especiales en JS, y no necesitan comillas.
+
+                            &emsp;- <b>Array</b>, Una estructura que te permite almacenar varios valores en una sola referencia.
+
+                            &emsp;- <b>Object</b>, Básicamente cualquier cosa. Todo en JavaScript es un objeto y puede ser almacenado en una variable. Mantén esto en mente mientras aprendes
+                        </p>
+
+                        <pre class="my-2">
+                            <code class="language-js">
+                                // String
+                                let miVariable = 'Bob';
+
+                                // Number
+                                let miVariable = 10;
+
+                                // Boolean
+                                let miVariable = true;
+
+                                // Array
+                                let miVariable = [1,'Bob','Steve',10];
+                                //Llama a cada miembro del array así: miVariable[0], miVariable[1], etc.
+
+                                // Object
+                                let miVariable = document.querySelector('h1');
+                                //Todos los ejemplos anteriores también.
+                            </code>
+                        </pre>
+
+                        <p class="data-text">
+                            <b>Notas Importantes:</b>
+
+                            &emsp;- Todas las líneas en JS deben acabar en punto y coma (;) para indicar que es ahí donde termina la declaración. Si no los incluyes puedes obtener resultados inesperados.
+
+                            &emsp;- Puedes llamar a una variable con casi cualquier nombre, pero hay algunas restricciones.
+                            &emsp;&emsp;+ Deben empezar con una letra, underscore (_) o signo de dolar ($).
+                            &emsp;&emsp;+ No pueden contener espacios.
+                            &emsp;&emsp;+ No pueden ser iguales a palabras reservadas como "if", "var" o "let".
+
+                            &emsp;- JavaScript distingue entre mayúsculas y minúsculas. <b>miVariable</b> es una variable distinta a <b>mivariable</b>.
+                        </p>
+
+                        <!-- ----------------------------- --> <hr class="h-divider w-50 my-4"> <!-- ----------------------------- -->
+
+                        <p class="data-text">
+                            <b>Operadores:</b>
+
+                            Un operador es básicamente un símbolo matemático que puede actuar sobre dos valores (o variables) y producir un resultado. A continuación expondremos los operadores más simples:
+                        </p>
+
+                        <p class="data-text">
+                            &emsp;- <b>Suma/concatena (+)</b>, Se usa para sumar dos números, o juntar dos cadenas en una.
+
+                            &emsp;- <b>Resta, multiplicación, división (-, *, /)</b>,Estos hacen lo que esperarías que hicieran en las matemáticas básicas.
+
+                            &emsp;- <b>Operador de asignación (=)</b>, Los has visto anteriormente: asigna un valor a una variable.
+
+                            &emsp;- <b>Igualdad/Comparativo (==, ===)</b>, Comprueba si dos valores son iguales entre sí, y devuelve un valor de true/false (booleano).
+
+                            &emsp;- <b>Negación, distinto (!, !=, !==)</b>, En ocasiones utilizado con el operador de identidad, la negación es en JS el equivalente al operador lógico NOT — cambia true por false y viceversa.
+                        </p>
+
+                        <!-- ----------------------------- --> <hr class="h-divider w-50 my-4"> <!-- ----------------------------- -->
+
+                        <p class="data-text">
+                            <b>Condicionales:</b>
+
+                            Las condicionales son estructuras de código que permiten comprobar si una expresión devuelve true o no, y después ejecuta un código diferente dependiendo del resultado. La forma de condicional más común es la llamada if... else. Entonces, por ejemplo:
+                        </p>
+
+                        <pre class="my-2">
+                            <code class="language-js">
+                                let helado = "chocolate";
+
+                                if (helado === "chocolate") {
+                                    alert("¡Sí, amo el helado de chocolate!");
+                                } else {
+                                    alert("Awwww, pero mi favorito es el de chocolate...");
+                                }
+                            </code>
+                        </pre>
+
+                        <p class="data-text">
+                            La expresión dentro de if (... ) es el criterio — este usa al operador de identidad (descrito arriba) para comparar la variable helado con la cadena chocolate para ver si las dos son iguales. Si esta comparación devuelve true, el primer bloque de código se ejecuta. Si no, ese código se omite y se ejecuta el segundo bloque de código después de la declaración else.
+                        </p>
+                        
+                        <!-- ----------------------------- --> <hr class="h-divider w-50 my-4"> <!-- ----------------------------- -->
+
+                        <p class="data-text">
+                            <b>Funciones:</b>
+
+                            Las funciones son una manera de encapsular una funcionalidad que quieres reutilizar, de manera que puedes llamar esa función con un solo nombre, y no tendrás que escribir el código entero cada vez que la utilices. Ya has visto algunas funciones más arriba, por ejemplo:
+                        </p>
+
+                        <pre class="my-2">
+                            <code class="language-js">
+                                let nombreDeLaVariable = document.querySelector("h1");
+
+                                alert("¡Hola!");
+                            </code>
+                        </pre>
+
+                        <p class="data-text">
+                            Estas funciones document.querySelector y alert están integradas en el navegador para poder utilizarlas en cualquier momento.
+
+                            Si ves algo que parece un nombre de variable, pero tiene paréntesis —()— al final, probablemente es una función. Las funciones con frecuencia toman argumentos —pedazos de datos que necesitan para hacer su trabajo—. Estos se colocan dentro de los paréntesis, y se separan con comas si hay más de uno.
+
+                            Por ejemplo, la función alert() hace aparecer una ventana emergente dentro de la ventana del navegador, pero necesitas asignarle una cadena como argumento para decirle qué mensaje se debe escribir en la ventana emergente.
+
+                            Las buenas noticias son que podemos definir nuestras propias funciones. En el siguiente ejemplo escribimos una función simple que toma dos números como argumentos y los multiplica entre sí:
+                        </p>
+
+                        <pre class="my-2">
+                            <code class="language-js">
+                                function multiplica(num1, num2) {
+                                    let resultado = num1 * num2;
+                                    return resultado;
+                                }
+                            </code>
+                        </pre>
+
+                        <p class="data-text">
+                            La sentencia return le dice al navegador que devuelva la variable resultado fuera de la función, para que esté disponible para su uso. Esto es necesario porque las variables definidas dentro de funciones, solo están disponibles dentro de esas funciones. Esto se conoce como «ámbito (scope en inglés) de la variable»:
+                        </p>
+                        
+                        <!-- ----------------------------- --> <hr class="h-divider w-50 my-4"> <!-- ----------------------------- -->
+
+                        <p class="data-text">
+                            <b>Eventos:</b>
+
+                            Para crear una interacción real en tu sitio web, debes usar eventos. Estos son unas estructuras de código que captan lo que sucede en el navegador, y permite que en respuesta a las acciones que suceden se ejecute un código. El ejemplo más obvio es un clic (click event), que se activa al hacer clic sobre algo.
+
+                            Hay muchas maneras de enlazar un evento a un elemento; aquí hemos seleccionado el elemento &lt;html> y le asignamos a su propiedad onclick una función anónima (función sin nombre) que contiene el código que se ejecutará cuando el evento suceda.
+                        </p>
+
+                        <pre class="my-2">
+                            <code class="language-js">
+                                // Considera que ...
+                                document.querySelector("html").onclick = function (){};
+
+                                // ... es equivalente a ..
+                                let miHTML = document.querySelector("html");
+                                miHTML.onclick = function () {};
+
+                                // Es solo un modo más corto de escribirlo.
+                            </code>
+                        </pre>
+                        
+                        <!-- ----------------------------- --> <hr class="h-divider w-50 my-4"> <!-- ----------------------------- -->
+
+                        <p class="data-text">
+                            <b>Selectores:</b>
+
+                            Los selectores son funciones nativas de JavaScript que permiten ubicar un objeto en el Documento HTML, para:
+                            &emsp;- Ser encapsulado en una variable.
+                            &emsp;- Leer o modificar sus atributos.
+                            &emsp;- Modificar al elemento en sí.
+                            &emsp;- Usarlo como punto de referencia para la búsqueda de otros elementos relativos al objetivo.
+
+                            Existen muchos selectores para poder exponerlos todos aquí, Pero debes conocer fundamentalmente que existen selectores de objetos (selector), y selectores de los atributos posibles del objeto (métodos). Por Ejemplo:
+                        </p>
+
+                        <pre class="my-2">
+                            <code class="language-js">
+                                // Esto es un selector que busca al elemento &lt;input> en el documento
+                                let input = document.querySelector("input");
+
+                                // Este Método busca el valor del objeto input
+                                let value = input.value;
+                            </code>
+                        </pre>
+
+                        <p class="data-text">
+                            Dentro de los selectores podemos destacar los siguientes:
+
+                            <b>Selectores Viejos</b>, que solo pueden ubicar a un único tipo de elemento, y pueden ser usados únicamente en la interfaz "document."
+
+                            &emsp;- <b>getElementById()</b>, Ubica elementos por su ID.
+
+                            &emsp;- <b>getElementsByClassName()</b>, Ubica varios elementos por su atributo "class", y por lo tanto devuelve un arreglo (array) de objetos
+
+                            &emsp;- <b>getElementsByName()</b>, Ubica varios elementos por su atributo "name", y por lo tanto devuelve un arreglo (array) de objetos
+
+                            &emsp;- <b>getElementsByTagName()</b>, Ubica varios elementos por su etiqueta, y por lo tanto devuelve un arreglo (array) de objetos. <b>OJO:</b> este selector tiene la particularidad de que la etiqueta a buscar deben escribirse en mayúscula.
+
+                            <b>Selectores Nuevos</b>, que ofrecen una mayor flexibilidad al momento de ubicar a un objetivo, pues usan selectores CSS para tal labor, por lo cual no están limitados a 1 solo tipo de elemento por búsqueda, y no están supeditados a la interfaz "document." sino que incluso pueden ser usado dentro de elementos ya seleccionados con el propósito de realizar una búsqueda incluso más específica.
+
+                            &emsp;- <b>querySelector()</b>, Devuelve el primer objeto encontrado que coincida con el selector empleado.
+
+                            &emsp;- <b>querySelectorAll()</b>, Devuelve un arreglo de objetos compuesto por todos los elementos HTML que cumplen con el criterio de búsqueda.
+
+                            Y esto ha sido todo de momento para el ámbito de normas, sintaxis y semántica de HTML de momento. Para ampliar la información por favor ingrese en el siguiente link:
+                        </p>
+
+                        <div class="e-dinamic my-2">
+                            <a class="btn" href="https://developer.mozilla.org/es/docs/Learn/Getting_started_with_the_web/JavaScript_basics" target="_blank">
+                                Fundamentos Básicos
+                            </a>
+                        </div>
+
                         <!-- ----------------------------- --> <hr class="h-divider w-75 my-2"> <!-- ----------------------------- -->
                     </div>
                 </article>
@@ -284,46 +546,214 @@
 
             <!-- Sección de Ejemplos -->
             <section id="exp" class="parallax bgllax js-2 cc-col">
-                <h2>Conceptos Básicos</h2>
+                <h2>Ejemplos Básicos</h2>
             </section>
 
             <section class="paraless">
                 <article class="data-wrapper">
-                    <hr class="h-divider w-100 my-4">
+                    <div class="data-content cc-col">
+                        <h3>Dentro de los usos simples de JavaScript tenemos</h3>
 
-                    <h2 class="mb-3">Usos muy básicos:</h2>
+                        <p class="data-text">
+                            
+                            1. <b>Alertas</b>:
 
-                    <div class="data-content">
-                        <div class="btn-group cc-row play">
-                            <button class="btn" id="alert">Alertas</button>
+                            Con la función alert() puedes emitir avisos para el usuario.
+                        </p>
 
-                            <button class="btn" id="confirm">Confirmaciones</button>
+                        <pre class="my-2">
+                            <code class="language-js">
+                                // Ubicamos el Botón con un selector
+                                let boton = document.querySelector('button');
 
-                            <button class="btn btn-dark" id="reverse">Eventos Especiales</button>
+                                // Le adjuntamos una "Escucha de eventos" al hacer click
+                                boton.addEvetListener('click', function()=>{
+                                    alert('Bienvenidos :D');
+                                });
+                                -
+                            </code>
+
+                            <code class="language-html"></code>
+
+                            <textarea>
+                                -
+
+                                <!-- HTML -->
+                                <button>
+                                    Click Me!
+                                </button>
+                            </textarea>
+                        </pre>
+
+                        <div><i class="fas fa-chevron-down"></i></div>
+
+                        <div class="code-result e-dinamic">
+                            <button id="alert" class="btn">
+                                Click Me!
+                            </button>
+                        </div>
+
+                        <!-- ----------------------------- --> <hr class="h-divider w-75 my-4"> <!-- ----------------------------- -->
+
+                        <p class="data-text">
+                            
+                            2. <b>Confirmaciones</b>:
+
+                            Con la función confirm() puedes evitar que el usuario siga con el uso del navegador hasta tanto no tomen una decisión. Normalmente se pide como consentimientos por parte del usuario para realizar una determinada actividad.
+                        </p>
+
+                        <pre class="my-2">
+                            <code class="language-js">
+                                // Ubicamos el Botón con un selector
+                                let boton = document.querySelector('#confirm');
+
+                                // Le adjuntamos una "Escucha de eventos" al hacer click
+                                boton.addEvetListener('click', function()=>{
+                                    confirm('de veras? de veritas?');
+                                });
+                                -
+                            </code>
+
+                            <code class="language-html"></code>
+
+                            <textarea>
+                                -
+
+                                <!-- HTML -->
+                                <button id="confirm">
+                                    Click Me!
+                                </button>
+                            </textarea>
+                        </pre>
+
+                        <div><i class="fas fa-chevron-down"></i></div>
+
+                        <div class="code-result e-dinamic">
+                            <button id="confirm" class="btn">
+                                Click Me!
+                            </button>
+                        </div>
+
+                        <!-- ----------------------------- --> <hr class="h-divider w-75 my-4"> <!-- ----------------------------- -->
+
+                        <p class="data-text">
+                            
+                            3. <b>Modificar Atributos</b>:
+
+                            Con JavaScript puedes modificar los atributos que posee un elemento HTML, pudiendo cambiar su clase, valor, estilo etc.
+
+                            Es gracias a esto que, por ejemplo, existe la capacidad de crear el modo "oscuro" de los sitios web, pues se pueden crear 2 juegos de colores diferentes proyectados en las normas de CSS, y activar uno u otro al modificar con JavaScript las clases pertinentes.
+                        </p>
+
+                        <pre class="my-2">
+                            <code class="language-js">
+                                // Ubicamos el Botón con un selector
+                                let boton = document.querySelector('#reverse');
+
+                                // Seleccionamos al contenedor padre relativo al botón
+                                let evenGrp = boton.parentNode;
+
+                                // Le adjuntamos una "Escucha de eventos" al hacer click
+                                boton.addEvetListener('click', function()=>{
+
+                                    // Creamos una condicional resumida gracias al "operador ternario"
+                                    // si el elemento tiene la clase "reverse", será removida y
+                                    // sino, le será colocada
+                                    evenGrp.classList.contains('reverse') ? evenGrp.classList.remove('reverse') : evenGrp.classList.add('reverse');
+                                });
+                                -
+                            </code>
+
+                            <code class="language-html"></code>
+
+                            <textarea>
+                                -
+
+                                <!-- HTML -->
+                                <div class="btn-group cc-row play">
+                                    <button class="btn">
+                                        Alertas
+                                    </button>
+        
+                                    <button class="btn">
+                                        Confirmaciones
+                                    </button>
+        
+                                    <button class="btn btn-dark" id="reverse">
+                                        Click Me
+                                    </button>
+                                </div>
+                            </textarea>
+                        </pre>
+
+                        <div><i class="fas fa-chevron-down"></i></div>
+
+                        <div class="code-result e-dinamic">
+                            <div class="btn-group cc-row play">
+                                <button class="btn">Alertas</button>
+
+                                <button class="btn">Confirmaciones</button>
+
+                                <button class="btn btn-dark" id="reverse">Click Me</button>
+                            </div>
                         </div>
                     </div>
+
+                    <!-- ----------------------------- --> <hr class="h-divider w-75 my-2"> <!-- ----------------------------- -->
                 </article>
             </section>
 
-            <!-- Sección de Ejemplos -->
+            <!-- Sección de Convenciones -->
             <section id="conv" class="parallax bgllax bg-5 cc-col">
                 <h2>Convenciones</h2>
             </section>
 
             <section class="paraless">
                 <article class="data-wrapper">
-                    <hr class="h-divider w-100 my-4">
+                    <div class="data-content cc-col">
+                        <h3>Entre las convenciones y buenas prácticas que existen podemos mencionar la siguientes</h3>
 
-                    <h2 class="mb-3">Usos muy básicos:</h2>
+                        <p class="data-text">
+                            1. <b>Indentación o Tabulación</b>:
 
-                    <div class="data-content">
-                        <div class="btn-group cc-row play">
-                            <button class="btn" id="alert">Alertas</button>
+                            Normalmente se puede trabajar con indentación y espacios en blanco en el código y no es importante para el intérprete puesto que no los toma en cuenta, pero para el programador, esto provee una mejor legibilidad del código..
+                        </p>
 
-                            <button class="btn" id="confirm">Confirmaciones</button>
+                        <!-- ----------------------------- --> <hr class="h-divider w-50 my-4"> <!-- ----------------------------- -->
 
-                            <button class="btn btn-dark" id="reverse">Eventos Especiales</button>
-                        </div>
+                        <p class="data-text">
+                            2. <b>Punto y Coma</b>:
+
+                            Javascript utiliza ASI (Automatic Semicolon Insertion) cuando se trata de insertar un “punto y coma” que ha sido omitido en cada instrucción , y que es separada en una lí­nea diferente. Técnicamente es posible, sin embargo esta no es una buena práctica, porque en ciertas ocasiones se puede generar un error que será un quebradero de cabeza poder solucionarlo.
+                        </p>
+
+                        <!-- ----------------------------- --> <hr class="h-divider w-50 my-4"> <!-- ----------------------------- -->
+
+                        <p class="data-text">
+                            3. <b>Utilizar === En lugar de ==</b>:
+
+                            JavaScript utiliza dos tipos diferentes de operadores de igualdad: === | !== y == | != Se considera que la mejor práctica es utilizar siempre el primer conjunto al comparar.
+
+                            Sin embargo, al trabajar con == y !=, te encontrarás con problemas al trabajar con diferentes tipos. En estos casos, intentarán coaccionar los valores, sin éxito.
+                        </p>
+
+                        <!-- ----------------------------- --> <hr class="h-divider w-50 my-4"> <!-- ----------------------------- -->
+
+                        <p class="data-text">
+                            4. <b>Coloca los scripts en la parte inferior de tu página</b>:
+
+                            Si tienes archivos JS cuyo único propósito es añadir funcionalidad, por ejemplo, después de hacer clic en un botón, coloca esos archivos en la parte inferior, justo antes de la etiqueta de cierre del cuerpo. Se trata de una práctica absolutamente recomendable.
+                        </p>
+
+                        <!-- ----------------------------- --> <hr class="h-divider w-50 my-4"> <!-- ----------------------------- -->
+
+                        <p class="data-text">
+                            5. <b>Comenta tu código</b>:
+
+                            Puede parecer innecesario al principio, pero créeme, QUIERES comentar tu código lo mejor posible. ¿Qué pasa cuando vuelves al proyecto meses después, solo para descubrir que no puedes recordar fácilmente cuál era tu línea de pensamiento?.
+                        </p>
+
+                        <!-- ----------------------------- --> <hr class="h-divider w-75 my-2"> <!-- ----------------------------- -->
                     </div>
                 </article>
             </section>

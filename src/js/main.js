@@ -145,7 +145,6 @@
             });
         }
 
-
         function pageListenersJS(){
 
             const alert   = document.getElementById('alert');
@@ -154,7 +153,7 @@
             const evenGrp = document.querySelector('.play');
 
             alert.addEventListener('click',()=>{
-                window.alert('Hola Mundo');
+                window.alert('Bienvenidos :D');
             });
 
             confirm.addEventListener('click',()=>{
