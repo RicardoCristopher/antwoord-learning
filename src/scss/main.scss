@@ -403,9 +403,13 @@
             }
 
             .parallax > * {
-                font-size: 10vmin;
+                font-size: 9vmin;
                 color: #2b2b2b;
                 font-family: Poppins-Bold;
+            }
+
+            .parallax > h2, .parallax > h3{
+                max-width: 100%;
             }
 
             .parallax::before{

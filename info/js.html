@@ -387,9 +387,7 @@
                             <b>Operadores:</b>
 
                             Un operador es básicamente un símbolo matemático que puede actuar sobre dos valores (o variables) y producir un resultado. A continuación expondremos los operadores más simples:
-                        </p>
 
-                        <p class="data-text">
                             &emsp;- <b>Suma/concatena (+)</b>, Se usa para sumar dos números, o juntar dos cadenas en una.
 
                             &emsp;- <b>Resta, multiplicación, división (-, *, /)</b>,Estos hacen lo que esperarías que hicieran en las matemáticas básicas.
@@ -398,7 +396,7 @@
 
                             &emsp;- <b>Igualdad/Comparativo (==, ===)</b>, Comprueba si dos valores son iguales entre sí, y devuelve un valor de true/false (booleano).
 
-                            &emsp;- <b>Negación, distinto (!, !=, !==)</b>, En ocasiones utilizado con el operador de identidad, la negación es en JS el equivalente al operador lógico NOT — cambia true por false y viceversa.
+                            &emsp;- <b>Negación, distinto (!, !=, !==)</b>, En ocasiones utilizado con el operador de identidad, la negación es en JS el equivalente al operador lógico NOT, es decir, cambia true por false y viceversa.
                         </p>
 
                         <!-- ----------------------------- --> <hr class="h-divider w-50 my-4"> <!-- ----------------------------- -->
@@ -422,7 +420,7 @@
                         </pre>
 
                         <p class="data-text">
-                            La expresión dentro de if (... ) es el criterio — este usa al operador de identidad (descrito arriba) para comparar la variable helado con la cadena chocolate para ver si las dos son iguales. Si esta comparación devuelve true, el primer bloque de código se ejecuta. Si no, ese código se omite y se ejecuta el segundo bloque de código después de la declaración else.
+                            La expresión dentro de if (... ) es el criterio, y este usa al operador de igualdad (descrito arriba) para comparar la variable helado con la cadena chocolate para ver si las dos son iguales. Si esta comparación devuelve true, el primer bloque de código se ejecuta. Si no, ese código se omite y se ejecuta el segundo bloque de código después de la declaración else.
                         </p>
                         
                         <!-- ----------------------------- --> <hr class="h-divider w-50 my-4"> <!-- ----------------------------- -->
@@ -444,7 +442,7 @@
                         <p class="data-text">
                             Estas funciones document.querySelector y alert están integradas en el navegador para poder utilizarlas en cualquier momento.
 
-                            Si ves algo que parece un nombre de variable, pero tiene paréntesis —()— al final, probablemente es una función. Las funciones con frecuencia toman argumentos —pedazos de datos que necesitan para hacer su trabajo—. Estos se colocan dentro de los paréntesis, y se separan con comas si hay más de uno.
+                            Si ves algo que parece un nombre de variable, pero tiene paréntesis —()— al final, probablemente es una función. Las funciones con frecuencia toman argumentos, que son pedazos de datos que necesitan para hacer su trabajo. Estos se colocan dentro de los paréntesis, y se separan con comas si hay más de uno.
 
                             Por ejemplo, la función alert() hace aparecer una ventana emergente dentro de la ventana del navegador, pero necesitas asignarle una cadena como argumento para decirle qué mensaje se debe escribir en la ventana emergente.
 
@@ -767,55 +765,36 @@
                 <article class="data-wrapper">
                     <div class="data-content cc-col">
                         <p class="data-text">
-                            Llegado a este punto, y teniendo una base conceptual sobre HTML, no nos queda más que alentarle a poner los conocimientos adquiridos en práctica.
+                            JavaScript no es considerado la oveja negra de la triada web gratuitamente.
+                            
+                            Como podrás haber vislumbrado, su control sobre el documento es absoluto, dando lugar a la capacidad de hacer grandes cosas; tanto útiles, llamativas y sorprendentes, como terribles.
 
-                            Para ello se requiere de 2 cosas:
+                            Es por esto que una de las convenciones que dejamos para este cierre es que diseñes tu web con la menor dependencia de JavaScript, pues hoy en día es una practica habitual el bloquear dicha tecnología con herramientas externas, incorporadas al navegador.
 
-                        </p>
+                            No obstante, para desarrollo de herramientas privadas con base en el entorno web, JavaScript puede y debe ser usado para brindar la mejor experiencia interactiva, al apegarse a las mejores prácticas y ser usado de una manera correctamente ética y moral.
 
-                        <p class="data-text">
-                            &emsp;- <b>Un Editor de texto</b>, pues aunque para comenzar puede hacer uso de bloc de notas, la realidad es que existen herramientas que le facilitaran el trabajo de edición de su código.
-
-                            Entre las más recomendadas destacamos 2.
+                            Recuerda que puedes ampliar tus conocimientos en JavaScript en los enlaces que dejaremos a continuación, los cuales sirvieron como base de la creación de la presente guía.
                         </p>
                     </div>
 
                     <div class="data-content e-dinamic">
-                        <a class="btn mt-2 px-2" href="https://www.sublimetext.com/" title="Editor Sublime Text" target="_blank">
-                            Sublime Text
+                        <a class="btn mt-2 px-2" href="https://developer.mozilla.org/es/docs/Learn/Getting_started_with_the_web/JavaScript_basics" title="Fundamentos Básicos de Javascript" target="_blank">
+                            Fundamentos Básicos
                         </a>
 
-                        <a class="btn mt-2 px-2" href="https://code.visualstudio.com/" title="Editor VSC" target="_blank">
-                            Visual Studio Code
+                        <a class="btn mt-2 px-2" href="https://developer.mozilla.org/es/docs/Learn/JavaScript" title="Guía Completa de JavaScript" target="_blank">
+                            Guía Completa
                         </a>
                     </div>
 
                     <!-- ----------------------------- --> <hr class="h-divider w-75 my-4"> <!-- ----------------------------- -->
 
-                    <div class="data-content cc-col">
-                        <p class="data-text">
-                            &emsp;- <b>Habilitar la extensión de los archivos</b>. Todos los archivos tienen una extensión, un valor que indica a qué tipo pertenece el archivo en cuestión. Por ejemplo, los documentos de Microsoft Word terminan en ".doc", las imágenes, usualmente tienen el formato ".jpg" ó "png", e incluso, uno de los formatos de compresión de música más reconocidos es el ".mp3". Usualmente no vemos estas extensiones, pero son necesarias pues los archivos que pretendemos que sean interpretados por nuestro navegador a la hora de practicar, deben tener la extensión ".html".
-
-                            <b>Además, por convención, el nombre de archivo no debe contener caracteres especiales ni letras que no existan en inglés y debe estar en minúsculas.</b>
-
-                            Para poder habilitar las extensiones de los archivos te brindamos a continuación un video corto.
-                        </p>
-                    </div>
-
-                    <div class="data-content e-dinamic">
-                        <a class="btn mt-4 px-2" href="https://www.youtube.com/watch?v=RJDeDGmo8R0" title="Video sobre extensiones de archivos" target="_blank">
-                            Ver Extensiones
-                        </a>
-                    </div>
-
-                    <!-- ----------------------------- --> <hr class="h-divider w-75 my-4"> <!-- ----------------------------- -->
-
-                    <h3>Una vez asimilada y practicada la información anterior, es momento de conocer al resto de la estructura estética de un sitio web. Aprendamos CSS:</h3>
+                    <h3>Veamos entonces, cuales son los fundamentos básicos del desarrollo web:</h3>
 
                     <div class="data-content e-dinamic">
                         <figure class="data-img">
-                            <a href="./css" title="Guía de CSS">
-                                <i class="fab fa-css3-alt"></i>
+                            <a href="./webDev" title="Guía de Desarrollo Web">
+                                <i class="fas fa-code"></i>
                             </a>
                         </figure>
                     </div>
