@@ -177,7 +177,7 @@ small{
 
 sub,sup{
     position:relative;
-    font-size:75%;
+    font-size:50%;
     line-height:0;
     vertical-align:baseline
 }
@@ -201,8 +201,14 @@ a{
     height: 100%;
 }
 
+a, .href{
+    transition: color .3s;
+}
+
 a:not(.btn,:has(.btn-txt)):hover, .href:not(.btn,:has(.btn-txt)):hover{
     text-decoration:unset;
+    color: var(--primary);
+    transition: color .3s;
 }
 
 a:not([href]):not([tabindex]){

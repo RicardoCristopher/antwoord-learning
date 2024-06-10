@@ -168,6 +168,65 @@
 
             pCleaner();
         };
+    
+    // --------------------------------------
+    // | WebDev |
+    // --------------------------------------
+
+        function maxLength(e){
+            let inp = e.currentTarget;
+            let ctr = document.getElementById('counter-'+inp.id);
+            let act = inp.value.length;
+            ctr.innerText = act;
+        }
+
+        function counterCreator(elemList){
+            for (let i = 0; i < elemList.length; i++){
+                let count = document.createElement('sub');
+                count.classList.add('counter-wrapper','my-2');
+                count.innerHTML = '<p>Max:(</p><p id="counter-'+elemList[i].id+'">0</p><p>/'+elemList[i].getAttribute('maxlength')+')</p>';
+                elemList[i].insertAdjacentElement('afterend',count);
+            }
+        }
+
+        function formCheck(form){
+            let input = form.querySelectorAll('input, select, textarea');
+            let error = 0;
+
+            for (let i = 0; i < input.length; i++) {
+                if((input[i].value == '') || (input[i].value.length < 1)){
+                    input[i].classList.add('is-invalid');
+                    error++;
+                }else{
+                    input[i].classList.remove('is-invalid');
+                }
+            }
+
+            if(error == 0){
+                document.forms[form.id].submit();
+                alert('Mensaje Enviado, Gracias','success',false);
+            }else{
+                alert('Formulario Incompleto','warning',false);
+            }
+        }
+
+        function pageListenersWeb(){
+
+            let maxL = main.querySelectorAll('.maxL');
+
+            if(maxL){
+                counterCreator(maxL);
+
+                $(".maxL").on('input',(e)=>{
+                    maxLength(e);
+                });
+            }
+
+            $('#contactme').on('submit',(e)=>{
+                e.preventDefault()
+                formCheck(e.currentTarget);
+            });
+        };
 
 //----------------------------------------------------------------------
 // Global rules

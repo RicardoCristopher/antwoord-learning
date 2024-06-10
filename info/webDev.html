@@ -5,10 +5,20 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta name="description" content="Guía básica sobre JavaScript. Sintaxis, semántica, reglas, y mucho más ">
+        <meta name="description" content="Guía básica sobre el Desarrollo Web. Bases, Consejos, Fundamentos y mucho más">
         <meta name="keywords" content="desarrollo, web, guía, instructivo, html5, css, javascript, frontEnd">
         <meta name="author" content="Antwoord Creative Lab">
         <title>Desarrollo Web | Antwoord Learning</title>
+
+        <!-- Preloads -->
+        <link rel="preload" fetchpriority="high" as="font" href="../plugins/fontawesome-free/webfonts/fa-brands-400.woff2" type="font/woff2" crossorigin>
+        <link rel="preload" fetchpriority="high" as="font" href="../plugins/fontawesome-free/webfonts/fa-solid-900.woff2" type="font/woff2" crossorigin>
+        <link rel="preload" fetchpriority="high" as="font"  href="../plugins/poppins/Poppins-Bold.ttf" type="font/ttf" crossorigin>
+        <link rel="preload" fetchpriority="high" as="font"  href="../plugins/poppins/Poppins-Medium.ttf" type="font/ttf" crossorigin>
+        <link rel="preload" fetchpriority="high" as="image" href="../src/img/init/init1.svg" type="image/svg+xml">
+        <link rel="preload" fetchpriority="high" as="image" href="../src/img/web/web1.webp" type="image/webp">
+        <link rel="preload" fetchpriority="high" as="image" href="../src/img/web/web2.webp" type="image/webp">
+        <link rel="preload" fetchpriority="high" as="image" href="../src/img/web/web3.webp" type="image/webp">
 
         <!-- Styles -->
         <link rel="shortcut icon" href="../src/img/antico.png">
@@ -92,58 +102,65 @@
                     </li>
 
                     <li class="btn m-dnamic">
-                        <a href="#real">
-                            <span class="btn-txt">No. 1</span>
-                            <i class="fas fa-users btn-ico"></i>
+                        <a href="#web" title="¿Qué es el Desarrollo Web?">
+                            <span class="btn-txt">Web Dev</span>
+                            <i class="fas fa-code btn-ico"></i>
                         </a>
                     </li>
 
                     <li class="btn m-dnamic">
-                        <a href="#ux">
-                            <span class="btn-txt">No. 2</span>
-                            <i class="fas fa-user-check btn-ico"></i>
+                        <a href="#pilar" title="Pilares Fundamentales">
+                            <span class="btn-txt">Pilares</span>
+                            <i class="fas fa-list-alt btn-ico"></i>
                         </a>
                     </li>
 
                     <li class="btn m-dnamic">
-                        <a href="#easy">
-                            <span class="btn-txt">No. 3</span>
-                            <i class="fas fa-tools btn-ico"></i>
+                        <a href="#conv" title="Buenas Prácticas">
+                            <span class="btn-txt">Convenciones</span>
+                            <i class="fas fa-hands-helping btn-ico"></i>
                         </a>
                     </li>
 
-                    <li class="btn m-dnamic">
-                        <a href="#adapt">
-                            <span class="btn-txt">No. 4</span>
-                            <i class="fas fa-text-width btn-ico"></i>
-                        </a>
-                    </li>
-
-                    <li class="btn m-dnamic">
-                        <a href="#cont">
-                            <span class="btn-txt">No. 5</span>
-                            <i class="fas fa-network-wired btn-ico"></i>
-                        </a>
-                    </li>
-
-                    <li class="btn m-dnamic">
-                        <a href="#base">
-                            <span class="btn-txt">No. 6</span>
-                            <i class="fas fa-chart-line btn-ico"></i>
+                    <li class="btn m-dnamic btn-dark w-50">
+                        <a href="#outro">
+                            <span class="btn-txt">Conclusión</span>
+                            <i class="fas fa-envelope btn-ico"></i>
                         </a>
                     </li>
                 </menu>
             </section>
 
             <!-- Begin of main content sections -->
-            <section>
-                <h2 class="mt-2">Los pilares fundamentales del Desarrollo Web</h2>
+            <section id="web" class="parallax bgllax web-1 cc-col">
+                <h2 class="mt-2">Entonces, ¿Qué es el Desarrollo Web?</h2>
             </section>
 
-            <section id="real" class="paraless cc-col">
+            <section class="paraless cc-col">
                 <article class="data-wrapper cc-col">
-                    <hr class="h-divider w-100">
+                    <h3>En palabras simples</h3>
 
+                    <div class="data-content c-dinamic">
+                        <p class="data-text mx-3">
+                            El desarrollo web se refiere al proceso de construcción y mantenimiento de sitios web, lo que implica una amplia variedad de acciones, desde la creación de códigos y diseño hasta la administración de contenidos y servidores. Los desarrolladores web utilizan lenguajes de programación como HTML/CSS y JavaScript en el ámbito de interacción del usuario (Front End) los cuales ya repasamos en la presente guía, pero además lenguajes como , PHP o SQL para el ámbito del servidor (Back End); todo esto con el fin de escribir programas que hagan que un sitio sea práctico, dinámico y ágil.
+                            
+                            Los desarrolladores web se encargan de codificar y crear el sitio web, trabajando con diseñadores para satisfacer las necesidades del cliente y luego escribir el código para hacer realidad ese diseño. Además, se aseguran de que el sitio responda correctamente a las interacciones del usuario y concretan un stack tecnológico adecuado 
+                            
+                            El desarrollo web es fundamental para el éxito de cualquier negocio en la actualidad, ya que permite que un negocio despegue o se hunda en función de cómo funcione su sitio web. Es un proceso complejo que implica la creación de productos digitales en línea y el uso de tecnologías de software del lado del servidor y del cliente 
+                            
+                            En resumen, el desarrollo web es esencial para la construcción y diseño de sitios web y aplicaciones, y es un campo en constante evolución que requiere adaptación a las nuevas tecnologías y necesidades de la industria
+                        </p>
+                    </div>
+                </article>
+            </section>
+
+            <!-- Sección de los Pilares -->
+            <section id="pilar" class="parallax bgllax web-2 cc-col">
+                <h2 class="mt-2">Pilares Fundamentales</h2>
+            </section>
+
+            <section class="paraless cc-col">
+                <article class="data-wrapper cc-col">
                     <h3>Centrado en Usuarios Reales:</h3>
 
                     <div class="data-content c-dinamic">
@@ -156,9 +173,7 @@
                         </figure>
                     </div>
                 </article>
-            </section>
 
-            <section id="ux" class="paraless cc-col">
                 <article class="data-wrapper cc-col">
                     <hr class="h-divider w-100">
 
@@ -174,9 +189,7 @@
                         </figure>
                     </div>
                 </article>
-            </section>
 
-            <section id="easy" class="paraless cc-col">
                 <article class="data-wrapper cc-col">
                     <hr class="h-divider w-100">
 
@@ -192,9 +205,7 @@
                         </figure>
                     </div>
                 </article>
-            </section>
 
-            <section id="adapt" class="paraless cc-col">
                 <article class="data-wrapper cc-col">
                     <hr class="h-divider w-100">
 
@@ -211,9 +222,7 @@
 
                     </div>
                 </article>
-            </section>
 
-            <section id="cont" class="paraless cc-col">
                 <article class="data-wrapper cc-col">
                     <hr class="h-divider w-100">
 
@@ -229,9 +238,7 @@
                         </figure>
                     </div>
                 </article>
-            </section>
 
-            <section id="base" class="paraless cc-col">
                 <article class="data-wrapper cc-col">
                     <hr class="h-divider w-100">
 
@@ -248,6 +255,109 @@
                     </div>
                 </article>
             </section>
+
+            <!-- Sección de Buenas Prácticas -->
+            <section id="conv" class="parallax bgllax web-3 cc-col">
+                <h2 class="mt-2">Buenas Prácticas</h2>
+            </section>
+
+            <section class="paraless cc-col">
+                <article class="data-wrapper cc-col">
+                    <h3>En palabras simples</h3>
+
+                    <div class="data-content c-dinamic">
+                        <p class="data-text mx-3">
+                            El desarrollo web se refiere al proceso de construcción y mantenimiento de sitios web, lo que implica una amplia variedad de acciones, desde la creación de códigos y diseño hasta la administración de contenidos y servidores. Los desarrolladores web utilizan lenguajes de programación como HTML/CSS y JavaScript en el ámbito de interacción del usuario (Front End) los cuales ya repasamos en la presente guía, pero además lenguajes como , PHP o SQL para el ámbito del servidor (Back End); todo esto con el fin de escribir programas que hagan que un sitio sea práctico, dinámico y ágil.
+                            
+                            Los desarrolladores web se encargan de codificar y crear el sitio web, trabajando con diseñadores para satisfacer las necesidades del cliente y luego escribir el código para hacer realidad ese diseño. Además, se aseguran de que el sitio responda correctamente a las interacciones del usuario y concretan un stack tecnológico adecuado 
+                            
+                            El desarrollo web es fundamental para el éxito de cualquier negocio en la actualidad, ya que permite que un negocio despegue o se hunda en función de cómo funcione su sitio web. Es un proceso complejo que implica la creación de productos digitales en línea y el uso de tecnologías de software del lado del servidor y del cliente 
+                            
+                            En resumen, el desarrollo web es esencial para la construcción y diseño de sitios web y aplicaciones, y es un campo en constante evolución que requiere adaptación a las nuevas tecnologías y necesidades de la industria
+                        </p>
+                    </div>
+                </article>
+            </section>
+
+            <!-- Sección Outro -->
+            <section id="outro" class="parallax bgllax init-1 cc-col">
+                <h2 class="mt-2">¡Gracias por acompañarnos!</h2>
+            </section>
+
+            <section class="paraless cc-col">
+                <article class="data-wrapper cc-col">
+                    <h3>Para finalizar ...</h3>
+
+                    <div class="data-content c-dinamic">
+                        <p class="data-text mx-3">
+                            Queremos agradecerte por quedarte hasta el final de esta aventura, espero que haya sido de vuestro agrado, pero principal, tenemos la esperanza de haber plantado en nuestro lector esa pequeña semilla del deseo por el conocimiento.
+
+                            Pues, como ya hemos reiterado en varias ocasiones a lo largo de esta guía, la única forma de aprender a programar es, irónicamente, programando.
+
+                            Es importante trabajar en construir el enfoque necesario en nuestro proceso de convertirnos en desarrolladores web, partiendo desde la investigación de las nuevas tecnologías a nuestra disposición a fin de mantener nuestros diseños con una tendencia moderna y actualizada pero, además, siempre tomando en cuenta la experiencia del usuario, quien es a final de cuentas, el consumidor de nuestro producto final.
+
+                            No queremos finalizar sin antes dejar un pequeño formulario de contacto por si deseas expresar alguna opinión o sugerencia, quedamos atento a todo cuanto tengas para compartir.
+
+                            Saludos, y hasta la próxima.
+                        </p>
+                    </div>
+
+                    <div class="form-wrapper cc-col mt-4">
+                        <h1 class="mb-3">Contáctenos <i class="fas fa-envelope"></i></h1>
+                
+                        <form target="_blank" id="contactme" action="https://formsubmit.co/5a24f0423dc260045a1c4badf6adfd48" method="POST" autocomplete="off" onsubmit="return false;">
+                            <div class="form-group">
+                                <label for="name">
+                                    Nombre Completo
+                                </label>
+                
+                                <input type="text" id="name" name="name" class="form-control" placeholder="Nombre Completo" required>
+                
+                                <hr class="h-divider w-100 mt-2">
+                            </div>
+                
+                            <div class="form-group">
+                                <label for="email">
+                                    Email
+                                </label>
+                
+                                <input type="email" id="email" name="email" class="form-control" placeholder="Email" required>
+                
+                                <hr class="h-divider w-100 mt-2">
+                            </div>
+                
+                            <div class="form-group">
+                                <label for="subject">
+                                    Motivo
+                                </label>
+                
+                                <input type="text" id="subject" name="subject" class="form-control" placeholder="Motivo" required>
+                
+                                <hr class="h-divider w-100 mt-2">
+                            </div>
+                
+                            <div class="form-group">
+                                <label for="message">
+                                    Mensaje
+                                </label>
+                
+                                <textarea id="message" name="message" placeholder="Mensaje" class="form-control maxL" maxlength="500" required></textarea>
+                
+                                <hr class="h-divider w-100 mt-2">
+                            </div>
+                
+                            <div class="flex-row-center-center w-100">
+                                <button id="send" type="submit" class="btn btn-primary">
+                                    Enviar
+                                </button>
+                            </div>
+                
+                            <input type="hidden" id="plus" name="plus" value="1" required>
+                        </form>
+                    </div>
+                </article>
+            </section>
+
             <!-- End of main content sections -->
         </main>
 
@@ -267,7 +377,9 @@
 
         <!-- Handler invoker -->
         <script type="text/javascript">
-            
+            document.addEventListener("DOMContentLoaded", ()=>{
+                pageListenersWeb();
+            });
         </script>
     </body>
 </html>

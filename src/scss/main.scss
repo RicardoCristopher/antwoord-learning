@@ -486,6 +486,14 @@
                         }
 
                     }
+                
+                /* <<<<< Web Dev >>>>> */
+                    @for $i from 1 through 3{
+                        .web-#{$i}.bgllax::before{
+                            background-image: url(../img/web/web#{$i}.webp);
+                        }
+
+                    }
                         
         /* ----------------------------
         <<<<<<<<<<<< Trynna >>>>>>>>>>>
@@ -510,6 +518,32 @@
             /* Temporal */
             .data-content figure img{
                 width: 100%;
+            }
+
+            .form-wrapper{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+                width: fit-content;
+                min-width: min-content;
+                border: 1px solid var(--gray);
+                border-radius: 5px;
+                padding: 3%;
+                background-color: #fff;
+                box-shadow: 3px 3px 10px 0px #0003;
+                margin: 0 auto;
+            }
+
+            sub.counter-wrapper{
+                bottom: unset;
+                display: flex;
+                flex-wrap: nowrap;
+                justify-content: flex-end;
+            }
+
+            sub.counter-wrapper > p{
+                margin: unset;
             }
 
     /* ----------------------------
