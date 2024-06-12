@@ -1,4 +1,16 @@
+/* PlugIns CSS */
 @import '../../plugins/fontawesome-free/css/all';
-@import './bootstrap';
-@import './main';
-@import '../../plugins/prism/prism';
+@import '../../plugins/bootstrap/bootstrap';
+@import '../../plugins/prism/css/prism';
+
+/* Partials */
+@import '_var';
+@import '_mixins';
+@import '_base';
+@import '_aside';
+@import '_header';
+@import '_main';
+@import '_footer';
+@import '_global';
+@import '_responsive';
+

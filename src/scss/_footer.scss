@@ -1,0 +1,21 @@
+/* ----------------------------
+<<<<<<<<<<<< Footer >>>>>>>>>>>
+---------------------------- */
+
+    .footer{
+        grid-area: footer;
+
+        width: 100%;
+        background-color: #fff;
+        box-shadow: 0px -5px 20px 0px #0003;
+        z-index: 2;
+
+        /*----------------------------
+        <<<<<<<<<<< Content >>>>>>>>>>
+        ----------------------------*/
+            .foot-data{
+                font-size: 2vmin;
+                text-align: center;
+            }
+    
+    }

@@ -1,0 +1,20 @@
+/* ----------------------------
+<<<<<<<<<<<< Base >>>>>>>>>>>>>
+---------------------------- */
+    html{
+        overflow: hidden;
+    }
+    
+    .body {
+        display: grid;
+        overflow: hidden;
+        grid-template-columns: $nav-area 1fr; 
+        grid-template-rows: $nav-area 1fr 30px; 
+        gap: 0px 0px; 
+        grid-template-areas: 
+            "aside header"
+            "aside main"
+            "aside footer";
+
+        transition: grid-template-columns $effect-delay;
+    }

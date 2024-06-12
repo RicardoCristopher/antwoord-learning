@@ -1,0 +1,107 @@
+/* ----------------------------
+<<<<<< Responsive rulez >>>>>>>
+---------------------------- */
+	
+	@media (max-width: 850px){
+        .main .bgllax::before{
+            background-size: cover;
+            transition: background-size .2s;
+        }
+    }
+
+	@media (orientation: portrait) or (max-width: 670px){
+        .main .data-wrapper .c-dinamic, 
+        .main .data-wrapper .e-dinamic{
+            
+            @include column-flex;
+
+            .data-img {
+            	width: 50%;
+            }
+        }
+
+        .c-dinamic > *, .e-dinamic > *{
+            margin: 2% 0;
+        }
+    }
+
+    @media (max-width: 650px) {
+
+    	/* ----------------------------
+        <<<<<<<<<<<<< Body >>>>>>>>>>>>
+        ---------------------------- */
+
+	        .body{
+
+	        	/* Toggling On */
+	            grid-template-columns: 0 100vw;
+	            transition: grid-template-columns $effect-delay;
+	            font-size: $global-text !important;
+
+	            /* Toggling Off */
+	            &.toggled {
+		            grid-template-columns: $nav-area 100vw;
+		            transition: grid-template-columns $effect-delay;
+		        }
+
+	            &:not(.toggled) .header{
+		            box-shadow: inset 4px 0 0px 0px var(--primary) !important;
+		            padding-left: 10px;
+		            transition: box-shadow $effect-delay, padding-left $effect-delay;
+		        }
+
+		        &.toggled .aside::after{
+		            content: "\f053";
+		            opacity: .9;
+		            transition: opacity $effect-delay;
+		        }
+	        }
+
+	    /* ----------------------------
+        <<<<<<<<<<<<< Aside >>>>>>>>>>>>
+        ---------------------------- */
+
+	        .aside{
+
+	        	/* Toggler on */
+	            &::after{
+		            @include absolute-center;
+		        }
+
+		        /* hidding nav */
+		        .nav{
+		            left: -$nav-area;
+		            transition: left $effect-delay;
+		        }
+	        } 
+
+	        /* showing nav */
+			.toggled .aside .nav{
+	            left: 0;
+	            transition: left .5s;
+	        }
+
+	    /* ----------------------------
+        <<<<<<<<<<<<< Main >>>>>>>>>>>>
+        ---------------------------- */
+
+	        .main{
+	        	.btn{
+	        		font-size: 3vmin;
+	        	}
+
+	        	.menu-wrapper .navMenu .m-dnamic{
+		        	.btn-txt{
+			            display: none;
+			        }
+
+			        .btn-ico{
+			            display: inline-flex;
+			        }
+			    }
+	        }
+
+	        pre code {
+                font-size: 3.5vmin !important;
+            }
+    }

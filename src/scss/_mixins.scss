@@ -1,0 +1,45 @@
+/*------------------------------------
+<<<<<<<<<<<<<<< Mixins >>>>>>>>>>>>>>>
+------------------------------------*/
+	
+	/*----------------------------
+    <<<<<<<< Flex Hadlers >>>>>>>>
+    ----------------------------*/
+
+		@mixin absolute-center {
+			display: flex;
+		    align-items: center;
+		    justify-content: center;
+		}
+
+		@mixin inLine-center {
+			display: inline-flex;
+		    align-items: center;
+		    justify-content: center;
+		}
+
+		@mixin column-flex {
+			-webkit-box-orient:vertical !important;
+            -webkit-box-direction:normal !important;
+            -ms-flex-direction:column !important;
+            flex-direction:column !important;
+		}
+
+	/*----------------------------
+    <<<<<<<<<< App-Line >>>>>>>>>>
+    ----------------------------*/
+
+    	@mixin no-select {
+			-webkit-user-select: none;
+			-moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+		}
+
+		@mixin no-drag {
+			-webkit-user-drag: none;
+		    -moz-user-drag: none;
+		    -o-user-drag: none;
+		}
+
+			

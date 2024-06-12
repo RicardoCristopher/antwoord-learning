@@ -1,0 +1,36 @@
+/* ----------------------------
+<<<<<<<<<<<< Header >>>>>>>>>>>
+---------------------------- */
+
+    .header{
+        grid-area: header;
+
+        width: 100%;
+        background: #fff;
+        padding: 0 0 0 1%;
+        z-index: 3;
+        display: grid;
+        grid-template-columns: 1fr 50px; 
+        grid-template-rows: 1fr; 
+        gap: 0px 0px; 
+        grid-template-areas: 
+            "title toPort";
+        align-items: center;
+        transition: box-shadow $effect-delay, padding-left $effect-delay;
+
+        /* ----------------------------
+        <<<<<<<<<<<< Title >>>>>>>>>>>>
+        ---------------------------- */
+
+            .title{
+                grid-area: title;
+            }
+
+        /* ----------------------------
+        <<<<<<<<< to Portfolio >>>>>>>>
+        ---------------------------- */
+
+            .toPort{
+                grid-area: toPort;
+            }
+    }

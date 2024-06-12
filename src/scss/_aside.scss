@@ -1,0 +1,160 @@
+/* ----------------------------
+<<<<<<<<<<<< Aside >>>>>>>>>>>>
+---------------------------- */
+
+    .aside{
+        grid-area: aside;
+
+        width: 100%;
+        height: 100%;
+        position: relative;
+        z-index: 1;
+        background-color: $base-color;
+        background-image: linear-gradient(180deg, $base-color 10%, #291717 100%);
+        background-image: -webkit-gradient(linear, left top, left bottom, color-stop(10%, $base-color), to(#291717));
+
+        /* ----------------------------
+        <<<<<<<<<<<<< After >>>>>>>>>>>
+        ---------------------------- */
+
+            /* Creating Toggler mode Off */
+            &::after{
+                width: 25px;
+                height: 70px;
+                right: -25px;
+                position: absolute;
+                background-color: #d99936;
+                border-top-right-radius: 10px;
+                border-bottom-right-radius: 10px;
+                display: none;
+
+                content: "\f054";
+                font-family: 'faSolid';
+                font-size: 15px;
+                font-weight: 900;
+                -moz-osx-font-smoothing: grayscale;
+                -webkit-font-smoothing: antialiased;
+                font-style: normal;
+                font-variant: normal;
+                text-rendering: auto;
+                line-height: 1;
+                color: $standar-text-color;
+                box-shadow: inset 1px -1px 9px 0px #ffffff5c;
+                opacity: .4;
+                transition: opacity $effect-delay;
+            }
+
+        /* ----------------------------
+        <<<<<<<<<<<< navBar >>>>>>>>>>>
+        ---------------------------- */
+
+            .nav{
+                height: 100%;
+                text-align: center;
+                position: absolute;
+                width: $nav-area;
+                left: 0;
+                display: grid;
+                grid-template-columns: 1fr; 
+                grid-template-rows: $nav-area 1fr; 
+                gap: 0px 0px; 
+                grid-template-areas: 
+                    "logo"
+                    "menu";
+                transition: left $effect-delay;
+
+                /* ----------------------------
+                <<<<<<<<<<<<< Logo >>>>>>>>>>>>
+                ---------------------------- */
+
+                    .logo{
+                        grid-area: logo;
+
+                        margin-block-start: unset;
+                        margin-block-end: unset;
+                        margin-inline-start: unset;
+                        margin-inline-end: unset;
+                        unicode-bidi: unset;
+                        width: 100%;
+                        padding: 1%;
+
+                        /* ----------------------------
+                        <<<<<<<<<<<<< img >>>>>>>>>>>>>
+                        ---------------------------- */
+
+                            img{
+                                width: 100%;
+                            }
+                    }
+
+                /* ----------------------------
+                <<<<<< Normalized Links >>>>>>>
+                ---------------------------- */
+                
+                    a:hover, a:has(.visited),
+                    .href, .href:hover, .href:has(.visited){
+                        text-decoration: none;
+                        color: inherit;
+                        text-align: center;
+                    }
+
+                /* ----------------------------
+                <<<<<<<<<<<<< Menu >>>>>>>>>>>>
+                ---------------------------- */
+
+                    .menu{
+                        grid-area: menu;
+
+                        list-style: none;
+                        margin-block-start: unset;
+                        margin-block-end: unset;
+                        margin-inline-start: unset;
+                        margin-inline-end: unset;
+                        padding-inline-start: unset;
+                        unicode-bidi: unset;
+                        color: #fff;
+                        height: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+
+                        /* ----------------------------
+                        <<<<<<<<<< List Items >>>>>>>>>
+                        ---------------------------- */
+
+                            li{
+                                width: 100%;
+                                height: 10%;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                            }
+
+                            li a{
+                                width: 100%;
+                                height: 100%;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                            }
+
+                            li i{
+                                font-size: 1.6rem;
+                                transition: all .1s;
+                            }
+
+                            li:hover i:not(.visited){
+                                text-shadow:  5px 5px 5px #0003;
+                                transform: scale(1.1);
+                                transition: all .1s;
+                            }
+
+                            li i.visited{
+                                text-shadow:  5px 5px 5px #0003;
+                                transform: scale(1.1);
+                                transition: all .1s;
+                            }
+                    }
+
+            }
+    } 

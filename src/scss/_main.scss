@@ -1,0 +1,308 @@
+/* ----------------------------
+<<<<<<<<<<<<< Main >>>>>>>>>>>>
+---------------------------- */
+
+    .main{
+        grid-area: main;
+
+        position: relative;
+        width: 100%;
+        height: 100%;
+        overflow-y: auto;
+        overflow-x: hidden;
+        perspective: 2px;
+        text-align: center;
+
+        /* ----------------------------
+        <<<<<<<<<<< sections >>>>>>>>>>
+        ---------------------------- */
+            section{
+                width: 100%;
+                transform-style: preserve-3d;
+                position: relative;
+            }
+
+        /* ----------------------------
+        <<<<<<<<<<<< navBar >>>>>>>>>>>
+        ---------------------------- */
+
+            .menu-wrapper{
+                position: sticky;
+                margin: unset;
+                top: 0;
+                z-index: 11;
+
+                /*----------------------------
+                <<<<<<<<<<<< Menu >>>>>>>>>>>>
+                ----------------------------*/
+
+                    .navMenu{
+                        list-style-type: unset;
+                        margin-block-start: unset;
+                        margin-block-end: unset;
+                        margin-inline-start: unset;
+                        margin-inline-end: unset;
+                        padding-inline-start: unset;
+
+                        /*----------------------------
+                        <<<<<<<<< List Items >>>>>>>>>
+                        ----------------------------*/
+                            .m-dnamic{
+                                display: inline-flex;
+                                width: 100%;
+
+                                /* Anchors */
+                                    a, 
+                                    a .btn{
+                                        width: 100%;
+                                    }
+
+                                /* Icons */
+                                    .btn-ico{
+                                        display: none;
+                                    }
+
+                            }
+                    }
+
+            }
+                
+        /* ----------------------------
+        <<<<<<<<<< Base Rules >>>>>>>>>
+        ---------------------------- */
+
+            .data-wrapper{
+
+                /*----------------------------
+                <<<<<<<< Content Area >>>>>>>>
+                ----------------------------*/
+                    .data-content{
+                        @include absolute-center;
+                        padding: 1%;
+
+                        /*----------------------------
+                        <<<<<< Childrens Margin >>>>>>
+                        ----------------------------*/
+                            & > *:not(:first-child,:last-child){
+                                margin: 1% 0;
+                            }
+
+                            & > :first-child{
+                                margin-bottom: 1%;
+                            }
+
+                            & > :last-child{
+                                margin-top: 1%;
+                            }
+
+                        /*----------------------------
+                        <<<<<<<<< Text Areas >>>>>>>>>
+                        ----------------------------*/
+
+                            .data-text:not(.unformat){
+                                width: 100%;
+                                text-align: justify;
+                                white-space: pre-line;
+                                color: $standar-text-color;
+                            }
+
+                        /*----------------------------
+                        <<<<<<<<<< Img Areas >>>>>>>>>
+                        ----------------------------*/
+
+                            .data-img{
+                                width: 20%;
+                                text-align: center;
+
+                                .fas, .far, .fab {
+                                    font-size: 20vmin;
+                                }
+                            }
+
+                            figure img{
+                                width: 100%;
+                            }
+                    }
+
+                /*----------------------------
+                <<<<<<<<<<<<< img >>>>>>>>>>>>
+                ----------------------------*/
+
+                    .img{
+                        width: 90%;
+                        transition: all .2s;
+                    }
+
+                    .imgHover{
+                        transition: all .2s;
+
+                        &:hover{
+                            transform: scale(1.1);
+                            filter: drop-shadow(5px 5px 2px #0004);
+                            -webkit-filter: drop-shadow(5px 5px 2px #0004);
+                            transition: all .2s;
+                        }
+                    }
+            
+                /*----------------------------
+                <<<<<<<<< Code Result >>>>>>>>
+                ----------------------------*/
+
+                    .code-result{
+                        background-color: var(--light);
+                        padding: 1%;
+                        border-radius: 5px;
+                        border: 1px solid var(--gray);
+
+                        textarea{
+                            min-height: 20px;
+                            max-height: 60px;
+                        }
+                    }
+
+            }
+
+        /* ----------------------------
+        <<<<<<<<<<< Parallax >>>>>>>>>>
+        ---------------------------- */
+
+            .paraless{
+                background-color: #ffe1b2;
+                z-index: 10;
+                padding: 8%;
+            }
+
+            .parallax{
+                height: 87vh;
+                padding: 8%;
+
+                /* Backgrund Wrapper */
+                &::before{
+                    content: '';
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
+                    transform: translateZ(-2px) scale(2);
+                    background-size: 100%;
+                    z-index: -1;
+                    opacity: .3;
+                }
+
+                /* Tittle Control */
+                & > * {
+                    font-size: 9vmin;
+                    color: $standar-text-color;
+                    font-family: Poppins-Bold;
+                }
+
+                /* Tittle overflow control */
+                & > h2, & > h3{
+                    max-width: 100%;
+                }
+            }
+
+            .bgllax::before{
+                background-size: 100% auto;
+                background-repeat: no-repeat;
+                background-position: center;
+                height: 100%;
+                box-shadow: inset 0px 0px 8px 8px var(--light);
+                transition: background-size .2s;
+            }
+
+            .bgCover.bgllax::before{
+                background-size: cover !important;
+            }
+
+            /* ----------------------------
+            <<<<< Parallax Bg control >>>>>
+            ---------------------------- */
+
+                /* <<<<< bg >>>>> */
+                    @for $i from 1 through 7{
+                        .bg-#{$i}.bgllax::before{
+                            background-image: url(../img/bg/bg#{$i}.webp);
+                        }
+                    }
+
+                /* <<<<< Init >>>>> */
+                    .init-1.bgllax::before{
+                        background-image: url(../img/init/init1.svg);
+                    }
+
+                /* <<<<< html >>>>> */
+                    @for $i from 1 through 3{
+                        .html-#{$i}.bgllax::before{
+                            background-image: url(../img/html/html#{$i}.webp);
+                        }
+
+                    }
+
+                /* <<<<< css >>>>> */
+                    @for $i from 1 through 3{
+                        .css-#{$i}.bgllax::before{
+                            background-image: url(../img/css/css#{$i}.webp);
+                        }
+
+                    }
+
+                /* <<<<< js >>>>> */
+                    @for $i from 1 through 3{
+                        .js-#{$i}.bgllax::before{
+                            background-image: url(../img/js/js#{$i}.webp);
+                        }
+
+                    }
+                
+                /* <<<<< Web Dev >>>>> */
+                    @for $i from 1 through 3{
+                        .web-#{$i}.bgllax::before{
+                            background-image: url(../img/web/web#{$i}.webp);
+                        }
+
+                    }
+                        
+        /* ----------------------------
+        <<<<<<<<<< Not Bound >>>>>>>>>>
+        ---------------------------- */
+
+            .reverse{
+                flex-direction: row-reverse !important;
+            }
+
+            .form-wrapper{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+                width: fit-content;
+                min-width: min-content;
+                border: 1px solid var(--gray);
+                border-radius: 5px;
+                padding: 3%;
+                background-color: #fff;
+                box-shadow: 3px 3px 10px 0px #0003;
+                margin: 0 auto;
+
+                /* ----------------------------
+                <<<<<<< Textarea Counter >>>>>>
+                ---------------------------- */
+
+                    .counter-wrapper{
+                        bottom: unset;
+                        display: flex;
+                        flex-wrap: nowrap;
+                        justify-content: flex-end;
+                    }
+
+                    .counter-wrapper > p{
+                        margin: unset;
+                    }
+            }   
+
+    }
+        

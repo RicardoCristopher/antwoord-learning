@@ -70,7 +70,6 @@ Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
     box-sizing:border-box;
     user-select: none;
     -webkit-user-drag: none;
-    -khtml-user-drag: none;
     -moz-user-drag: none;
     -o-user-drag: none;
     scroll-behavior: smooth;
@@ -289,11 +288,6 @@ button,input,optgroup,select,textarea{
     font-size:inherit;
     line-height:inherit
 }
-
-optgroup,select{
-    font-size: calc(.7rem + .3vw) !important;
-}
-
 
 button,input{
     overflow:visible
